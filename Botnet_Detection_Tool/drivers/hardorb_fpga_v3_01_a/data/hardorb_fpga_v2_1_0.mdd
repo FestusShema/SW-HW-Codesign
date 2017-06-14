@@ -1,0 +1,28 @@
+##############################################################################
+## Filename:          /home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib/MyProcessorIPLib/drivers/hardorb_fpga10_v3_01_a/data/hardorb_fpga10_v2_1_0.mdd
+## Description:       Microprocessor Driver Definition
+## Date:              Wed Dec 23 12:08:46 2009 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+OPTION psf_version = 2.1;
+
+BEGIN driver hardorbfpga
+
+  OPTION supported_peripherals = (hardorb_fpga_v3_[0-9][0-9]_[a-z]);
+  OPTION driver_state = ACTIVE;
+  OPTION depends = (common_v1_00_a);
+  OPTION copyfiles = all;
+
+  BEGIN INTERFACE vxworks5_5
+  END INTERFACE
+
+  BEGIN INTERFACE vxworks6_3
+  END INTERFACE
+
+  BEGIN INTERFACE vxworks6_5
+  END INTERFACE
+  
+  BEGIN INTERFACE vxworks6_7
+  END INTERFACE
+
+END driver

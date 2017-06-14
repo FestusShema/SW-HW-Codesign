@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/TCPServer.TCP_SERVER_HANDLER/TCPdataCompletelyRcvd_or0000</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/TCPServer.TCP_SERVER_HANDLER/nbTCPdataByteRecd_not0001</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/control0&lt;13&gt;</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">xps_bram_if_cntlr_1_port_BRAM_Addr&lt;31&gt;</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="367" delta="old" >The signal &lt;<arg fmt="%s" index="1">xps_bram_if_cntlr_1_port_BRAM_Addr&lt;30&gt;</arg>&gt; is incomplete. The signal does not drive any load pins in the design.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="781" delta="new" ><arg fmt="%s" index="1">PULLDOWN</arg> on an active net. <arg fmt="%s" index="2">PULLDOWN</arg> of comp <arg fmt="%s" index="3">ProtoComp1630.PULL</arg> is set but the tri state is not configured. 
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="781" delta="new" ><arg fmt="%s" index="1">PULLDOWN</arg> on an active net. <arg fmt="%s" index="2">PULLDOWN</arg> of comp <arg fmt="%s" index="3">ProtoComp1630.PULL.1</arg> is set but the tri state is not configured. 
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="781" delta="new" ><arg fmt="%s" index="1">PULLDOWN</arg> on an active net. <arg fmt="%s" index="2">PULLDOWN</arg> of comp <arg fmt="%s" index="3">ProtoComp1630.PULL.2</arg> is set but the tri state is not configured. 
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="781" delta="new" ><arg fmt="%s" index="1">PULLDOWN</arg> on an active net. <arg fmt="%s" index="2">PULLDOWN</arg> of comp <arg fmt="%s" index="3">ProtoComp1630.PULL.3</arg> is set but the tri state is not configured. 
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="781" delta="new" ><arg fmt="%s" index="1">PULLDOWN</arg> on an active net. <arg fmt="%s" index="2">PULLDOWN</arg> of comp <arg fmt="%s" index="3">ProtoComp1630.PULL.4</arg> is set but the tri state is not configured. 
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="781" delta="new" ><arg fmt="%s" index="1">PULLDOWN</arg> on an active net. <arg fmt="%s" index="2">PULLDOWN</arg> of comp <arg fmt="%s" index="3">ProtoComp1630.PULL.5</arg> is set but the tri state is not configured. 
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="781" delta="new" ><arg fmt="%s" index="1">PULLDOWN</arg> on an active net. <arg fmt="%s" index="2">PULLDOWN</arg> of comp <arg fmt="%s" index="3">ProtoComp1630.PULL.6</arg> is set but the tri state is not configured. 
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="781" delta="new" ><arg fmt="%s" index="1">PULLDOWN</arg> on an active net. <arg fmt="%s" index="2">PULLDOWN</arg> of comp <arg fmt="%s" index="3">ProtoComp1630.PULL.7</arg> is set but the tri state is not configured. 
+</msg>
+
+</messages>
+

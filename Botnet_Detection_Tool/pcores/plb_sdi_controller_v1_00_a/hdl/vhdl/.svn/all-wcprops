@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/reposTI/!svn/ver/1359/projects/PICSY/src/hw/IPcores/PICSY/pcores/plb_sdi_controller_v1_00_a/hdl/vhdl
+END
+plb_sdi_controller.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/reposTI/!svn/ver/1618/projects/PICSY/src/hw/IPcores/PICSY/pcores/plb_sdi_controller_v1_00_a/hdl/vhdl/plb_sdi_controller.vhd
+END
+snippet.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/reposTI/!svn/ver/1332/projects/PICSY/src/hw/IPcores/PICSY/pcores/plb_sdi_controller_v1_00_a/hdl/vhdl/snippet.vhd
+END
+fifo_generator_v4_4.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/reposTI/!svn/ver/1332/projects/PICSY/src/hw/IPcores/PICSY/pcores/plb_sdi_controller_v1_00_a/hdl/vhdl/fifo_generator_v4_4.vhd
+END
+user_logic.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/reposTI/!svn/ver/2256/projects/PICSY/src/hw/IPcores/PICSY/pcores/plb_sdi_controller_v1_00_a/hdl/vhdl/user_logic.vhd
+END

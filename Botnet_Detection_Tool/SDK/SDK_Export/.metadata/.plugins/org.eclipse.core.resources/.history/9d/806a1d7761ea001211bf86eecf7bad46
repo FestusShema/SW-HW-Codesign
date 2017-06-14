@@ -1,0 +1,321 @@
+/*
+ * Empty C++ Application
+ */
+
+#include "xparameters.h"
+#include "xuartlite_l.h"
+#include "IRC_Channel_Stats.h"
+
+//=================================================================================================
+//						      Global variables to access the memory
+//=================================================================================================
+volatile u32 *TCPmessageCompletelyRcvd = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR;
+volatile u32 *IRCmsgDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000001;
+volatile u32 *nbSuspiciousProtocol = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000002;
+volatile u32 *nbSuspiciousLoopback = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000003;
+volatile u32 *nbSuspiciousBroadcast = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000004;
+volatile u32 *nbSuspectedLandAttack = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000005;
+volatile u32 *nbPatternDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000006;
+volatile u32 *nbIRCmessageDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000007;
+volatile u32 *nbJOINmessageDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000008;
+volatile u32 *nbPINGmessageDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000009;
+volatile u32 *nbPONGmessageDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x0000000A;
+volatile u32 *nbPRIVMSGmessageDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x0000000B;
+volatile u8 *source_ip = (volatile u8 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000030;
+volatile u8 *dest_ip = (volatile u8 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x000000034;
+volatile u16 *source_port = (volatile u16 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000001C;
+volatile u16 *dest_port = (volatile u16 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000001E;
+volatile u8 *channel_name = (volatile u8 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000040;
+volatile u8 *next_channel_name = (volatile u8 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000074;
+//=================================================================================================
+//						      Global variables to access the memory
+//=================================================================================================
+
+std::vector<IRC_Channel_stats*> per_channel_stat;
+std::string channelName = "";
+std::string nextChannelName = "";
+
+//=================================================================================================
+//						     		Function displayStat()
+//
+// The function below is used to display the statistics
+//=================================================================================================
+void displayStat(std::string ch1, std::string ch2)
+{
+	xil_printf("\r\n--------------------------------------------------------------------------\r\n");
+	xil_printf("                Network Intrusion Detection Information                   \r\n");
+	xil_printf("--------------------------------------------------------------------------\r\n");
+	xil_printf("One TCP message has been completely received : %d \r\n", TCPmessageCompletelyRcvd[0]);
+	xil_printf("The last received TCP message is an IRC message : %d \r\n", IRCmsgDetected[0]);
+	xil_printf("Number of packets with a suspicious protocol number (greater than 134) in the IP header : %d \r\n", nbSuspiciousProtocol[0]);
+	xil_printf("Number of packets with a suspicious loopback address in the source IP field : %d \r\n", nbSuspiciousLoopback[0]);
+	xil_printf("Number of packets with a suspicious broadcast address in the source IP field : %d \r\n", nbSuspiciousBroadcast[0]);
+	xil_printf("Number of packets with a suspected Land attack : %d \r\n", nbSuspectedLandAttack[0]);
+	xil_printf("Number of malware patterns detected : %d \r\n", nbPatternDetected[0]);
+
+
+	xil_printf("\r\n--------------------------------------------------------------------------\r\n");
+	xil_printf("                          General IRC statistics                          \r\n");
+	xil_printf("--------------------------------------------------------------------------\r\n");
+	xil_printf("Number of IRC packet detected is : %d \r\n", nbIRCmessageDetected[0]);
+	xil_printf("Number of \"JOIN\" IRC packet detected is : %d \r\n", nbJOINmessageDetected[0]);
+	xil_printf("Number of \"PING\" IRC packet detected is : %d \r\n", nbPINGmessageDetected[0]);
+	xil_printf("Number of \"PONG\" IRC packet detected is : %d \r\n", nbPONGmessageDetected[0]);
+	xil_printf("Number of \"PRIVMSG\" IRC packet detected is : %d \r\n\r\n", nbPRIVMSGmessageDetected[0]);
+
+
+	xil_printf("--------------------------------------------------------------------------\r\n");
+	xil_printf("                        Packet specific information                       \r\n");
+	xil_printf("--------------------------------------------------------------------------\r\n");
+	xil_printf("The source IP address of the packet is : %d.%d.%d.%d \r\n", source_ip[0], source_ip[1], source_ip[2], source_ip[3]);
+	xil_printf("The destination IP address of the packet is : %d.%d.%d.%d \r\n", dest_ip[0], dest_ip[1], dest_ip[2], dest_ip[3]);
+	xil_printf("The source port of the packet is : %d \r\n", source_port[1]);
+	xil_printf("The destination port of the packet is : %d \r\n", dest_port[1]);
+
+	if(*IRCmsgDetected == 1 || *IRCmsgDetected == 4)
+	{
+		xil_printf("The first channel name is : %s \r\n", ch1.c_str());
+		xil_printf("The second channel name is : %s \r\n\r\n", ch2.c_str());
+
+		xil_printf("--------------------------------------------------------------------------\r\n");
+		xil_printf("                          Per Channel Statistics                          \r\n");
+		xil_printf("--------------------------------------------------------------------------\r\n");
+
+		xil_printf("|====================================================|============|============|============|=================|\r\n");
+		xil_printf("|                    Channel name                    | Total IRC  |   JOIN     |  PRIVMSG   |   IP addresses  |\r\n");
+		xil_printf("|====================================================|============|============|============|=================|\r\n");
+
+	}
+
+
+}
+//=================================================================================================
+//						     		Function displayStat()
+//
+// The function above is used to display the statistics
+//=================================================================================================
+
+
+
+//=================================================================================================
+//						      		Begin: Main function
+//=================================================================================================
+int main()
+{
+	bool match_Found_First_Channel; //Indicate whether a match has been found in the vector that contains channel names or not
+	bool match_Found_Second_Channel; //Indicate whether a match has been found in the vector that contains channel names or not
+	bool match_Found_Source_IP_First_Channel; //Indicate whether a match has been found in the vector that contains the IP addresses that JOINED a channel
+	bool match_Found_Source_IP_Second_Channel; //Indicate whether a match has been found in the vector that contains the IP addresses that JOINED a channel
+
+	IP_Address *source_ip_address;
+	IP_Address *dest_ip_address;
+
+	 while(1)
+	{
+		if(*TCPmessageCompletelyRcvd == 1) //A TCP message has been received
+		{
+			if(*IRCmsgDetected != 0) //Received TCP message is an IRC message
+			{
+				if((*IRCmsgDetected == 1) || (*IRCmsgDetected == 4)) //Received IRC message is a JOIN or a PRIVMSG
+				{
+					channelName = ""; //Re-initialize channel name to get the new one
+					nextChannelName = ""; //Re-initialize channel name to get the new one
+					match_Found_First_Channel = false; //Re-initialize "match_Found_First_Channel" to false
+					match_Found_Second_Channel = false; //Re-initialize "match_Found_Second_Channel" to false
+					match_Found_Source_IP_First_Channel = false; ////Re-initialize "match_Found_Source_IP" to false
+					match_Found_Source_IP_Second_Channel = false; ////Re-initialize "match_Found_Source_IP" to false
+
+					// This loop is used to retrieve the channel names that have been written
+					// by the hardware into the memory in two "std::string" objects(50 bytes)
+					for(int i=0; i<=49; ++i)
+					{
+						channelName += channel_name[i]; //retrieve the first channel name and store it in the global string variable
+						nextChannelName += next_channel_name[i]; //retrieve the second channel name and store it in the global string variable
+					}
+
+					// Retrieve the source and destination IP address of the received packet
+					source_ip_address = new IP_Address(source_ip[0], source_ip[1], source_ip[2], source_ip[3]);
+					dest_ip_address = new IP_Address(dest_ip[0], dest_ip[1], dest_ip[2], dest_ip[3]);
+
+					if(channelName[0] != '\0') //Ensure that the channel name is not empty
+					{
+						if(!per_channel_stat.empty()) //per_channel_stat vector is not empty
+						{
+							for(unsigned int i=0; i<per_channel_stat.size();++i) //Compare the received channel name to those inside the vector
+							{
+								//if the received channel is already in the vector, then update the statistics of this channel
+								if((per_channel_stat.at(i)->getChannelName() == channelName))
+								{
+									//Indicate that a match has been found for this channel name
+									match_Found_First_Channel = true;
+
+									//Received IRC message was a JOIN message
+									if(*IRCmsgDetected == 1)
+									{
+										per_channel_stat.at(i)->IncNbJoin(1); //Update the number of JOIN for this channel
+										per_channel_stat.at(i)->IncTotalIRCMessages(1); //Update the total number of IRC message for this channel
+
+										//Compare the IP_addresses that joined this channel to the source IP received right now
+										for(unsigned j=0; j<per_channel_stat.at(i)->getIPaddresses().size(); ++j)
+										{
+											//If the received IP address already among the IP addresses that joined the channel
+											if(per_channel_stat.at(i)->getIPaddresses().at(j)->operator ==(*source_ip_address))
+											{
+												match_Found_Source_IP_First_Channel = true;
+												break;
+											}
+										}
+
+										//If the received IP address is not among the IP addresses that joined this channel
+										if(!match_Found_Source_IP_First_Channel)
+											//Add this IP address to the IP addresses that joined this channel
+											per_channel_stat.at(i)->push_back_IP(source_ip_address); //Add this IP address to the IP addresses that joined this channel
+
+
+									}
+									else //Received IRC message was a PRIVMSG message
+									{
+										per_channel_stat.at(i)->IncNbPrivmsg(1); //Update the number of PRIVMSG for this channel
+										per_channel_stat.at(i)->IncTotalIRCMessages(1); //Update the total number of IRC message for this channel
+
+									}
+
+								}
+
+								if(channelName != nextChannelName)
+								{
+									//if the received channel is already in the vector, then update the statistics of this channel
+									if((per_channel_stat.at(i)->getChannelName() == nextChannelName))
+									{
+										//Received IRC message was a JOIN message
+										if(*IRCmsgDetected == 1)
+										{
+											per_channel_stat.at(i)->IncNbJoin(1); //Update the number of JOIN for this channel
+											per_channel_stat.at(i)->IncTotalIRCMessages(1); //Update the total number of IRC message for this channel
+
+											//Compare the IP_addresses that joined this channel to the source IP received right now
+											for(unsigned j=0; j<per_channel_stat.at(i)->getIPaddresses().size(); ++j)
+											{
+												//If the received IP address already among the IP addresses that joined this channel
+												if(per_channel_stat.at(i)->getIPaddresses().at(j)->operator ==(*source_ip_address))
+												{
+													match_Found_Source_IP_Second_Channel = true;
+													break;
+												}
+											}
+
+											//If the received IP address is not among the IP addresses that joined this channel
+											if(!match_Found_Source_IP_Second_Channel)
+												//Add this IP address to the IP addresses that joined this channel
+												per_channel_stat.at(i)->push_back_IP(source_ip_address); //Add this IP address to the IP addresses that joined this channel
+
+										}
+										//ELSE: A PRIVMSG can not be sent to several channels so it is useless to check "nextChannelName" for PRIVMSG
+
+										//Indicate that a match has been found for this channel name
+										match_Found_Second_Channel = true;
+										break;
+									}
+								}
+							}
+
+							if(!match_Found_First_Channel) //if no match has been found for the received channel name in the vector
+							{
+								IRC_Channel_stats *IRC_stats = new IRC_Channel_stats(); //Create new IRC_Channel_stats object
+
+								if(*IRCmsgDetected == 1)
+								{
+									IRC_stats->setchannelName(channelName); //Set the channel name
+									IRC_stats->IncNbJoin(1); //Increment number of received JOIN for this channel name
+									IRC_stats->IncTotalIRCMessages(1); //Increment total number of received IRC messages for this channel name
+									IRC_stats->push_back_IP(source_ip_address); //Add this IP address to the IP addresses that joined this channel
+								}
+								else
+								{
+									IRC_stats->setchannelName(channelName); //Set the channel name
+									IRC_stats->IncNbPrivmsg(1); //Increment number of received PRIVMSG for this channel name
+									IRC_stats->IncTotalIRCMessages(1); //Increment total number of received IRC messages for this channel name
+									IRC_stats->push_back_IP(source_ip_address); //Add this IP address to the IP addresses that joined this channel
+								}
+
+								per_channel_stat.push_back(IRC_stats); //Add new IRC_Channel_stats to vector
+							}
+
+							if(channelName != nextChannelName)
+							{
+								if(!match_Found_Second_Channel)
+								{
+									IRC_Channel_stats *IRC_stats = new IRC_Channel_stats(); //Create new IRC_Channel_stats object
+
+									if(*IRCmsgDetected == 1)
+									{
+										IRC_stats->setchannelName(nextChannelName); //Set the channel name
+										IRC_stats->IncNbJoin(1); //Increment number of received JOIN for this channel name
+										IRC_stats->IncTotalIRCMessages(1); //Increment total number of received IRC messages for this channel name
+										IRC_stats->push_back_IP(source_ip_address); //Add this IP address to the IP addresses that joined this channel
+									}
+									//ELSE: A PRIVMSG can not be sent to several channels so it is useless to check "nextChannelName" for PRIVMSG
+
+									per_channel_stat.push_back(IRC_stats); //Add IRC_Channel_stats to vector
+								}
+							}
+						}
+						else //per_channel_stat vector is empty
+						{
+							IRC_Channel_stats *IRC_stats = new IRC_Channel_stats(); //Create new IRC_Channel_stats object
+
+							if(*IRCmsgDetected == 1) //Received IRC message is a JOIN
+							{
+								IRC_stats->setchannelName(channelName); //Set the channel name
+								IRC_stats->IncNbJoin(1); //Increment number of received JOIN
+								IRC_stats->IncTotalIRCMessages(1); //Increment total number of received IRC messages
+								IRC_stats->push_back_IP(source_ip_address); //Add this IP address to the IP addresses that joined this channel
+							}
+							else //Received IRC message is a PRIVMSG
+							{
+								IRC_stats->setchannelName(channelName); //Set the channel name
+								IRC_stats->IncNbPrivmsg(1); //Increment number of received PRIVMSG
+								IRC_stats->IncTotalIRCMessages(1); //Increment total number of received IRC messages
+								IRC_stats->push_back_IP(source_ip_address); //Add this IP address to the IP addresses that joined this channel
+							}
+
+							per_channel_stat.push_back(IRC_stats); //Add IRC_Channel_stats to vector
+
+							if(channelName != nextChannelName) //Check if a second channel name was specified
+							{
+								if(*IRCmsgDetected == 1) //Received IRC message is a JOIN
+								{
+									IRC_Channel_stats *IRC_stats_nextCh = new IRC_Channel_stats(); //Create new IRC_Channel_stats object
+									IRC_stats_nextCh->setchannelName(nextChannelName); //Set the channel name
+									IRC_stats_nextCh->IncNbJoin(1); //Increment number of received JOIN
+									IRC_stats_nextCh->IncTotalIRCMessages(1); //Increment total number of received IRC messages
+									IRC_stats_nextCh->push_back_IP(source_ip_address); //Add this IP address to the IP addresses that joined this channel
+									per_channel_stat.push_back(IRC_stats_nextCh); //Add IRC_Channel_stats to vector
+								}
+								//ELSE: A PRIVMSG can not be sent to several channels so it is useless to check "nextChannelName" for PRIVMSG
+
+							}
+						}
+					}
+				}
+			}
+
+			//Set TCPmessageCompleteRcvd to 0 and wait for the hardware to indicate that a new TCP message has been received again
+			TCPmessageCompletelyRcvd[0] = 0;
+			displayStat(channelName, nextChannelName); //Display statistics in the terminal
+
+			//This loop is used to display the statistics for each channel
+			for(unsigned int i=0; i<per_channel_stat.size();++i)
+				per_channel_stat.at(i)->displayStat();
+
+			//This loop is used to display all IP addresses that joined a channel
+			for(unsigned int i=0; i<per_channel_stat.size();++i)
+				per_channel_stat.at(i)->display_IP_Per_Channel();
+		}
+	}
+
+	return 0;
+}
+//=================================================================================================
+//						      		End: Main function
+//=================================================================================================

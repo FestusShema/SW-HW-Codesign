@@ -1,0 +1,2478 @@
+Release 13.4 Xflow O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+xflow -wd implementation -p xc5vfx70tff1136-1 -implement xflow.opt system.ngc  
+PMSPEC -- Overriding Xilinx file
+</opt/Xilinx/13.4/ISE_DS/EDK/virtex5/data/virtex5.acd> with local file
+</opt/Xilinx/13.4/ISE_DS/ISE/virtex5/data/virtex5.acd>
+
+Using Flow File:
+/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/fpga
+.flw 
+Using Option File(s): 
+ /home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/xfl
+ow.opt 
+
+Creating Script File ... 
+
+#----------------------------------------------#
+# Starting program ngdbuild
+# ngdbuild -p xc5vfx70tff1136-1 -nt timestamp -bm system.bmm
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/sys
+tem.ngc" -uc system.ucf system.ngd 
+#----------------------------------------------#
+Release 13.4 - ngdbuild O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+</opt/Xilinx/13.4/ISE_DS/EDK/virtex5/data/virtex5.acd> with local file
+</opt/Xilinx/13.4/ISE_DS/ISE/virtex5/data/virtex5.acd>
+
+Command Line: /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -p
+xc5vfx70tff1136-1 -nt timestamp -bm system.bmm
+/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/syst
+em.ngc -uc system.ucf system.ngd
+
+Reading NGO file
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/sys
+tem.ngc" ...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/ppc
+440_0_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/plb
+_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/xps
+_bram_if_cntlr_1_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/xps
+_bram_if_cntlr_1_bram_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/rs2
+32_uart_1_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/ddr
+2_sdram_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/clo
+ck_generator_0_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/jta
+gppc_cntlr_inst_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/pro
+c_sys_reset_0_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/xps
+_intc_0_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/har
+dorb_fpga_0_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/mea
+surtool_0_wrapper.ngc"...
+Applying constraints in
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/ddr
+2_sdram_wrapper.ncf" to module "DDR2_SDRAM"...
+Checking Constraint Associations...
+Applying constraints in
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/har
+dorb_fpga_0_wrapper.ncf" to module "hardorb_fpga_0"...
+WARNING:ConstraintSystem - The Offset constraint <OFFSET = IN 6.000 BEFORE 
+   "hardorb_fpga_0_PHY_rx_clk_pin";>
+   [/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/
+   hardorb_fpga_0_wrapper.ncf(3)], is specified without a duration.  This will
+   result in a lack of hold time checks in timing reports.  If hold time checks
+   are desired a duration value should be specified following the 'VALID'
+   keyword.
+
+Checking Constraint Associations...
+WARNING:NgdBuild:1445 - No net associated with hardorb_fpga_0_PHY_rx_clk_pin
+   from OFFSET constraint <OFFSET = IN 6.000 BEFORE 
+   "hardorb_fpga_0_PHY_rx_clk_pin";>
+   [/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/
+   hardorb_fpga_0_wrapper.ncf(3)]
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "system.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0" TS_sys_clk_pin
+   * 1.5 PHASE 1.666666667 ns HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT1: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT1 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT1" TS_sys_clk_pin
+   * 1.5 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT2: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2" TS_sys_clk_pin
+   * 1.5 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT3: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT3 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT3" TS_sys_clk_pin
+   * 2 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT4: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT4 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT4" TS_sys_clk_pin
+   * 3 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT5: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT5 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT5" TS_sys_clk_pin
+   * 0.75 HIGH 50%>
+
+WARNING:ConstraintSystem - The Offset constraint <OFFSET = IN 6000.000000000 pS
+   BEFORE hardorb_fpga_0_PHY_rx_clk_pin;>, is specified without a duration. 
+   This will result in a lack of hold time checks in timing reports.  If hold
+   time checks are desired a duration value should be specified following the
+   'VALID' keyword.
+
+Done...
+
+Processing BMM file "system.bmm" ...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_bram_if_cntlr_1/xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_
+   ATTACH/I_DBEAT_CONTROL/I_DBEAT_CNTR/STRUCTURAL_A_GEN.I_ADDSUB_GEN[4].FDRE_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u
+   _phy_calib_0/gen_rden[1].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u
+   _phy_calib_0/gen_rden[2].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u
+   _phy_calib_0/gen_rden[3].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u
+   _phy_calib_0/gen_rden[4].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u
+   _phy_calib_0/gen_rden[5].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u
+   _phy_calib_0/gen_rden[6].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u
+   _phy_calib_0/gen_rden[7].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[3].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[2].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[1].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[0].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[0].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[3].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[0].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[2].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[0].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[1].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[0].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[0].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[2].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[3].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[2].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[2].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[2].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[1].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[2].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[0].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[1].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[3].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[1].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[2].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[1].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[1].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[1].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[0].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[0].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[3].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[0].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[2].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[0].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[1].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[0].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[0].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[2].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[3].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[2].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[2].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[2].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[1].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[2].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[0].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_FIFOS[0].GEN_RDDAT
+   A_PORT_ENABLE.URdDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[1].GEN_VIR
+   TEX4_RAM.ramb16_i" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_FIFOS[0].GEN_RDDAT
+   A_PORT_ENABLE.URdDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[0].GEN_VIR
+   TEX4_RAM.ramb16_i" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDAT
+   A_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[1].GEN_VIR
+   TEX4_RAM.ramb16_i" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDAT
+   A_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[0].GEN_VIR
+   TEX4_RAM.ramb16_i" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/BU
+   10' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/BU
+   15' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/BU
+   20' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/BU
+   25' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/BU
+   30' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/BU
+   35' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/BU
+   130' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/BU
+   237' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/BU
+   10' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/BU
+   15' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/BU
+   20' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/BU
+   25' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/BU
+   30' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/BU
+   35' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/BU
+   130' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/BU
+   237' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/COLLISION_SYNC' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.I_BKEND_CS_REG' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_BURST_SUPPORT/RESPONSE_DBEAT_CNTR_I/STRUCTURAL_A_GEN.I_ADDSUB_GEN[7]
+   .FDRE_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_BURST_SUPPORT/CONTROL_DBEAT_CNTR_I/STRUCTURAL_A_GEN.I_ADDSUB_GEN[7].
+   FDRE_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[0].I_FDRSE_BE0
+   to3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[1].I_FDRSE_BE0
+   to3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[2].I_FDRSE_BE0
+   to3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[3].I_FDRSE_BE0
+   to3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[0].I_SIZE_S_H_RE
+   G' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[0].I_SIZE_S_H_
+   REG' has unconnected output pin
+WARNING:NgdBuild:452 - logical net 'N100' has no driver
+WARNING:NgdBuild:452 - logical net 'N101' has no driver
+WARNING:NgdBuild:452 - logical net 'N102' has no driver
+WARNING:NgdBuild:452 - logical net 'N103' has no driver
+WARNING:NgdBuild:452 - logical net 'N104' has no driver
+WARNING:NgdBuild:452 - logical net 'N105' has no driver
+WARNING:NgdBuild:452 - logical net 'N106' has no driver
+WARNING:NgdBuild:452 - logical net 'N107' has no driver
+WARNING:NgdBuild:452 - logical net 'N108' has no driver
+WARNING:NgdBuild:452 - logical net 'N109' has no driver
+WARNING:NgdBuild:452 - logical net 'N110' has no driver
+WARNING:NgdBuild:452 - logical net 'N111' has no driver
+WARNING:NgdBuild:452 - logical net 'N112' has no driver
+WARNING:NgdBuild:452 - logical net 'N113' has no driver
+WARNING:NgdBuild:452 - logical net 'N114' has no driver
+WARNING:NgdBuild:452 - logical net 'N115' has no driver
+WARNING:NgdBuild:452 - logical net 'N116' has no driver
+WARNING:NgdBuild:452 - logical net 'N117' has no driver
+WARNING:NgdBuild:452 - logical net 'N118' has no driver
+WARNING:NgdBuild:452 - logical net 'N119' has no driver
+WARNING:NgdBuild:452 - logical net 'N120' has no driver
+WARNING:NgdBuild:452 - logical net 'N121' has no driver
+WARNING:NgdBuild:452 - logical net 'N122' has no driver
+WARNING:NgdBuild:452 - logical net 'N123' has no driver
+WARNING:NgdBuild:452 - logical net 'N124' has no driver
+WARNING:NgdBuild:452 - logical net 'N125' has no driver
+WARNING:NgdBuild:452 - logical net 'N126' has no driver
+WARNING:NgdBuild:452 - logical net 'N127' has no driver
+WARNING:NgdBuild:452 - logical net 'N128' has no driver
+WARNING:NgdBuild:452 - logical net 'N129' has no driver
+WARNING:NgdBuild:452 - logical net 'N130' has no driver
+WARNING:NgdBuild:452 - logical net 'N131' has no driver
+WARNING:NgdBuild:452 - logical net 'N132' has no driver
+WARNING:NgdBuild:452 - logical net 'N133' has no driver
+WARNING:NgdBuild:452 - logical net 'N134' has no driver
+WARNING:NgdBuild:452 - logical net 'N135' has no driver
+WARNING:NgdBuild:452 - logical net 'N136' has no driver
+WARNING:NgdBuild:452 - logical net 'N137' has no driver
+WARNING:NgdBuild:452 - logical net 'N138' has no driver
+WARNING:NgdBuild:452 - logical net 'N139' has no driver
+WARNING:NgdBuild:452 - logical net 'N140' has no driver
+WARNING:NgdBuild:452 - logical net 'N141' has no driver
+WARNING:NgdBuild:452 - logical net 'N142' has no driver
+WARNING:NgdBuild:452 - logical net 'N143' has no driver
+WARNING:NgdBuild:452 - logical net 'N144' has no driver
+WARNING:NgdBuild:452 - logical net 'N145' has no driver
+WARNING:NgdBuild:452 - logical net 'N146' has no driver
+WARNING:NgdBuild:452 - logical net 'N147' has no driver
+WARNING:NgdBuild:452 - logical net 'N148' has no driver
+WARNING:NgdBuild:452 - logical net 'N149' has no driver
+WARNING:NgdBuild:452 - logical net 'N150' has no driver
+WARNING:NgdBuild:452 - logical net 'N151' has no driver
+WARNING:NgdBuild:452 - logical net 'N152' has no driver
+WARNING:NgdBuild:452 - logical net 'N153' has no driver
+WARNING:NgdBuild:452 - logical net 'N154' has no driver
+WARNING:NgdBuild:452 - logical net 'N155' has no driver
+WARNING:NgdBuild:452 - logical net 'N156' has no driver
+WARNING:NgdBuild:452 - logical net 'N157' has no driver
+WARNING:NgdBuild:452 - logical net 'N158' has no driver
+WARNING:NgdBuild:452 - logical net 'N159' has no driver
+WARNING:NgdBuild:452 - logical net 'N160' has no driver
+WARNING:NgdBuild:452 - logical net 'N161' has no driver
+WARNING:NgdBuild:452 - logical net 'N162' has no driver
+WARNING:NgdBuild:452 - logical net 'N163' has no driver
+WARNING:NgdBuild:452 - logical net 'N84' has no driver
+WARNING:NgdBuild:452 - logical net 'N85' has no driver
+WARNING:NgdBuild:452 - logical net 'N86' has no driver
+WARNING:NgdBuild:452 - logical net 'N87' has no driver
+WARNING:NgdBuild:452 - logical net 'N88' has no driver
+WARNING:NgdBuild:452 - logical net 'N89' has no driver
+WARNING:NgdBuild:452 - logical net 'N90' has no driver
+WARNING:NgdBuild:452 - logical net 'N91' has no driver
+WARNING:NgdBuild:452 - logical net 'N92' has no driver
+WARNING:NgdBuild:452 - logical net 'N93' has no driver
+WARNING:NgdBuild:452 - logical net 'N94' has no driver
+WARNING:NgdBuild:452 - logical net 'N95' has no driver
+WARNING:NgdBuild:452 - logical net 'N96' has no driver
+WARNING:NgdBuild:452 - logical net 'N97' has no driver
+WARNING:NgdBuild:452 - logical net 'N98' has no driver
+WARNING:NgdBuild:452 - logical net 'N99' has no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings: 145
+
+Writing NGD file "system.ngd" ...
+Total REAL time to NGDBUILD completion:  38 sec
+Total CPU time to NGDBUILD completion:   38 sec
+
+Writing NGDBUILD log file "system.bld"...
+
+NGDBUILD done.
+
+
+
+#----------------------------------------------#
+# Starting program map
+# map -o system_map.ncd -w -pr b -ol high -timing -detail system.ngd system.pcf 
+#----------------------------------------------#
+Release 13.4 - Map O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+</opt/Xilinx/13.4/ISE_DS/EDK/data/Xdh_PrimTypeLib.xda> with local file
+</opt/Xilinx/13.4/ISE_DS/ISE/data/Xdh_PrimTypeLib.xda>
+Using target part "5vfx70tff1136-1".
+Mapping design into LUTs...
+WARNING:MapLib:701 - Signal hardorb_fpga_0_PHY_col_pin connected to top level
+   port hardorb_fpga_0_PHY_col_pin has been removed.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=2000 pS" on net
+   "DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_FIFOS[0
+   ].GEN_RDDATA_PORT_ENABLE.URdDataFifo/ConsObjPtr<3>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=2000 pS" on net
+   "DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_FIFOS[0
+   ].GEN_RDDATA_PORT_ENABLE.URdDataFifo/ConsObjPtr<2>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=2000 pS" on net
+   "DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_FIFOS[0
+   ].GEN_RDDATA_PORT_ENABLE.URdDataFifo/ConsObjPtr<0>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=2000 pS" on net
+   "DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_FIFOS[0
+   ].GEN_RDDATA_PORT_ENABLE.URdDataFifo/ConsObjPtr<5>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=2000 pS" on net
+   "DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_FIFOS[0
+   ].GEN_RDDATA_PORT_ENABLE.URdDataFifo/ConsObjPtr<1>" has been discarded,
+   because the net was optimized out of the design.
+WARNING:MapLib:39 - The timing specification "MAXDELAY=2000 pS" on net
+   "DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_FIFOS[0
+   ].GEN_RDDATA_PORT_ENABLE.URdDataFifo/ConsObjPtr<4>" has been discarded,
+   because the net was optimized out of the design.
+Writing file system_map.ngm...
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_0
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_0_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_0
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_0_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_1
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_1_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_1
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_1_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_10
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_10_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_10
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_10_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_11
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_11_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_11
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_11_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_12
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_12_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_12
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_12_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_13
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_13_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_13
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_13_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_14
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_14_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_14
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_14_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_15
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_15_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_15
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_15_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_16
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_16_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_16
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_16_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_17
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_17_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_17
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_17_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_18
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_18_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_18
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_18_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_19
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_19_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_19
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_19_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_2
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_2_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_2
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_2_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_20
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_20_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_20
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_20_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_21
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_21_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_21
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_21_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_22
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_22_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_22
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_22_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_23
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_23_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_23
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_23_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_24
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_24_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_24
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_24_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_25
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_25_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_25
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_25_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_26
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_26_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_26
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_26_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_27
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_27_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_27
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_27_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_28
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_28_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_28
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_28_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_29
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_29_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_29
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_29_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_3
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_3_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_3
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_3_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_30
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_30_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_30
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_30_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_31
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_31_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_31
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_31_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_32
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_32_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_32
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_32_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_33
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_33_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_33
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_33_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_34
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_34_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_34
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_34_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_35
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_35_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_35
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_35_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_36
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_36_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_36
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_36_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_37
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_37_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_37
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_37_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_38
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_38_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_38
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_38_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_39
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_39_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_39
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_39_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_4
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_4_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_4
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_4_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_40
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_40_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_40
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_40_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_41
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_41_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_41
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_41_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_42
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_42_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_42
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_42_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_43
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_43_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_43
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_43_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_44
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_44_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_44
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_44_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_45
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_45_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_45
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_45_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_46
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_46_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_46
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_46_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_47
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_47_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_47
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_47_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_48
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_48_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_48
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_48_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_49
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_49_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_49
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_49_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_5
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_5_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_5
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_5_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_50
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_50_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_50
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_50_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_51
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_51_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_51
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_51_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_52
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_52_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_52
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_52_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_53
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_53_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_53
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_53_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_54
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_54_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_54
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_54_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_55
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_55_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_55
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_55_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_56
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_56_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_56
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_56_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_57
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_57_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_57
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_57_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_58
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_58_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_58
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_58_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_59
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_59_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_59
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_59_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_6
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_6_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_6
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_6_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_60
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_60_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_60
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_60_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_61
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_61_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_61
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_61_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_62
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_62_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_62
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_62_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_63
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_63_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_63
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_63_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_7
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_7_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_7
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_7_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_8
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_8_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_8
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_8_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_9
+   of frag REGCLKAU connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_9_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_9
+   of frag REGCLKAL connected to power/ground net
+   xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_9_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UC
+   mdFifo/memory0/GEN_SAME_WIDTH.mem0/Mram_mem
+   of frag REGCLKAU connected to power/ground net
+   DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UC
+   mdFifo/memory0/GEN_SAME_WIDTH.mem0/Mram_mem_REGCLKAU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UC
+   mdFifo/memory0/GEN_SAME_WIDTH.mem0/Mram_mem
+   of frag REGCLKAL connected to power/ground net
+   DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UC
+   mdFifo/memory0/GEN_SAME_WIDTH.mem0/Mram_mem_REGCLKAL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UC
+   mdFifo/memory0/GEN_SAME_WIDTH.mem0/Mram_mem
+   of frag REGCLKBU connected to power/ground net
+   DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UC
+   mdFifo/memory0/GEN_SAME_WIDTH.mem0/Mram_mem_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UC
+   mdFifo/memory0/GEN_SAME_WIDTH.mem0/Mram_mem
+   of frag REGCLKBL connected to power/ground net
+   DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIFOS[0].UC
+   mdFifo/memory0/GEN_SAME_WIDTH.mem0/Mram_mem_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBU connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u
+   _ramb36/U_RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBL connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u
+   _ramb36/U_RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].
+   u_ramb36/U_RAMB36
+   of frag REGCLKBU connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].
+   u_ramb36/U_RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].
+   u_ramb36/U_RAMB36
+   of frag REGCLKBL connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].
+   u_ramb36/U_RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[11].
+   u_ramb36/U_RAMB36
+   of frag REGCLKBU connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[11].
+   u_ramb36/U_RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[11].
+   u_ramb36/U_RAMB36
+   of frag REGCLKBL connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[11].
+   u_ramb36/U_RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[12].
+   u_ramb36/U_RAMB36
+   of frag REGCLKBU connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[12].
+   u_ramb36/U_RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[12].
+   u_ramb36/U_RAMB36
+   of frag REGCLKBL connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[12].
+   u_ramb36/U_RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[13].
+   u_ramb36/U_RAMB36
+   of frag REGCLKBU connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[13].
+   u_ramb36/U_RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[13].
+   u_ramb36/U_RAMB36
+   of frag REGCLKBL connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[13].
+   u_ramb36/U_RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBU connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u
+   _ramb36/U_RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBL connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u
+   _ramb36/U_RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBU connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u
+   _ramb36/U_RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBL connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u
+   _ramb36/U_RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBU connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u
+   _ramb36/U_RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBL connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u
+   _ramb36/U_RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBU connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u
+   _ramb36/U_RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBL connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u
+   _ramb36/U_RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBU connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u
+   _ramb36/U_RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBL connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u
+   _ramb36/U_RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBU connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u
+   _ramb36/U_RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBL connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u
+   _ramb36/U_RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBU connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u
+   _ramb36/U_RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBL connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u
+   _ramb36/U_RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBU connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u
+   _ramb36/U_RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBL connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u
+   _ramb36/U_RAMB36_REGCLKBL_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBU connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u
+   _ramb36/U_RAMB36_REGCLKBU_tiesig
+WARNING:Pack:2874 - Trimming timing constraints from pin
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u
+   _ramb36/U_RAMB36
+   of frag REGCLKBL connected to power/ground net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/ila_comp/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM
+   /I_V5.U_CS_BRAM_CASCADE_V5/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u
+   _ramb36/U_RAMB36_REGCLKBL_tiesig
+Running directed packing...
+WARNING:Pack:2515 - The LUT-1 inverter
+   "hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/Rst_inv1_INV_0" failed to join
+   the OLOGIC comp matched to output buffer "hardorb_fpga_0_PHY_rst_n_pin_OBUF".
+    This may result in suboptimal timing.  The LUT-1 inverter
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/Rst_inv1_INV_0 drives multiple
+   loads.
+Running delay-based LUT packing...
+Updating timing models...
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 53 secs 
+Total CPU  time at the beginning of Placer: 51 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:17265b7c) REAL time: 58 secs 
+
+Phase 2.7  Design Feasibility Check
+WARNING:Place:838 - An IO Bus with more than one IO standard is found.
+   Components associated with this bus are as follows: 
+   	 Comp: hardorb_fpga_0_leds_GPIO_IO_pin<0>   IOSTANDARD = LVCMOS25
+   	 Comp: hardorb_fpga_0_leds_GPIO_IO_pin<1>   IOSTANDARD = LVCMOS25
+   	 Comp: hardorb_fpga_0_leds_GPIO_IO_pin<2>   IOSTANDARD = LVCMOS25
+   	 Comp: hardorb_fpga_0_leds_GPIO_IO_pin<3>   IOSTANDARD = LVCMOS18
+   	 Comp: hardorb_fpga_0_leds_GPIO_IO_pin<4>   IOSTANDARD = LVCMOS25
+   	 Comp: hardorb_fpga_0_leds_GPIO_IO_pin<5>   IOSTANDARD = LVCMOS18
+   	 Comp: hardorb_fpga_0_leds_GPIO_IO_pin<6>   IOSTANDARD = LVCMOS18
+   	 Comp: hardorb_fpga_0_leds_GPIO_IO_pin<7>   IOSTANDARD = LVCMOS18
+
+
+Phase 2.7  Design Feasibility Check (Checksum:17265b7c) REAL time: 59 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:4fb4332) REAL time: 59 secs 
+
+Phase 4.37  Local Placement Optimization
+Phase 4.37  Local Placement Optimization (Checksum:f6232393) REAL time: 59 secs 
+
+Phase 5.33  Local Placement Optimization
+Phase 5.33  Local Placement Optimization (Checksum:f6232393) REAL time: 1 mins 47 secs 
+
+Phase 6.32  Local Placement Optimization
+Phase 6.32  Local Placement Optimization (Checksum:f6232393) REAL time: 1 mins 47 secs 
+
+Phase 7.2  Initial Clock and IO Placement
+
+
+
+There are 16 clock regions on the target FPGA device:
+|------------------------------------------|------------------------------------------|
+| CLOCKREGION_X0Y7:                        | CLOCKREGION_X1Y7:                        |
+|   2 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
+|   4 Regional Clock Spines, 0 in use      |   4 Regional Clock Spines, 0 in use      |
+|   4 edge BUFIOs available, 0 in use      |   4 edge BUFIOs available, 0 in use      |
+|   4 center BUFIOs available, 0 in use    |   0 center BUFIOs available, 0 in use    |
+|                                          |                                          |
+|------------------------------------------|------------------------------------------|
+| CLOCKREGION_X0Y6:                        | CLOCKREGION_X1Y6:                        |
+|   2 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
+|   4 Regional Clock Spines, 0 in use      |   4 Regional Clock Spines, 0 in use      |
+|   4 edge BUFIOs available, 3 in use      |   4 edge BUFIOs available, 0 in use      |
+|   0 center BUFIOs available, 0 in use    |   0 center BUFIOs available, 0 in use    |
+|                                          |                                          |
+|------------------------------------------|------------------------------------------|
+| CLOCKREGION_X0Y5:                        | CLOCKREGION_X1Y5:                        |
+|   2 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
+|   4 Regional Clock Spines, 0 in use      |   4 Regional Clock Spines, 0 in use      |
+|   4 edge BUFIOs available, 0 in use      |   4 edge BUFIOs available, 0 in use      |
+|   2 center BUFIOs available, 0 in use    |   0 center BUFIOs available, 0 in use    |
+|                                          |                                          |
+|------------------------------------------|------------------------------------------|
+| CLOCKREGION_X0Y4:                        | CLOCKREGION_X1Y4:                        |
+|   2 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
+|   4 Regional Clock Spines, 0 in use      |   4 Regional Clock Spines, 0 in use      |
+|   4 edge BUFIOs available, 0 in use      |   4 edge BUFIOs available, 0 in use      |
+|   2 center BUFIOs available, 0 in use    |   0 center BUFIOs available, 0 in use    |
+|                                          |                                          |
+|------------------------------------------|------------------------------------------|
+| CLOCKREGION_X0Y3:                        | CLOCKREGION_X1Y3:                        |
+|   2 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
+|   4 Regional Clock Spines, 0 in use      |   4 Regional Clock Spines, 0 in use      |
+|   4 edge BUFIOs available, 0 in use      |   4 edge BUFIOs available, 0 in use      |
+|   2 center BUFIOs available, 0 in use    |   0 center BUFIOs available, 0 in use    |
+|                                          |                                          |
+|------------------------------------------|------------------------------------------|
+| CLOCKREGION_X0Y2:                        | CLOCKREGION_X1Y2:                        |
+|   2 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
+|   4 Regional Clock Spines, 0 in use      |   4 Regional Clock Spines, 0 in use      |
+|   4 edge BUFIOs available, 3 in use      |   4 edge BUFIOs available, 0 in use      |
+|   2 center BUFIOs available, 0 in use    |   0 center BUFIOs available, 0 in use    |
+|                                          |                                          |
+|------------------------------------------|------------------------------------------|
+| CLOCKREGION_X0Y1:                        | CLOCKREGION_X1Y1:                        |
+|   2 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
+|   4 Regional Clock Spines, 0 in use      |   4 Regional Clock Spines, 0 in use      |
+|   4 edge BUFIOs available, 2 in use      |   4 edge BUFIOs available, 0 in use      |
+|   0 center BUFIOs available, 0 in use    |   0 center BUFIOs available, 0 in use    |
+|                                          |                                          |
+|------------------------------------------|------------------------------------------|
+| CLOCKREGION_X0Y0:                        | CLOCKREGION_X1Y0:                        |
+|   2 BUFRs available, 0 in use            |   2 BUFRs available, 0 in use            |
+|   4 Regional Clock Spines, 0 in use      |   4 Regional Clock Spines, 0 in use      |
+|   4 edge BUFIOs available, 0 in use      |   4 edge BUFIOs available, 0 in use      |
+|   4 center BUFIOs available, 0 in use    |   0 center BUFIOs available, 0 in use    |
+|                                          |                                          |
+|------------------------------------------|------------------------------------------|
+
+
+Clock-Region: <CLOCKREGION_X0Y1>
+  key resource utilizations (used/available): edge-bufios - 2/4; bufrs - 0/2; regional-clock-spines - 0/4
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|       |    clock    | BRAM |     |    |        |        |       |       |       |      |      |     |      |
+|       |    region   | FIFO | DCM | GT | ILOGIC | OLOGIC |   FF  |  LUTM |  LUTL | MULT | EMAC | PPC | PCIe | <- (Types of Resources in Clock Region)
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       | Upper Region|  24  |  2  |  0 |   60   |   60   |  3200 |  1600 |  4800 |   0  |   0  |  0  |   0  | <- Available resources in the upper region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       |CurrentRegion|  24  |  4  |  0 |   40   |   40   |  3200 |  1600 |  4800 |   0  |   0  |  0  |   0  | <- Available resources in the current region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       | Lower Region|  24  |  0  |  0 |   80   |   80   |  3200 |  1600 |  4800 |   0  |   0  |  0  |   0  | <- Available resources in the lower region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| clock |    region   |                                                                                      -----------------------------------------------
+|  type |  expansion  |                                                                                      | <IO/Regional clock Net Name>
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| BUFIO |             |   0  |  0  |  0 |    9   |    0   |     0 |     0 |     0 |   0  |   0  |  0  |   0  | "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<1>"
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| BUFIO |             |   0  |  0  |  0 |    9   |    0   |     0 |     0 |     0 |   0  |   0  |  0  |   0  | "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<2>"
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X0Y2>
+  key resource utilizations (used/available): edge-bufios - 3/4; center-bufios - 0/2; bufrs - 0/2; regional-clock-spines - 0/4
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|       |    clock    | BRAM |     |    |        |        |       |       |       |      |      |     |      |
+|       |    region   | FIFO | DCM | GT | ILOGIC | OLOGIC |   FF  |  LUTM |  LUTL | MULT | EMAC | PPC | PCIe | <- (Types of Resources in Clock Region)
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       | Upper Region|   8  |  0  |  0 |   60   |   60   |  1280 |   640 |  1920 |   0  |   0  |  1  |   0  | <- Available resources in the upper region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       |CurrentRegion|  24  |  2  |  0 |   60   |   60   |  3200 |  1600 |  4800 |   0  |   0  |  0  |   0  | <- Available resources in the current region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       | Lower Region|  24  |  4  |  0 |   40   |   40   |  3200 |  1600 |  4800 |   0  |   0  |  0  |   0  | <- Available resources in the lower region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| clock |    region   |                                                                                      -----------------------------------------------
+|  type |  expansion  |                                                                                      | <IO/Regional clock Net Name>
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| BUFIO |             |   0  |  0  |  0 |    9   |    0   |     0 |     0 |     0 |   0  |   0  |  0  |   0  | "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<0>"
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| BUFIO |             |   0  |  0  |  0 |    9   |    0   |     0 |     0 |     0 |   0  |   0  |  0  |   0  | "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<4>"
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| BUFIO |             |   0  |  0  |  0 |    9   |    0   |     0 |     0 |     0 |   0  |   0  |  0  |   0  | "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<3>"
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+
+
+Clock-Region: <CLOCKREGION_X0Y6>
+  key resource utilizations (used/available): edge-bufios - 3/4; bufrs - 0/2; regional-clock-spines - 0/4
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|       |    clock    | BRAM |     |    |        |        |       |       |       |      |      |     |      |
+|       |    region   | FIFO | DCM | GT | ILOGIC | OLOGIC |   FF  |  LUTM |  LUTL | MULT | EMAC | PPC | PCIe | <- (Types of Resources in Clock Region)
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       | Upper Region|  24  |  0  |  0 |   80   |   80   |  3200 |  1600 |  4800 |   0  |   0  |  0  |   0  | <- Available resources in the upper region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       |CurrentRegion|  24  |  4  |  0 |   40   |   40   |  3200 |  1600 |  4800 |   0  |   0  |  0  |   0  | <- Available resources in the current region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+|       | Lower Region|  24  |  2  |  0 |   60   |   60   |  3200 |  1600 |  4800 |   0  |   0  |  0  |   0  | <- Available resources in the lower region
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| clock |    region   |                                                                                      -----------------------------------------------
+|  type |  expansion  |                                                                                      | <IO/Regional clock Net Name>
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| BUFIO |             |   0  |  0  |  0 |    9   |    0   |     0 |     0 |     0 |   0  |   0  |  0  |   0  | "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<7>"
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| BUFIO |             |   0  |  0  |  0 |    9   |    0   |     0 |     0 |     0 |   0  |   0  |  0  |   0  | "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<5>"
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+| BUFIO |             |   0  |  0  |  0 |    9   |    0   |     0 |     0 |     0 |   0  |   0  |  0  |   0  | "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<6>"
+|-------|-------------|------|-----|----|--------|--------|-------|-------|-------|------|------|-----|------|----------------------------------------------
+
+
+
+
+######################################################################################
+# REGIONAL CLOCKING RESOURCE DISTRIBUTION UCF REPORT:
+#
+# Number of Regional Clocking Regions in the device: 16  (4 clock spines in each)
+# Number of Regional Clock Networks used in this design: 8 (each network can be
+# composed of up to 3 clock spines and cover up to 3 regional clock regions)
+# 
+######################################################################################
+
+# IO-Clock "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<7>" driven by
+"BUFIO_X0Y27"
+INST "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[7].u_iob_dqs/u_bufio_dqs" LOC =
+"BUFIO_X0Y27" ;
+NET "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<7>" TNM_NET =
+"TN_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<7>" ;
+TIMEGRP "TN_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<7>" AREA_GROUP =
+"CLKAG_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<7>" ;
+AREA_GROUP "CLKAG_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<7>" RANGE =
+CLOCKREGION_X0Y6;
+
+
+# IO-Clock "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<0>" driven by
+"BUFIO_X0Y9"
+INST "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[0].u_iob_dqs/u_bufio_dqs" LOC =
+"BUFIO_X0Y9" ;
+NET "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<0>" TNM_NET =
+"TN_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<0>" ;
+TIMEGRP "TN_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<0>" AREA_GROUP =
+"CLKAG_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<0>" ;
+AREA_GROUP "CLKAG_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<0>" RANGE =
+CLOCKREGION_X0Y2;
+
+
+# IO-Clock "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<4>" driven by
+"BUFIO_X0Y11"
+INST "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[4].u_iob_dqs/u_bufio_dqs" LOC =
+"BUFIO_X0Y11" ;
+NET "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<4>" TNM_NET =
+"TN_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<4>" ;
+TIMEGRP "TN_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<4>" AREA_GROUP =
+"CLKAG_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<4>" ;
+AREA_GROUP "CLKAG_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<4>" RANGE =
+CLOCKREGION_X0Y2;
+
+
+# IO-Clock "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<1>" driven by
+"BUFIO_X0Y4"
+INST "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[1].u_iob_dqs/u_bufio_dqs" LOC =
+"BUFIO_X0Y4" ;
+NET "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<1>" TNM_NET =
+"TN_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<1>" ;
+TIMEGRP "TN_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<1>" AREA_GROUP =
+"CLKAG_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<1>" ;
+AREA_GROUP "CLKAG_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<1>" RANGE =
+CLOCKREGION_X0Y1;
+
+
+# IO-Clock "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<5>" driven by
+"BUFIO_X0Y25"
+INST "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[5].u_iob_dqs/u_bufio_dqs" LOC =
+"BUFIO_X0Y25" ;
+NET "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<5>" TNM_NET =
+"TN_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<5>" ;
+TIMEGRP "TN_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<5>" AREA_GROUP =
+"CLKAG_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<5>" ;
+AREA_GROUP "CLKAG_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<5>" RANGE =
+CLOCKREGION_X0Y6;
+
+
+# IO-Clock "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<2>" driven by
+"BUFIO_X0Y7"
+INST "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[2].u_iob_dqs/u_bufio_dqs" LOC =
+"BUFIO_X0Y7" ;
+NET "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<2>" TNM_NET =
+"TN_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<2>" ;
+TIMEGRP "TN_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<2>" AREA_GROUP =
+"CLKAG_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<2>" ;
+AREA_GROUP "CLKAG_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<2>" RANGE =
+CLOCKREGION_X0Y1;
+
+
+# IO-Clock "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<6>" driven by
+"BUFIO_X0Y26"
+INST "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[6].u_iob_dqs/u_bufio_dqs" LOC =
+"BUFIO_X0Y26" ;
+NET "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<6>" TNM_NET =
+"TN_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<6>" ;
+TIMEGRP "TN_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<6>" AREA_GROUP =
+"CLKAG_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<6>" ;
+AREA_GROUP "CLKAG_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<6>" RANGE =
+CLOCKREGION_X0Y6;
+
+
+# IO-Clock "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<3>" driven by
+"BUFIO_X0Y10"
+INST "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/gen_dqs[3].u_iob_dqs/u_bufio_dqs" LOC =
+"BUFIO_X0Y10" ;
+NET "DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<3>" TNM_NET =
+"TN_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<3>" ;
+TIMEGRP "TN_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<3>" AREA_GROUP =
+"CLKAG_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<3>" ;
+AREA_GROUP "CLKAG_DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/delayed_dqs<3>" RANGE =
+CLOCKREGION_X0Y2;
+
+
+Phase 7.2  Initial Clock and IO Placement (Checksum:4f99156) REAL time: 1 mins 50 secs 
+
+Phase 8.36  Local Placement Optimization
+Phase 8.36  Local Placement Optimization (Checksum:4f99156) REAL time: 1 mins 50 secs 
+
+Phase 9.30  Global Clock Region Assignment
+Phase 9.30  Global Clock Region Assignment (Checksum:4f99156) REAL time: 1 mins 50 secs 
+
+Phase 10.3  Local Placement Optimization
+Phase 10.3  Local Placement Optimization (Checksum:4f99156) REAL time: 1 mins 50 secs 
+
+Phase 11.5  Local Placement Optimization
+Phase 11.5  Local Placement Optimization (Checksum:4f99156) REAL time: 1 mins 51 secs 
+
+Phase 12.8  Global Placement
+..............................
+.......................................................................................................................................
+...............
+.............................................................................
+...........................................................................................................................
+.........................................................................................................................................
+..............................................................................................................................................................
+.................................................................
+Phase 12.8  Global Placement (Checksum:f7ad4ca3) REAL time: 3 mins 32 secs 
+
+Phase 13.29  Local Placement Optimization
+Phase 13.29  Local Placement Optimization (Checksum:f7ad4ca3) REAL time: 3 mins 32 secs 
+
+Phase 14.5  Local Placement Optimization
+Phase 14.5  Local Placement Optimization (Checksum:f7ad4ca3) REAL time: 3 mins 34 secs 
+
+Phase 15.18  Placement Optimization
+Phase 15.18  Placement Optimization (Checksum:fc4c841a) REAL time: 5 mins 42 secs 
+
+Phase 16.5  Local Placement Optimization
+Phase 16.5  Local Placement Optimization (Checksum:fc4c841a) REAL time: 5 mins 43 secs 
+
+Phase 17.34  Placement Validation
+Phase 17.34  Placement Validation (Checksum:fc4c841a) REAL time: 5 mins 44 secs 
+
+Total REAL time to Placer completion: 5 mins 45 secs 
+Total CPU  time to Placer completion: 5 mins 42 secs 
+Running post-placement packing...
+Writing output files...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:  182
+Slice Logic Utilization:
+  Number of Slice Registers:                10,323 out of  44,800   23%
+    Number used as Flip Flops:              10,269
+    Number used as Latches:                     48
+    Number used as Latch-thrus:                  6
+  Number of Slice LUTs:                     18,349 out of  44,800   40%
+    Number used as logic:                   17,911 out of  44,800   39%
+      Number using O6 output only:          16,376
+      Number using O5 output only:           1,026
+      Number using O5 and O6:                  509
+    Number used as Memory:                     345 out of  13,120    2%
+      Number used as Dual Port RAM:            132
+        Number using O6 output only:            12
+        Number using O5 output only:            24
+        Number using O5 and O6:                 96
+      Number used as Single Port RAM:            4
+        Number using O6 output only:             4
+      Number used as Shift Register:           209
+        Number using O6 output only:           208
+        Number using O5 and O6:                  1
+    Number used as exclusive route-thru:        93
+  Number of route-thrus:                     1,140
+    Number using O6 output only:             1,116
+    Number using O5 output only:                23
+    Number using O5 and O6:                      1
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 6,670 out of  11,200   59%
+  Number of LUT Flip Flop pairs used:       21,169
+    Number with an unused Flip Flop:        10,846 out of  21,169   51%
+    Number with an unused LUT:               2,820 out of  21,169   13%
+    Number of fully used LUT-FF pairs:       7,503 out of  21,169   35%
+    Number of unique control sets:           1,086
+    Number of slice register sites lost
+      to control set restrictions:           2,429 out of  44,800    5%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                       143 out of     640   22%
+    Number of LOCed IOBs:                      143 out of     143  100%
+    IOB Flip Flops:                            285
+
+Specific Feature Utilization:
+  Number of BlockRAM/FIFO:                     101 out of     148   68%
+    Number using BlockRAM only:                101
+    Total primitives used:
+      Number of 36k BlockRAM used:             100
+      Number of 18k BlockRAM used:               2
+    Total Memory used (KB):                  3,636 out of   5,328   68%
+  Number of BUFG/BUFGCTRLs:                     10 out of      32   31%
+    Number used as BUFGs:                       10
+  Number of IDELAYCTRLs:                         3 out of      22   13%
+  Number of BSCANs:                              1 out of       4   25%
+  Number of BUFIOs:                              8 out of      80   10%
+  Number of PLL_ADVs:                            1 out of       6   16%
+  Number of PPC440s:                             1 out of       1  100%
+
+  Number of RPM macros:            9
+Average Fanout of Non-Clock Nets:                4.65
+
+Peak Memory Usage:  1373 MB
+Total REAL time to MAP completion:  6 mins 
+Total CPU time to MAP completion:   5 mins 57 secs 
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.
+
+
+
+#----------------------------------------------#
+# Starting program par
+# par -w -ol high system_map.ncd system.ncd system.pcf 
+#----------------------------------------------#
+Release 13.4 - par O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file </opt/Xilinx/13.4/ISE_DS/EDK/data/parBmgr.acd> with local file
+</opt/Xilinx/13.4/ISE_DS/ISE/data/parBmgr.acd>
+
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '5vfx70t.nph' in environment
+/opt/Xilinx/13.4/ISE_DS/ISE/:/opt/Xilinx/13.4/ISE_DS/EDK.
+   "system" is an NCD, version 3.2, device xc5vfx70t, package ff1136, speed -1
+WARNING:ConstraintSystem - The Offset constraint <OFFSET = IN 6 ns BEFORE COMP "hardorb_fpga_0_PHY_rx_clk_pin";>
+   [system.pcf(22655)], is specified without a duration.  This will result in a lack of hold time checks in timing
+   reports.  If hold time checks are desired a duration value should be specified following the 'VALID' keyword.
+
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.73 2012-01-07".
+
+
+
+Device Utilization Summary:
+
+   Number of BSCANs                          1 out of 4      25%
+   Number of BUFGs                          10 out of 32     31%
+   Number of BUFIOs                          8 out of 80     10%
+   Number of IDELAYCTRLs                     3 out of 22     13%
+      Number of LOCed IDELAYCTRLs            3 out of 3     100%
+
+   Number of ILOGICs                        83 out of 800    10%
+      Number of LOCed ILOGICs                8 out of 83      9%
+
+   Number of External IOBs                 143 out of 640    22%
+      Number of LOCed IOBs                 143 out of 143   100%
+
+   Number of IODELAYs                       80 out of 800    10%
+      Number of LOCed IODELAYs               8 out of 80     10%
+
+   Number of JTAGPPCs                        1 out of 1     100%
+   Number of OLOGICs                       121 out of 800    15%
+   Number of PLL_ADVs                        1 out of 6      16%
+   Number of PPC440s                         1 out of 1     100%
+   Number of RAMB18X2s                       1 out of 148     1%
+   Number of RAMB36_EXPs                   100 out of 148    67%
+   Number of Slices                       6670 out of 11200  59%
+   Number of Slice Registers             10323 out of 44800  22%
+      Number used as Flip Flops          10269
+      Number used as Latches                48
+      Number used as LatchThrus              6
+
+   Number of Slice LUTS                  18349 out of 44800  40%
+   Number of Slice LUT-Flip Flop pairs   21169 out of 44800  47%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please
+   consult the Xilinx Command Line Tools User Guide for information on generating a TSI report.
+Starting initial Timing Analysis.  REAL time: 24 secs 
+Finished initial Timing Analysis.  REAL time: 24 secs 
+
+WARNING:Par:288 - The signal xps_bram_if_cntlr_1_port_BRAM_Addr<31> has no load.  PAR will not attempt to route this
+   signal.
+WARNING:Par:288 - The signal xps_bram_if_cntlr_1_port_BRAM_Addr<30> has no load.  PAR will not attempt to route this
+   signal.
+Starting Router
+
+
+Phase  1  : 116625 unrouted;      REAL time: 28 secs 
+INFO:Route:538 - One or more MIG cores have been detected in your design and have been successfully
+   placed and routed. These MIG core(s) have critical skew and delay requirements 
+   that are independent of the user (UCF) timing constraints. These MIG-related timing 
+   constraints have been successfully met in this design. However, the user must verify
+   separately that all timing constraints specified in the UCF file have been met.
+
+
+Phase  2  : 101935 unrouted;      REAL time: 33 secs 
+
+Phase  3  : 45110 unrouted;      REAL time: 1 mins 37 secs 
+
+Phase  4  : 53629 unrouted; (Setup:670392, Hold:1273, Component Switching Limit:0)     REAL time: 3 mins 25 secs 
+
+Updating file: system.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:1012306, Hold:1282, Component Switching Limit:0)     REAL time: 13 mins 40 secs 
+
+Phase  6  : 0 unrouted; (Setup:946210, Hold:1282, Component Switching Limit:0)     REAL time: 47 mins 35 secs 
+
+Phase  7  : 0 unrouted; (Setup:946210, Hold:1282, Component Switching Limit:0)     REAL time: 47 mins 35 secs 
+
+Phase  8  : 0 unrouted; (Setup:946210, Hold:1282, Component Switching Limit:0)     REAL time: 47 mins 35 secs 
+
+Phase  9  : 0 unrouted; (Setup:946210, Hold:0, Component Switching Limit:0)     REAL time: 47 mins 37 secs 
+
+Phase 10  : 0 unrouted; (Setup:903863, Hold:0, Component Switching Limit:0)     REAL time: 47 mins 43 secs 
+Total REAL time to Router completion: 47 mins 43 secs 
+Total CPU time to Router completion: 48 mins 6 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+WARNING:ParHelpers:81 - 
+   The following Clock signals have USELOWSKEWLINES constraint
+   specified. The router was not able to completely route using
+   the LOW SKEW resources. Check the timing report to verify the
+   delay and skew for this net.
+Net Name: hardorb_fpga_0_PHY_rx_clk_pin_IBUF
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|clk_75_0000MHzPLL0_A |              |      |      |            |             |
+|               DJUST | BUFGCTRL_X0Y0| No   | 2439 |  0.525     |  2.057      |
++---------------------+--------------+------+------+------------+-------------+
+|hardorb_fpga_0/hardo |              |      |      |            |             |
+|rb_fpga_0/XEMAC_I/OR |              |      |      |            |             |
+|B_SW/FILTER_INC/PATT |              |      |      |            |             |
+|_MATCH_MALWARE/FSM_I |              |      |      |            |             |
+|    NST0/clk_div_0_0 |BUFGCTRL_X0Y29| No   |  161 |  0.309     |  1.935      |
++---------------------+--------------+------+------+------------+-------------+
+|hardorb_fpga_0/hardo |              |      |      |            |             |
+|rb_fpga_0/XEMAC_I/OR |              |      |      |            |             |
+|B_SW/FILTER_INC/PATT |              |      |      |            |             |
+|_MATCH_IRC/FSM_INST0 |              |      |      |            |             |
+|        /control0<0> |BUFGCTRL_X0Y28| No   |   73 |  0.618     |  2.168      |
++---------------------+--------------+------+------+------------+-------------+
+|clk_150_0000MHzPLL0_ |              |      |      |            |             |
+|              ADJUST | BUFGCTRL_X0Y3| No   | 1507 |  0.638     |  2.168      |
++---------------------+--------------+------+------+------------+-------------+
+|clk_150_0000MHz90PLL |              |      |      |            |             |
+|            0_ADJUST | BUFGCTRL_X0Y1| No   |  157 |  0.280     |  2.048      |
++---------------------+--------------+------+------+------------+-------------+
+|hardorb_fpga_0/hardo |              |      |      |            |             |
+|rb_fpga_0/XEMAC_I/OR |              |      |      |            |             |
+|B_SW/tcphndl_sendDat |              |      |      |            |             |
+|               agram |BUFGCTRL_X0Y30| No   |   44 |  0.224     |  1.913      |
++---------------------+--------------+------+------+------------+-------------+
+|hardorb_fpga_0/hardo |              |      |      |            |             |
+|rb_fpga_0/XEMAC_I/OR |              |      |      |            |             |
+|B_SW/FILTER_INC/PATT |              |      |      |            |             |
+|_MATCH_IRC/FSM_INST0 |              |      |      |            |             |
+|        /clk_div_0_0 |BUFGCTRL_X0Y31| No   |  117 |  0.399     |  1.947      |
++---------------------+--------------+------+------+------------+-------------+
+|DDR2_SDRAM/DDR2_SDRA |              |      |      |            |             |
+|M/mpmc_core_0/gen_v5 |              |      |      |            |             |
+|_ddr2_phy.mpmc_phy_i |              |      |      |            |             |
+|f_0/u_phy_io_0/delay |              |      |      |            |             |
+|           ed_dqs<0> |        IO Clk| No   |   17 |  0.095     |  0.419      |
++---------------------+--------------+------+------+------------+-------------+
+|DDR2_SDRAM/DDR2_SDRA |              |      |      |            |             |
+|M/mpmc_core_0/gen_v5 |              |      |      |            |             |
+|_ddr2_phy.mpmc_phy_i |              |      |      |            |             |
+|f_0/u_phy_io_0/delay |              |      |      |            |             |
+|           ed_dqs<1> |        IO Clk| No   |   17 |  0.083     |  0.380      |
++---------------------+--------------+------+------+------------+-------------+
+|DDR2_SDRAM/DDR2_SDRA |              |      |      |            |             |
+|M/mpmc_core_0/gen_v5 |              |      |      |            |             |
+|_ddr2_phy.mpmc_phy_i |              |      |      |            |             |
+|f_0/u_phy_io_0/delay |              |      |      |            |             |
+|           ed_dqs<2> |        IO Clk| No   |   17 |  0.101     |  0.425      |
++---------------------+--------------+------+------+------------+-------------+
+|DDR2_SDRAM/DDR2_SDRA |              |      |      |            |             |
+|M/mpmc_core_0/gen_v5 |              |      |      |            |             |
+|_ddr2_phy.mpmc_phy_i |              |      |      |            |             |
+|f_0/u_phy_io_0/delay |              |      |      |            |             |
+|           ed_dqs<3> |        IO Clk| No   |   17 |  0.107     |  0.404      |
++---------------------+--------------+------+------+------------+-------------+
+|DDR2_SDRAM/DDR2_SDRA |              |      |      |            |             |
+|M/mpmc_core_0/gen_v5 |              |      |      |            |             |
+|_ddr2_phy.mpmc_phy_i |              |      |      |            |             |
+|f_0/u_phy_io_0/delay |              |      |      |            |             |
+|           ed_dqs<5> |        IO Clk| No   |   17 |  0.101     |  0.425      |
++---------------------+--------------+------+------+------------+-------------+
+|DDR2_SDRAM/DDR2_SDRA |              |      |      |            |             |
+|M/mpmc_core_0/gen_v5 |              |      |      |            |             |
+|_ddr2_phy.mpmc_phy_i |              |      |      |            |             |
+|f_0/u_phy_io_0/delay |              |      |      |            |             |
+|           ed_dqs<4> |        IO Clk| No   |   17 |  0.101     |  0.425      |
++---------------------+--------------+------+------+------------+-------------+
+|DDR2_SDRAM/DDR2_SDRA |              |      |      |            |             |
+|M/mpmc_core_0/gen_v5 |              |      |      |            |             |
+|_ddr2_phy.mpmc_phy_i |              |      |      |            |             |
+|f_0/u_phy_io_0/delay |              |      |      |            |             |
+|           ed_dqs<6> |        IO Clk| No   |   17 |  0.096     |  0.393      |
++---------------------+--------------+------+------+------------+-------------+
+|DDR2_SDRAM/DDR2_SDRA |              |      |      |            |             |
+|M/mpmc_core_0/gen_v5 |              |      |      |            |             |
+|_ddr2_phy.mpmc_phy_i |              |      |      |            |             |
+|f_0/u_phy_io_0/delay |              |      |      |            |             |
+|           ed_dqs<7> |        IO Clk| No   |   17 |  0.101     |  0.425      |
++---------------------+--------------+------+------+------------+-------------+
+|     clk_200_0000MHz | BUFGCTRL_X0Y4| No   |    3 |  0.077     |  1.879      |
++---------------------+--------------+------+------+------------+-------------+
+| clk_150_0000MHzPLL0 | BUFGCTRL_X0Y2| No   |    1 |  0.000     |  1.738      |
++---------------------+--------------+------+------+------------+-------------+
+| clk_300_0000MHzPLL0 | BUFGCTRL_X0Y5| No   |    1 |  0.000     |  1.738      |
++---------------------+--------------+------+------+------------+-------------+
+|hardorb_fpga_0/hardo |              |      |      |            |             |
+|rb_fpga_0/phy_tx_clk |              |      |      |            |             |
+|                  _i |         Local|      |   15 |  1.221     |  4.753      |
++---------------------+--------------+------+------+------------+-------------+
+|hardorb_fpga_0/hardo |              |      |      |            |             |
+|rb_fpga_0/XEMAC_I/OR |              |      |      |            |             |
+|B_SW/TCPServer.TCP_S |              |      |      |            |             |
+|ERVER_HANDLER/TCPdat |              |      |      |            |             |
+|aCompletelyRcvd_or00 |              |      |      |            |             |
+|                  00 |         Local|      |    1 |  0.000     |  1.226      |
++---------------------+--------------+------+------+------------+-------------+
+|hardorb_fpga_0_PHY_r |              |      |      |            |             |
+|      x_clk_pin_IBUF |         Local|      |   14 |  1.730     |  3.367      |
++---------------------+--------------+------+------+------------+-------------+
+|hardorb_fpga_0/hardo |              |      |      |            |             |
+|rb_fpga_0/XEMAC_I/OR |              |      |      |            |             |
+|B_SW/TCPServer.TCP_S |              |      |      |            |             |
+|ERVER_HANDLER/nbTCPd |              |      |      |            |             |
+| ataByteRecd_not0001 |         Local|      |    3 |  0.000     |  2.127      |
++---------------------+--------------+------+------+------------+-------------+
+|hardorb_fpga_0/hardo |              |      |      |            |             |
+|rb_fpga_0/XEMAC_I/OR |              |      |      |            |             |
+|B_SW/FILTER_INC/PATT |              |      |      |            |             |
+|_MATCH_IRC/FSM_INST0 |              |      |      |            |             |
+|       /control0<13> |         Local|      |    5 |  0.000     |  2.226      |
++---------------------+--------------+------+------+------------+-------------+
+|hardorb_fpga_0/hardo |              |      |      |            |             |
+|rb_fpga_0/XEMAC_I/OR |              |      |      |            |             |
+|B_SW/FILTER_INC/PATT |              |      |      |            |             |
+|_MATCH_IRC/FSM_INST0 |              |      |      |            |             |
+|/icon_comp/U0/iUPDAT |              |      |      |            |             |
+|               E_OUT |         Local|      |    1 |  0.000     |  1.085      |
++---------------------+--------------+------+------+------------+-------------+
+|ppc440_0_jtagppc_bus |              |      |      |            |             |
+|         _JTGC405TCK |         Local|      |    1 |  0.000     |  1.526      |
++---------------------+--------------+------+------+------------+-------------+
+|HardORB_FPGA_0_IP2IN |              |      |      |            |             |
+|             TC_Irpt |         Local|      |    1 |  0.000     |  1.126      |
++---------------------+--------------+------+------+------------+-------------+
+|RS232_Uart_1_Interru |              |      |      |            |             |
+|                  pt |         Local|      |    1 |  0.000     |  0.643      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 903863 (Setup: 903863, Hold: 0, Component Switching Limit: 0)
+
+WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in
+   your design.
+
+   Review the timing report using Timing Analyzer (In ISE select "Post-Place &
+   Route Static Timing Report"). Go to the failing constraint(s) and evaluate the failing paths for each constraint.
+
+   Try the Design Goal and Strategies for Timing Performance(In ISE select Project -> Design Goals & Strategies) to
+   ensure the best options are set in the tools for timing closure.
+
+   Use the Xilinx "SmartXplorer" script to try special combinations of
+   options known to produce very good results.
+
+   Visit the Xilinx technical support web at http://support.xilinx.com and go to
+   either "Troubleshoot->Tech Tips->Timing & Constraints" or "
+   TechXclusives->Timing Closure" for tips and suggestions for meeting timing
+   in your design.
+
+Number of Timing Constraints that were not applied: 5
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+* TS_clock_generator_0_clock_generator_0_SI | SETUP       |    -3.077ns|    16.410ns|    1034|      903863
+  G_PLL0_CLKOUT5 = PERIOD TIMEGRP         " | HOLD        |     0.015ns|            |       0|           0
+  clock_generator_0_clock_generator_0_SIG_P |             |            |            |        |            
+  LL0_CLKOUT5" TS_sys_clk_pin         * 0.7 |             |            |            |        |            
+  5 HIGH 50%                                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/mpmc_c | MAXDELAY    |     0.015ns|     0.835ns|       0|           0
+  ore_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy |             |            |            |        |            
+  _io_0/gen_dqs[1].u_iob_dqs/en_dqs_sync"   |             |            |            |        |            
+         MAXDELAY = 0.85 ns                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clock_generator_0_clock_generator_0_SI | SETUP       |     0.028ns|     6.638ns|       0|           0
+  G_PLL0_CLKOUT2 = PERIOD TIMEGRP         " | HOLD        |     0.030ns|            |       0|           0
+  clock_generator_0_clock_generator_0_SIG_P |             |            |            |        |            
+  LL0_CLKOUT2" TS_sys_clk_pin         * 1.5 |             |            |            |        |            
+   HIGH 50%                                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_DQ_CE = MAXDELAY FROM TIMEGRP "TNM_DQ_ | SETUP       |     0.038ns|     1.862ns|       0|           0
+  CE_IDDR" TO TIMEGRP "TNM_DQS_FLOPS"       | HOLD        |     1.004ns|            |       0|           0
+     1.9 ns                                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/mpmc_c | MAXDELAY    |     0.045ns|     0.805ns|       0|           0
+  ore_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy |             |            |            |        |            
+  _io_0/gen_dqs[5].u_iob_dqs/en_dqs_sync"   |             |            |            |        |            
+         MAXDELAY = 0.85 ns                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/mpmc_c | MAXDELAY    |     0.045ns|     0.805ns|       0|           0
+  ore_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy |             |            |            |        |            
+  _io_0/gen_dqs[0].u_iob_dqs/en_dqs_sync"   |             |            |            |        |            
+         MAXDELAY = 0.85 ns                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.046ns|     1.954ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_ |             |            |            |        |            
+  FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFi |             |            |            |        |            
+  fo/ConsObjPtr<3>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/mpmc_c | MAXDELAY    |     0.047ns|     0.803ns|       0|           0
+  ore_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy |             |            |            |        |            
+  _io_0/gen_dqs[6].u_iob_dqs/en_dqs_sync"   |             |            |            |        |            
+         MAXDELAY = 0.85 ns                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/mpmc_c | MAXDELAY    |     0.047ns|     0.803ns|       0|           0
+  ore_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy |             |            |            |        |            
+  _io_0/gen_dqs[7].u_iob_dqs/en_dqs_sync"   |             |            |            |        |            
+         MAXDELAY = 0.85 ns                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/mpmc_c | MAXDELAY    |     0.047ns|     0.803ns|       0|           0
+  ore_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy |             |            |            |        |            
+  _io_0/gen_dqs[2].u_iob_dqs/en_dqs_sync"   |             |            |            |        |            
+         MAXDELAY = 0.85 ns                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/mpmc_c | MAXDELAY    |     0.047ns|     0.803ns|       0|           0
+  ore_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy |             |            |            |        |            
+  _io_0/gen_dqs[3].u_iob_dqs/en_dqs_sync"   |             |            |            |        |            
+         MAXDELAY = 0.85 ns                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/mpmc_c | MAXDELAY    |     0.047ns|     0.803ns|       0|           0
+  ore_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy |             |            |            |        |            
+  _io_0/gen_dqs[4].u_iob_dqs/en_dqs_sync"   |             |            |            |        |            
+         MAXDELAY = 0.85 ns                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/mpmc_c | MAXDELAY    |     0.072ns|     0.528ns|       0|           0
+  ore_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy |             |            |            |        |            
+  _io_0/en_dqs<1>"         MAXDELAY = 0.6 n |             |            |            |        |            
+  s                                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/mpmc_c | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
+  ore_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy |             |            |            |        |            
+  _io_0/en_dqs<7>"         MAXDELAY = 0.6 n |             |            |            |        |            
+  s                                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/mpmc_c | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
+  ore_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy |             |            |            |        |            
+  _io_0/en_dqs<6>"         MAXDELAY = 0.6 n |             |            |            |        |            
+  s                                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/mpmc_c | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
+  ore_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy |             |            |            |        |            
+  _io_0/en_dqs<5>"         MAXDELAY = 0.6 n |             |            |            |        |            
+  s                                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/mpmc_c | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
+  ore_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy |             |            |            |        |            
+  _io_0/en_dqs<4>"         MAXDELAY = 0.6 n |             |            |            |        |            
+  s                                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/mpmc_c | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
+  ore_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy |             |            |            |        |            
+  _io_0/en_dqs<3>"         MAXDELAY = 0.6 n |             |            |            |        |            
+  s                                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/mpmc_c | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
+  ore_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy |             |            |            |        |            
+  _io_0/en_dqs<2>"         MAXDELAY = 0.6 n |             |            |            |        |            
+  s                                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/mpmc_c | MAXDELAY    |     0.078ns|     0.522ns|       0|           0
+  ore_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy |             |            |            |        |            
+  _io_0/en_dqs<0>"         MAXDELAY = 0.6 n |             |            |            |        |            
+  s                                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.087ns|     1.913ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/wrfifo_rese |             |            |            |        |            
+  t_or_flush<1>"         MAXDELAY = 2 ns    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "hardorb_fpga_0/hardorb_fpga_0/phy_tx | NETSKEW     |     0.247ns|     4.753ns|       0|           0
+  _clk_i" MAXSKEW = 5 ns                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.421ns|     1.579ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIF |             |            |            |        |            
+  OS[0].UCmdFifo/ProdObjPtr<0>"         MAX |             |            |            |        |            
+  DELAY = 2 ns                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.574ns|     1.426ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIF |             |            |            |        |            
+  OS[0].UCmdFifo/ProdObjPtr<2>"         MAX |             |            |            |        |            
+  DELAY = 2 ns                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.596ns|     1.404ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIF |             |            |            |        |            
+  OS[0].UCmdFifo/ProdObjPtr<3>"         MAX |             |            |            |        |            
+  DELAY = 2 ns                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clock_generator_0_clock_generator_0_SI | SETUP       |     0.642ns|     6.024ns|       0|           0
+  G_PLL0_CLKOUT0 = PERIOD TIMEGRP         " | HOLD        |     0.552ns|            |       0|           0
+  clock_generator_0_clock_generator_0_SIG_P |             |            |            |        |            
+  LL0_CLKOUT0" TS_sys_clk_pin         * 1.5 |             |            |            |        |            
+   PHASE 1.66666667 ns HIGH 50%             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.695ns|     1.305ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIF |             |            |            |        |            
+  OS[0].UCmdFifo/ProdObjPtr<1>"         MAX |             |            |            |        |            
+  DELAY = 2 ns                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.712ns|     1.288ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/rdfifo_rese |             |            |            |        |            
+  t_or_flush<0>"         MAXDELAY = 2 ns    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.716ns|     1.284ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_ |             |            |            |        |            
+  FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFi |             |            |            |        |            
+  fo/ConsObjPtr<2>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.836ns|     1.164ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_ |             |            |            |        |            
+  FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFi |             |            |            |        |            
+  fo/ConsObjPtr<5>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.841ns|     1.159ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_ |             |            |            |        |            
+  FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFi |             |            |            |        |            
+  fo/ProdObjPtr<4>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.881ns|     1.119ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_ |             |            |            |        |            
+  FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFi |             |            |            |        |            
+  fo/ConsObjPtr<4>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.885ns|     1.115ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_ |             |            |            |        |            
+  FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFi |             |            |            |        |            
+  fo/ConsObjPtr<0>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.895ns|     1.105ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_ |             |            |            |        |            
+  FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFi |             |            |            |        |            
+  fo/ProdObjPtr<5>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.911ns|     1.089ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_ |             |            |            |        |            
+  FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFi |             |            |            |        |            
+  fo/ProdObjPtr<0>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.912ns|     1.088ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_ |             |            |            |        |            
+  FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFi |             |            |            |        |            
+  fo/ProdObjPtr<2>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.962ns|     1.038ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_ |             |            |            |        |            
+  FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFi |             |            |            |        |            
+  fo/ProdObjPtr<1>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     0.971ns|     1.029ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_ |             |            |            |        |            
+  FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFi |             |            |            |        |            
+  fo/ConsObjPtr<1>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     1.073ns|     0.927ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIF |             |            |            |        |            
+  OS[0].UCmdFifo/ConsObjPtr<2>"         MAX |             |            |            |        |            
+  DELAY = 2 ns                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     1.082ns|     0.918ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_ |             |            |            |        |            
+  FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFi |             |            |            |        |            
+  fo/ProdObjPtr<3>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     1.304ns|     0.696ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIF |             |            |            |        |            
+  OS[0].UCmdFifo/ConsObjPtr<3>"         MAX |             |            |            |        |            
+  DELAY = 2 ns                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     1.316ns|     0.684ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIF |             |            |            |        |            
+  OS[0].UCmdFifo/ConsObjPtr<0>"         MAX |             |            |            |        |            
+  DELAY = 2 ns                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfb | MAXDELAY    |     1.358ns|     0.642ns|       0|           0
+  c/VFBC1_PIM_NGC/UVFBC/cmd_reset<0>"       |             |            |            |        |            
+     MAXDELAY = 2 ns                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     1.427ns|     0.573ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_ |             |            |            |        |            
+  FIFOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFi |             |            |            |        |            
+  fo/ProdObjPtr<0>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     1.468ns|     0.532ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_ |             |            |            |        |            
+  FIFOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFi |             |            |            |        |            
+  fo/ProdObjPtr<3>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     1.488ns|     0.512ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_CMD_FIF |             |            |            |        |            
+  OS[0].UCmdFifo/ConsObjPtr<1>"         MAX |             |            |            |        |            
+  DELAY = 2 ns                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     1.494ns|     0.506ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_ |             |            |            |        |            
+  FIFOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFi |             |            |            |        |            
+  fo/ProdObjPtr<4>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     1.553ns|     0.447ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_ |             |            |            |        |            
+  FIFOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFi |             |            |            |        |            
+  fo/ProdObjPtr<2>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     1.624ns|     0.376ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_ |             |            |            |        |            
+  FIFOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFi |             |            |            |        |            
+  fo/ProdObjPtr<5>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | MINLOWPULSE |     6.000ns|     4.000ns|       0|           0
+  pin" 100 MHz HIGH 50%                     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clock_generator_0_clock_generator_0_SI | MINPERIOD   |     1.667ns|     1.666ns|       0|           0
+  G_PLL0_CLKOUT4 = PERIOD TIMEGRP         " |             |            |            |        |            
+  clock_generator_0_clock_generator_0_SIG_P |             |            |            |        |            
+  LL0_CLKOUT4" TS_sys_clk_pin         * 3 H |             |            |            |        |            
+  IGH 50%                                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET         "DDR2_SDRAM/DDR2_SDRAM/VFBC2_ | MAXDELAY    |     1.703ns|     0.297ns|       0|           0
+  INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_ |             |            |            |        |            
+  FIFOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFi |             |            |            |        |            
+  fo/ProdObjPtr<1>"         MAXDELAY = 2 ns |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  NET "hardorb_fpga_0_PHY_rx_clk_pin_IBUF"  | NETSKEW     |     3.155ns|     1.845ns|       0|           0
+  MAXSKEW = 5 ns                            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clock_generator_0_clock_generator_0_SI | MINPERIOD   |     3.334ns|     1.666ns|       0|           0
+  G_PLL0_CLKOUT3 = PERIOD TIMEGRP         " |             |            |            |        |            
+  clock_generator_0_clock_generator_0_SIG_P |             |            |            |        |            
+  LL0_CLKOUT3" TS_sys_clk_pin         * 2 H |             |            |            |        |            
+  IGH 50%                                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_clock_generator_0_clock_generator_0_SI | MINPERIOD   |     3.566ns|     3.100ns|       0|           0
+  G_PLL0_CLKOUT1 = PERIOD TIMEGRP         " |             |            |            |        |            
+  clock_generator_0_clock_generator_0_SIG_P |             |            |            |        |            
+  LL0_CLKOUT1" TS_sys_clk_pin         * 1.5 |             |            |            |        |            
+   HIGH 50%                                 |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_MC_PHY_INIT_DATA_SEL_90 = MAXDELAY FRO | SETUP       |     7.055ns|     4.945ns|       0|           0
+  M TIMEGRP "TNM_PHY_INIT_DATA_SEL" TO      | HOLD        |     0.366ns|            |       0|           0
+      TIMEGRP "FFS" 12 ns                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_MC_RD_DATA_SEL = MAXDELAY FROM TIMEGRP | SETUP       |     7.278ns|     4.722ns|       0|           0
+   "TNM_RD_DATA_SEL" TO TIMEGRP "FFS"       | HOLD        |     0.169ns|            |       0|           0
+     12 ns                                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TSTXOUT_hardorb_fpga_0 = MAXDELAY FROM TI | MAXDELAY    |     7.423ns|     2.577ns|       0|           0
+  MEGRP "TXCLK_GRP_hardorb_fpga_0" TO       |             |            |            |        |            
+     TIMEGRP "PADS" 10 ns                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  OFFSET = IN 6 ns BEFORE COMP "hardorb_fpg | SETUP       |     8.212ns|    -2.212ns|       0|           0
+  a_0_PHY_rx_clk_pin"                       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_MC_GATE_DLY = MAXDELAY FROM TIMEGRP "T | SETUP       |     8.714ns|     3.286ns|       0|           0
+  NM_GATE_DLY" TO TIMEGRP "FFS" 12 ns       | HOLD        |     0.201ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_MC_CAL_RDEN_DLY = MAXDELAY FROM TIMEGR | SETUP       |    10.090ns|     1.910ns|       0|           0
+  P "TNM_CAL_RDEN_DLY" TO TIMEGRP "FFS"     | HOLD        |     0.115ns|            |       0|           0
+       12 ns                                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_MC_RDEN_DLY = MAXDELAY FROM TIMEGRP "T | SETUP       |    10.278ns|     1.722ns|       0|           0
+  NM_RDEN_DLY" TO TIMEGRP "FFS" 12 ns       | HOLD        |     0.078ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  NET "hardorb_fpga_0_PHY_rx_clk_pin_IBUF"  | SETUP       |    10.573ns|     9.791ns|       0|           0
+  PERIOD = 40 ns HIGH 14 ns                 | HOLD        |     0.292ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  NET "hardorb_fpga_0/hardorb_fpga_0/phy_tx | SETUP       |    11.159ns|     8.117ns|       0|           0
+  _clk_i" PERIOD = 40 ns HIGH 14 ns         | HOLD        |     0.488ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_MC_PHY_INIT_DATA_SEL_0 = MAXDELAY FROM | N/A         |         N/A|         N/A|     N/A|         N/A
+   TIMEGRP "TNM_PHY_INIT_DATA_SEL" TO       |             |            |            |        |            
+     TIMEGRP "FFS" 12 ns                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk_pin                 |     10.000ns|      4.000ns|     12.308ns|            0|         1034|            0|   5305897968|
+| TS_clock_generator_0_clock_gen|      6.667ns|      6.024ns|          N/A|            0|            0|          898|            0|
+| erator_0_SIG_PLL0_CLKOUT0     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      6.667ns|      3.100ns|          N/A|            0|            0|            0|            0|
+| erator_0_SIG_PLL0_CLKOUT1     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      6.667ns|      6.638ns|          N/A|            0|            0|        28687|            0|
+| erator_0_SIG_PLL0_CLKOUT2     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      5.000ns|      1.666ns|          N/A|            0|            0|            0|            0|
+| erator_0_SIG_PLL0_CLKOUT3     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      3.333ns|      1.666ns|          N/A|            0|            0|            0|            0|
+| erator_0_SIG_PLL0_CLKOUT4     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|     13.333ns|     16.410ns|          N/A|         1034|            0|   5305868383|            0|
+| erator_0_SIG_PLL0_CLKOUT5     |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+1 constraint not met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 47 mins 53 secs 
+Total CPU time to PAR completion: 48 mins 16 secs 
+
+Peak Memory Usage:  1228 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - 1034 errors found.
+
+Number of error messages: 0
+Number of warning messages: 7
+Number of info messages: 2
+
+Writing design to file system.ncd
+
+
+
+PAR done!
+
+
+
+#----------------------------------------------#
+# Starting program post_par_trce
+# trce -e 3 -xml system.twx system.ncd system.pcf 
+#----------------------------------------------#
+Release 13.4 - Trace  (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+
+PMSPEC -- Overriding Xilinx file
+</opt/Xilinx/13.4/ISE_DS/EDK/virtex5/data/virtex5.acd> with local file
+</opt/Xilinx/13.4/ISE_DS/ISE/virtex5/data/virtex5.acd>
+Loading device for application Rf_Device from file '5vfx70t.nph' in environment
+/opt/Xilinx/13.4/ISE_DS/ISE/:/opt/Xilinx/13.4/ISE_DS/EDK.
+   "system" is an NCD, version 3.2, device xc5vfx70t, package ff1136, speed -1
+WARNING:ConstraintSystem - The Offset constraint <OFFSET = IN 6 ns BEFORE COMP
+   "hardorb_fpga_0_PHY_rx_clk_pin";> [system.pcf(22655)], is specified without a
+   duration.  This will result in a lack of hold time checks in timing reports. 
+   If hold time checks are desired a duration value should be specified
+   following the 'VALID' keyword.
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more
+   information, see the TSI report.  Please consult the Xilinx Command Line
+   Tools User Guide for information on generating a TSI report.
+--------------------------------------------------------------------------------
+Release 13.4 Trace  (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/trce -e 3 -xml system.twx
+system.ncd system.pcf
+
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,speed:             xc5vfx70t,-1 (PRODUCTION 1.73 2012-01-07, STEPPING
+level 0)
+Report level:             error report
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on a
+   50 Ohm transmission line loading model.  For the details of this model, and
+   for more information on accounting for different loading conditions, please
+   see the device datasheet.
+
+
+Timing summary:
+---------------
+
+Timing errors: 1034  Score: 903863 (Setup/Max: 903863, Hold: 0)
+
+Constraints cover 5305898827 paths, 47 nets, and 99501 connections
+
+Design statistics:
+   Minimum period:  16.410ns (Maximum frequency:  60.938MHz)
+   Maximum path delay from/to any node:   4.945ns
+   Maximum net delay:   1.954ns
+   Maximum net skew:   4.753ns
+
+
+Analysis completed Thu Jun 27 17:42:44 2013
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 1
+Number of info messages: 4
+Total time: 35 secs 
+
+

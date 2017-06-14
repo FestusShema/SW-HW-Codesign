@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/festus/Documents/SSL/SSL/ssl_test_isim_beh.exe" -prj "/home/festus/Documents/SSL/SSL/ssl_test_beh.prj" "work.ssl_test" 

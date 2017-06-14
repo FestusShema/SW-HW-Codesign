@@ -1,0 +1,13 @@
+run
+-ifmt VHDL
+-ent txorb_dpmem_v4_top
+-p xc5vfx70t-ff1136-1
+-ifn xst.prj
+-write_timing_constraints No
+-iobuf YES
+-max_fanout 100
+-ofn txorb_dpmem_v4_top 
+-ofmt NGC
+-bus_delimiter ()
+-hierarchy_separator /
+-case Maintain

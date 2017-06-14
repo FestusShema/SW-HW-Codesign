@@ -1,0 +1,118 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.NUMERIC_STD.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity AUT_JOIN is 
+	 port(CLK	 : in  std_logic; 
+	      char	: in  std_logic_vector(7 downto 0); 
+	      nbIRCmsgDetected :out std_logic_vector(63 downto 0);
+	      hit	 : out std_logic_vector(3 downto 0));
+end AUT_JOIN;
+
+architecture STRUCTURAL of AUT_JOIN is 
+
+  signal debug0: std_logic; 
+  signal debug00: std_logic; 
+  signal debug1: std_logic; 
+  signal debug10: std_logic; 
+  signal debug2: std_logic; 
+  signal debug20: std_logic; 
+  signal debug3: std_logic; 
+  signal debug30: std_logic; 
+  signal intern_pos:std_logic_vector(19 downto 0); 
+
+  signal clk_div: std_logic_vector(0 downto 0) := "0";
+  signal divided_clk: std_logic;
+
+  component comp_vect0_irc 
+	 port(car : in   std_logic_vector(7 downto 0); 
+	      pos : out  std_logic_vector(19 downto 0)); 
+  end component; 
+
+	 signal Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27, Q28, Q29, Q30, Q31, Q32, Q33, Q34: std_logic;
+   begin
+
+  compar0:comp_vect0_irc
+	 Port Map(char, intern_pos);
+  --===========================
+  --	Clock divider process
+  --===========================
+  DIV_CLOCK:process(CLK)
+	begin
+	   if rising_edge(CLK) then
+		clk_div <= clk_div + 1;
+	   end if;
+  end process;
+  --===========================
+  --	Clock divider process
+  --===========================
+  
+  divided_clk <= clk_div(0); 
+
+	 SET_STATE:process(divided_clk) 
+	   variable cntIRCmsgDetected: std_logic_vector (63 downto 0) := x"0000000000000000";
+	   begin 
+	     if divided_clk'event and divided_clk = '1' then
+
+	      --The code below is used to count how many IRC packets have been detected
+		if (debug0 /= '0' or debug1 /= '0' or debug2 /= '0' or debug3 /= '0') then
+			cntIRCmsgDetected := std_logic_vector(unsigned(cntIRCmsgDetected + 1));
+			nbIRCmsgDetected <= cntPatternDetected;
+		end if;
+	      --The code above is used to count how many IRC packets have been detected
+
+	      Q1 <= intern_pos(0); 
+	      Q2 <= (intern_pos(1) and Q1); 
+	      Q3 <= (intern_pos(2) and Q2); 
+	      Q4 <= (intern_pos(3) and Q3); 
+	      Q5 <= intern_pos(4); 
+	      Q6 <= (intern_pos(5) and Q5); 
+	      Q7 <= (intern_pos(6) and Q6); 
+	      Q8 <= (intern_pos(7) and Q7); 
+	      Q9 <= intern_pos(8); 
+	      Q26 <= (intern_pos(2) and Q9); 
+	      Q27 <= (intern_pos(3) and Q26); 
+	      Q28 <= (intern_pos(9) and Q27); 
+	      Q13 <= intern_pos(10); 
+	      Q17 <= (intern_pos(6) and Q13); 
+	      Q18 <= (intern_pos(7) and Q17); 
+	      Q19 <= (intern_pos(11) and Q18); 
+	      Q10 <= (intern_pos(1) and Q9); 
+	      Q11 <= (intern_pos(3) and Q10); 
+	      Q12 <= (intern_pos(9) and Q11); 
+	      Q14 <= (intern_pos(5) and Q13); 
+	      Q15 <= (intern_pos(7) and Q14); 
+	      Q16 <= (intern_pos(11) and Q15); 
+	      Q29 <= (intern_pos(12) and Q9); 
+	      Q30 <= (intern_pos(2) and Q29); 
+	      Q31 <= (intern_pos(13) and Q30); 
+	      Q32 <= (intern_pos(14) and Q31); 
+	      Q33 <= (intern_pos(15) and Q32); 
+	      Q34 <= (intern_pos(9) and Q33); 
+	      Q20 <= (intern_pos(16) and Q13); 
+	      Q21 <= (intern_pos(6) and Q20); 
+	      Q22 <= (intern_pos(17) and Q21); 
+	      Q23 <= (intern_pos(18) and Q22); 
+	      Q24 <= (intern_pos(19) and Q23); 
+	      Q25 <= (intern_pos(11) and Q24); 
+	 end if; 
+	 end process; 
+
+ debug0 <= Q4 or Q12 or Q28 or Q34; 
+
+ debug1 <= Q8 or Q16 or Q28 or Q34; 
+
+ debug2 <= Q12 or Q16 or Q19 or Q34; 
+
+ debug3 <= Q25; 
+
+
+hit(0) <= debug0; 
+hit(1) <= debug1; 
+hit(2) <= debug2; 
+hit(3) <= debug3; 
+
+end STRUCTURAL; 
+

@@ -1,0 +1,360 @@
+Release 13.4 - Bitgen O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+</opt/Xilinx/13.4/ISE_DS/EDK/virtex5/data/virtex5.acd> with local file
+</opt/Xilinx/13.4/ISE_DS/ISE/virtex5/data/virtex5.acd>
+Loading device for application Rf_Device from file '5vfx70t.nph' in environment
+/opt/Xilinx/13.4/ISE_DS/ISE/:/opt/Xilinx/13.4/ISE_DS/EDK.
+   "system" is an NCD, version 3.2, device xc5vfx70t, package ff1136, speed -1
+Opened constraints file system.pcf.
+
+Thu Jun 27 17:42:56 2013
+
+/opt/Xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -w -g TdoPin:PULLNONE -g DriveDone:No -g StartUpClk:JTAGCLK -g DONE_cycle:4 -g GTS_cycle:5 -g TckPin:PULLUP -g TdiPin:PULLUP -g TmsPin:PULLUP -g DonePipe:No -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:NONE -g Persist:No system.ncd 
+
+Summary of Bitgen Options:
++----------------------+----------------------+
+| Option Name          | Current Setting      |
++----------------------+----------------------+
+| Compress             | (Not Specified)*     |
++----------------------+----------------------+
+| Readback             | (Not Specified)*     |
++----------------------+----------------------+
+| CRC                  | Enable*              |
++----------------------+----------------------+
+| DebugBitstream       | No*                  |
++----------------------+----------------------+
+| ConfigRate           | 2*                   |
++----------------------+----------------------+
+| StartupClk           | JtagClk              |
++----------------------+----------------------+
+| CclkPin              | Pullup*              |
++----------------------+----------------------+
+| DonePin              | Pullup*              |
++----------------------+----------------------+
+| HswapenPin           | Pullup*              |
++----------------------+----------------------+
+| M0Pin                | Pullup*              |
++----------------------+----------------------+
+| M1Pin                | Pullup*              |
++----------------------+----------------------+
+| M2Pin                | Pullup*              |
++----------------------+----------------------+
+| ProgPin              | Pullup*              |
++----------------------+----------------------+
+| InitPin              | Pullup*              |
++----------------------+----------------------+
+| CsPin                | Pullup*              |
++----------------------+----------------------+
+| DinPin               | Pullup*              |
++----------------------+----------------------+
+| BusyPin              | Pullup*              |
++----------------------+----------------------+
+| RdWrPin              | Pullup*              |
++----------------------+----------------------+
+| TckPin               | Pullup**             |
++----------------------+----------------------+
+| TdiPin               | Pullup**             |
++----------------------+----------------------+
+| TdoPin               | Pullnone             |
++----------------------+----------------------+
+| TmsPin               | Pullup**             |
++----------------------+----------------------+
+| UnusedPin            | Pulldown*            |
++----------------------+----------------------+
+| GWE_cycle            | 6**                  |
++----------------------+----------------------+
+| GTS_cycle            | 5**                  |
++----------------------+----------------------+
+| OverTempPowerDown    | Disable*             |
++----------------------+----------------------+
+| LCK_cycle            | NoWait**             |
++----------------------+----------------------+
+| Match_cycle          | 2                    |
++----------------------+----------------------+
+| DONE_cycle           | 4**                  |
++----------------------+----------------------+
+| Persist              | No**                 |
++----------------------+----------------------+
+| DriveDone            | No**                 |
++----------------------+----------------------+
+| DonePipe             | No**                 |
++----------------------+----------------------+
+| Security             | None**               |
++----------------------+----------------------+
+| UserID               | 0xFFFFFFFF*          |
++----------------------+----------------------+
+| ActiveReconfig       | No*                  |
++----------------------+----------------------+
+| Partial              | (Not Specified)*     |
++----------------------+----------------------+
+| Encrypt              | No*                  |
++----------------------+----------------------+
+| Key0                 | pick*                |
++----------------------+----------------------+
+| StartCBC             | pick*                |
++----------------------+----------------------+
+| KeyFile              | (Not Specified)*     |
++----------------------+----------------------+
+| DCIUpdateMode        | AsRequired*          |
++----------------------+----------------------+
+| ConfigFallback       | Enable*              |
++----------------------+----------------------+
+| SelectMAPAbort       | Enable*              |
++----------------------+----------------------+
+| BPI_page_size        | 1*                   |
++----------------------+----------------------+
+| BPI_1st_read_cycle   | 1*                   |
++----------------------+----------------------+
+| JTAG_SysMon          | Enable*              |
++----------------------+----------------------+
+| TIMER_CFG            | None*                |
++----------------------+----------------------+
+| TIMER_USR            | None*                |
++----------------------+----------------------+
+| USR_ACCESS           | None*                |
++----------------------+----------------------+
+| IEEE1532             | No*                  |
++----------------------+----------------------+
+| Binary               | No*                  |
++----------------------+----------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+There were 0 CONFIG constraint(s) processed from system.pcf.
+
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_0' at 'RAMB36_X5Y19' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_1' at 'RAMB36_X3Y20' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_2' at 'RAMB36_X5Y18' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_3' at 'RAMB36_X3Y19' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_4' at 'RAMB36_X0Y13' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_5' at 'RAMB36_X0Y12' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_6' at 'RAMB36_X0Y11' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_7' at 'RAMB36_X0Y10' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_8' at 'RAMB36_X4Y16' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_9' at 'RAMB36_X4Y15' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_10' at 'RAMB36_X4Y17' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_11' at 'RAMB36_X4Y18' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_12' at 'RAMB36_X2Y20' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_13' at 'RAMB36_X2Y23' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_14' at 'RAMB36_X2Y22' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_15' at 'RAMB36_X2Y21' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_16' at 'RAMB36_X4Y23' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_17' at 'RAMB36_X5Y22' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_18' at 'RAMB36_X4Y24' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_19' at 'RAMB36_X4Y22' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_20' at 'RAMB36_X0Y18' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_21' at 'RAMB36_X2Y24' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_22' at 'RAMB36_X1Y20' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_23' at 'RAMB36_X0Y22' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_24' at 'RAMB36_X2Y8' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_25' at 'RAMB36_X2Y7' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_26' at 'RAMB36_X2Y6' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_27' at 'RAMB36_X2Y5' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_28' at 'RAMB36_X4Y8' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_29' at 'RAMB36_X4Y9' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_30' at 'RAMB36_X4Y11' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_31' at 'RAMB36_X4Y10' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_32' at 'RAMB36_X3Y15' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_33' at 'RAMB36_X3Y16' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_34' at 'RAMB36_X3Y17' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_35' at 'RAMB36_X3Y18' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_36' at 'RAMB36_X2Y9' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_37' at 'RAMB36_X1Y10' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_38' at 'RAMB36_X1Y9' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_39' at 'RAMB36_X1Y11' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_40' at 'RAMB36_X4Y14' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_41' at 'RAMB36_X3Y13' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_42' at 'RAMB36_X3Y14' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_43' at 'RAMB36_X4Y13' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_44' at 'RAMB36_X3Y23' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_45' at 'RAMB36_X3Y22' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_46' at 'RAMB36_X3Y24' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_47' at 'RAMB36_X3Y25' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_48' at 'RAMB36_X4Y21' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_49' at 'RAMB36_X4Y19' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_50' at 'RAMB36_X4Y20' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_51' at 'RAMB36_X3Y21' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_52' at 'RAMB36_X0Y17' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_53' at 'RAMB36_X0Y14' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_54' at 'RAMB36_X0Y15' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_55' at 'RAMB36_X0Y16' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_56' at 'RAMB36_X3Y8' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_57' at 'RAMB36_X3Y6' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_58' at 'RAMB36_X3Y9' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_59' at 'RAMB36_X3Y7' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_60' at 'RAMB36_X3Y12' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_61' at 'RAMB36_X4Y12' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_62' at 'RAMB36_X3Y10' location successfully updated with design data.
+
+
+INFO:(null):100 - BRAM 'xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_63' at 'RAMB36_X3Y11' location successfully updated with design data.
+
+Running DRC.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/TCPServer.TCP_SERVER_HANDLER/TCP
+   dataCompletelyRcvd_or0000 is sourced by a combinatorial pin. This is not good
+   design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/TCPServer.TCP_SERVER_HANDLER/nbT
+   CPdataByteRecd_not0001 is sourced by a combinatorial pin. This is not good
+   design practice. Use the CE pin to control the loading of data into the
+   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_IN
+   ST0/control0<13> is sourced by a combinatorial pin. This is not good design
+   practice. Use the CE pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal
+   <xps_bram_if_cntlr_1_port_BRAM_Addr<31>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <xps_bram_if_cntlr_1_port_BRAM_Addr<30>> is incomplete. The signal does not
+   drive any load pins in the design.
+WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
+   ProtoComp1630.PULL is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
+   ProtoComp1630.PULL.1 is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
+   ProtoComp1630.PULL.2 is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
+   ProtoComp1630.PULL.3 is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
+   ProtoComp1630.PULL.4 is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
+   ProtoComp1630.PULL.5 is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
+   ProtoComp1630.PULL.6 is set but the tri state is not configured. 
+WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
+   ProtoComp1630.PULL.7 is set but the tri state is not configured. 
+DRC detected 0 errors and 13 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
+Creating bit map...
+Saving bit stream in "system.bit".
+Bitstream generation is complete.

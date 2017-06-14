@@ -1,0 +1,46 @@
+# Peripheral Analyze Order (.pao) file for the
+# SDMA Version 1.00.a
+#
+# ----- Proc Common Library Files -------------------------
+lib proc_common_v2_00_a proc_common_pkg.vhd   vhdl
+lib proc_common_v2_00_a family_support.vhd vhdl
+lib proc_common_v2_00_a or_muxcy.vhd vhdl
+lib proc_common_v2_00_a or_gate128.vhd vhdl
+lib proc_common_v2_00_a pselect_f.vhd vhdl
+lib proc_common_v2_00_a counter_f.vhd vhdl
+lib proc_common_v2_00_a ipif_pkg.vhd vhdl
+#
+#
+# ----- PLB V4.6 Slave Single Library Files -----------------
+lib plbv46_slave_single_v1_00_a  plb_address_decoder.vhd vhdl
+lib plbv46_slave_single_v1_00_a  plb_slave_attachment.vhd vhdl
+lib plbv46_slave_single_v1_00_a  plbv46_slave_single.vhd vhdl 
+#
+# ----- Soft DMA Library Files ------------------------------
+#
+lib sdma_v1_00_b sdma_pkg.vhd vhdl
+lib sdma_v1_00_b addr_arbiter.vhd vhdl
+lib sdma_v1_00_b address_counter.vhd vhdl
+lib sdma_v1_00_b channel_status_reg.vhd vhdl
+lib sdma_v1_00_b sample_cycle.vhd vhdl
+lib sdma_v1_00_b ipic_if.vhd vhdl
+lib sdma_v1_00_b dmac_regfile_arb.vhd vhdl
+lib sdma_v1_00_b interrupt_register.vhd vhdl
+lib sdma_v1_00_b length_counter.vhd vhdl
+lib sdma_v1_00_b port_arbiter.vhd vhdl
+lib sdma_v1_00_b read_data_delay.vhd vhdl
+lib sdma_v1_00_b rx_byte_shifter.vhd vhdl
+lib sdma_v1_00_b rx_port_controller.vhd vhdl
+lib sdma_v1_00_b rx_read_handler.vhd vhdl
+lib sdma_v1_00_b rx_write_handler.vhd vhdl
+lib sdma_v1_00_b tx_byte_shifter.vhd vhdl
+lib sdma_v1_00_b tx_port_controller.vhd vhdl
+lib sdma_v1_00_b tx_read_handler.vhd vhdl
+lib sdma_v1_00_b tx_rx_state.vhd vhdl
+lib sdma_v1_00_b tx_write_handler.vhd vhdl
+lib sdma_v1_00_b reset_module.vhd vhdl
+lib sdma_v1_00_b sdma_cntl.vhd vhdl
+lib sdma_v1_00_b sdma_datapath.vhd vhdl
+lib sdma_v1_00_b sdma.vhd vhdl
+
+

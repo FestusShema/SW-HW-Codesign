@@ -1,0 +1,21 @@
+# Date: Wed Feb 17 14:33:09 2010
+SET addpads = False
+SET asysymbol = False
+SET busformat = BusFormatAngleBracketNotRipped
+SET createndf = False
+SET designentry = VHDL
+SET device = xc4vfx20
+SET devicefamily = virtex4
+SET flowvendor = Other
+SET formalverification = False
+SET foundationsym = False
+SET implementationfiletype = Ngc
+SET package = ff672
+SET removerpms = False
+SET simulationfiles = Behavioral
+SET speedgrade = -10
+SET verilogsim = False
+SET vhdlsim = True
+SET workingdirectory = /home/jupiter/Desktop/Hard_ORB_Client_14.4_Virtex5/pcores/hardorb_fpga_v3_01_a/coregen/tmp/
+
+

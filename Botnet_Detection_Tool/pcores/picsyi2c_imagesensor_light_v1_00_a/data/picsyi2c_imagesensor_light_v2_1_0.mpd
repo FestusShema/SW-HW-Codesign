@@ -1,0 +1,92 @@
+###################################################################
+##
+## Name     : picsyi2c_imagesensor_light
+## Desc     : Microprocessor Peripheral Description
+## By       : University of Potsdam - Department of Computer Sceince 
+###################################################################
+
+BEGIN picsyi2c_imagesensor_light
+
+## Peripheral Options
+OPTION IPTYPE = PERIPHERAL
+OPTION IMP_NETLIST = TRUE
+OPTION HDL = VHDL
+OPTION ALERT = Please refer to the picsyi2c_imagesensor_light_v1_00_a data sheet for details.
+OPTION LAST_UPDATED = 10.1.2
+OPTION IP_GROUP = MICROBLAZE:PPC:USER
+OPTION DESC = PICSY EXTENSION CAMERA I2C LIGHT USING MUX
+
+IO_INTERFACE IO_IF = picsyi2c_imagesensor_light_0, IO_TYPE = picsyi2c_imagesensor_light_V1
+
+## Bus Interfaces
+BUS_INTERFACE BUS = STREAM_OUT, BUS_TYPE = INITIATOR, BUS_STD = DATASTREAM
+
+## Generics for VHDL or Parameters for Verilog
+
+PARAMETER C_IMAGE_WIDTH = 2048, DT = INTEGER
+PARAMETER C_IMAGE_HIGHT = 1536, DT = INTEGER
+PARAMETER C_RECOMPILE = 0, DT = INTEGER, VALUES = (0= AGAIN, 1= ONCE_AGAIN)
+PARAMETER C_DWIDTH = 64, DT = INTEGER, PERMIT = BASE_USER, RANGE = (64,80), ASSIGNMENT = REQUIRE
+PARAMETER C_REGWIDTH = 32, DT = INTEGER
+PARAMETER C_NUM_CONFIG_REGS = 4, DT = INTEGER, ASSIGNMENT = CONSTANT
+PARAMETER C_NUM_STATUS_REGS = 1, DT = INTEGER, ASSIGNMENT = CONSTANT
+
+
+## Peripheral ports
+PORT clk = "", DIR = I, SIGIS = Clk
+PORT rst = "", DIR = I, SIGIS = Rst
+PORT I2C_SDA = "", DIR = IO, THREE_STATE = TRUE, TRI_I = I2C_SDA_I, TRI_O = I2C_SDA_O, TRI_T = I2C_SDA_T, PERMIT = BASE_USER, DESC = 'Serial data bus', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = I2C_SRL_DATA
+PORT I2C_SDA_I = "", DIR = I
+PORT I2C_SDA_O = "", DIR = O
+PORT I2C_SDA_T = "", DIR = O
+PORT I2C_SCL = "", DIR = O, PERMIT = BASE_USER, DESC = 'Clock for serial interface', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = I2C_SRL_CLK
+PORT I2C_SEL0 = "", DIR = O
+PORT I2C_SEL1 = "", DIR = O
+PORT ISI1_D = "", DIR = I, VEC = [9:0], PERMIT = BASE_USER, DESC = 'Pixel data output bit 0, DOUT[9] (MSB), DOUT[0] (LSB)', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI1_DATA
+PORT ISI1_LNE_VLD = "", DIR = I, PERMIT = BASE_USER, DESC = 'Output is pulsed HIGH during line of selectable valid pixel data', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI1_LINE_VALID
+PORT ISI1_FRM_VLD = "", DIR = I, PERMIT = BASE_USER, DESC = 'Output is pulsed HIGH during frame of valid pixel data', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI1_FRAM_VALID
+PORT ISI1_TRIGGER = "", DIR = O, PERMIT = BASE_USER, DESC = 'Activates (HIGH) snapshot sequence', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI1_SNPSHOT
+PORT ISI1_RESET_N = "", DIR = O, PERMIT = BASE_USER, DESC = 'Activates (LOW) asynchronous reset of sensor. All registers assume factory defaults', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI1_RESET
+PORT ISI1_XMCLK = "", DIR = O, PERMIT = BASE_USER, DESC = 'Output is pulsed HIGH during frame of valid pixel data', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI1_MASTER_CLK
+PORT ISI1_GSHT_CTL = "", DIR = O, PERMIT = BASE_USER, DESC = 'Global shutter control', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI1_SHUTR_CTRL
+PORT ISI1_PXCLK = "", DIR = I, PERMIT = BASE_USER, DESC = 'Pixel data outputs are valid during falling edge of this clock. Frequency = master clock', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI1_PIXL_CLK
+PORT ISI1_STB = "", DIR = I, PERMIT = BASE_USER, DESC = 'Output is pulsed HIGH to indicate sensor reset operation of pixel array has completed', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI1_STROBE
+PORT ISI1_OE_N = "", DIR = O, PERMIT = BASE_USER, DESC = 'when HIGH, places outputs DOUT[9:0], FRAME_VALID, LINE_VALID, PIXCLK, and STROBE into a tri-state configuration', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI1_OE
+PORT ISI1_STDBY = "", DIR = O, PERMIT = BASE_USER, DESC = 'Activates (HIGH) standby mode, disables analog bias circuitry for power saving mode', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI1_STANDBY
+PORT ISI1_RES0 = "", DIR = IO, THREE_STATE = TRUE, TRI_I = ISI1_RES0_I, TRI_O = ISI1_RES0_O, TRI_T = ISI1_RES0_T, PERMIT = BASE_USER, DESC = 'Spare IO Pin', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI1_RES0
+PORT ISI1_RES0_I = "", DIR = I
+PORT ISI1_RES0_O = "", DIR = O
+PORT ISI1_RES0_T = "", DIR = O
+PORT ISI1_RES1 = "", DIR = IO, THREE_STATE = TRUE, TRI_I = ISI1_RES1_I, TRI_O = ISI1_RES1_O, TRI_T = ISI1_RES1_T, PERMIT = BASE_USER, DESC = 'Spare IO Pin', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI1_RES1
+PORT ISI1_RES1_I = "", DIR = I
+PORT ISI1_RES1_O = "", DIR = O
+PORT ISI1_RES1_T = "", DIR = O
+PORT ISI3_D = "", DIR = I, VEC = [9:0], PERMIT = BASE_USER, DESC = 'Pixel data output bit 0, DOUT[9] (MSB), DOUT[0] (LSB)', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI3_DATA
+PORT ISI3_LNE_VLD = "", DIR = I, PERMIT = BASE_USER, DESC = 'Output is pulsed HIGH during line of selectable valid pixel data', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI3_LINE_VALID
+PORT ISI3_FRM_VLD = "", DIR = I, PERMIT = BASE_USER, DESC = 'Output is pulsed HIGH during frame of valid pixel data', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI3_FRAM_VALID
+PORT ISI3_TRIGGER = "", DIR = O, PERMIT = BASE_USER, DESC = 'Activates (HIGH) snapshot sequence', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI3_SNPSHOT
+PORT ISI3_RESET_N = "", DIR = O, PERMIT = BASE_USER, DESC = 'Activates (LOW) asynchronous reset of sensor. All registers assume factory defaults', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI3_RESET
+PORT ISI3_XMCLK = "", DIR = O, PERMIT = BASE_USER, DESC = 'Output is pulsed HIGH during frame of valid pixel data', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI3_MASTER_CLK
+PORT ISI3_GSHT_CTL = "", DIR = O, PERMIT = BASE_USER, DESC = 'Global shutter control', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI3_SHUTR_CTRL
+PORT ISI3_PXCLK = "", DIR = I, PERMIT = BASE_USER, DESC = 'Pixel data outputs are valid during falling edge of this clock. Frequency = master clock', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI3_PIXL_CLK
+PORT ISI3_STB = "", DIR = I, PERMIT = BASE_USER, DESC = 'Output is pulsed HIGH to indicate sensor reset operation of pixel array has completed', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI3_STROBE
+PORT ISI3_OE_N = "", DIR = O, PERMIT = BASE_USER, DESC = 'when HIGH, places outputs DOUT[9:0], FRAME_VALID, LINE_VALID, PIXCLK, and STROBE into a tri-state configuration', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI3_OE
+PORT ISI3_STDBY = "", DIR = O, PERMIT = BASE_USER, DESC = 'Activates (HIGH) standby mode, disables analog bias circuitry for power saving mode', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI3_STANDBY
+PORT ISI3_RES0 = "", DIR = IO, THREE_STATE = TRUE, TRI_I = ISI3_RES0_I, TRI_O = ISI3_RES0_O, TRI_T = ISI3_RES0_T, PERMIT = BASE_USER, DESC = 'Spare IO Pin', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI3_RES0
+PORT ISI3_RES0_I = "", DIR = I
+PORT ISI3_RES0_O = "", DIR = O
+PORT ISI3_RES0_T = "", DIR = O
+PORT ISI3_RES1 = "", DIR = IO, THREE_STATE = TRUE, TRI_I = ISI3_RES1_I, TRI_O = ISI3_RES1_O, TRI_T = ISI3_RES1_T, PERMIT = BASE_USER, DESC = 'Spare IO Pin', IO_IF = picsyi2c_imagesensor_light_0, IO_IS = ISI3_RES1
+PORT ISI3_RES1_I = "", DIR = I
+PORT ISI3_RES1_O = "", DIR = O
+PORT ISI3_RES1_T = "", DIR = O
+PORT stream_out_stop = stream_stop, DIR = I, BUS = STREAM_OUT
+PORT stream_out_valid = stream_valid, DIR = O, BUS = STREAM_OUT
+#PORT stream_out_valid_wide = "", DIR = O
+PORT stream_out_data = stream_data, DIR = O, VEC = [(C_DWIDTH-1):0], BUS = STREAM_OUT
+PORT sof = "", DIR = O
+PORT eof = "", DIR = O
+PORT config_reg = "", DIR = I, VEC=[(C_REGWIDTH*C_NUM_CONFIG_REGS-1):0]
+PORT status_reg = "", DIR = O, VEC=[(C_REGWIDTH*C_NUM_STATUS_REGS-1):0]
+PORT 
+END

@@ -1,0 +1,11 @@
+Welcome to Xilinx CORE Generator.
+Opened project file
+/home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib/UniPotsdam/pcores/plb_sdi_
+controller_v1_00_a/coregen/coregen.cgp.
+Recustomizing IP...
+ERROR:sim - Write_Data_Count_Width: Value '10' is out of range '[1..9]'.
+ERROR:sim - Read_Data_Count_Width: Value '10' is out of range '[1..9]'.
+Finished Recustomizing.
+Recustomizing IP...
+Finished Recustomizing.
+Closed project file.

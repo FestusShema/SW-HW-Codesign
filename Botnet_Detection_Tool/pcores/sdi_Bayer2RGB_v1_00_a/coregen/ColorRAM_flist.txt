@@ -1,0 +1,8 @@
+# Output products list for <ColorRAM>
+ColorRAM.ngc
+ColorRAM.vhd
+ColorRAM.vho
+ColorRAM.xco
+ColorRAM_blk_mem_gen_v2_8_xst_1.ngc_xst.xrpt
+ColorRAM_flist.txt
+ColorRAM_xmdf.tcl

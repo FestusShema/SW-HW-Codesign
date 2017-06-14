@@ -1,0 +1,20 @@
+# Date: Thu Feb 11 13:23:50 2010
+SET addpads = False
+SET asysymbol = False
+SET busformat = BusFormatAngleBracketNotRipped
+SET createndf = False
+SET designentry = VHDL
+SET device = xc4vfx20
+SET devicefamily = virtex4
+SET flowvendor = Other
+SET formalverification = False
+SET foundationsym = False
+SET implementationfiletype = Ngc
+SET package = ff672
+SET removerpms = False
+SET simulationfiles = Behavioral
+SET speedgrade = -10
+SET verilogsim = False
+SET vhdlsim = True
+SET workingdirectory = /home/hartmann/picsy/EDK/hand_follower_sw/pcores/sdi_Bayer2RGB_v1_00_a/coregen/tmp
+

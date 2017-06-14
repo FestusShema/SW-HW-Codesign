@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/festus/Documents/SSL/SSL/SSL.ncd
+OUTFILE=/home/festus/Documents/SSL/SSL/SSL.bit
+FAMILY=Spartan6
+PART=xc6slx45-3fgg484
+WORKINGDIR=/home/festus/Documents/SSL/SSL
+LICENSE=ISE
+USER_INFO=174134878_174134879_210597870_745

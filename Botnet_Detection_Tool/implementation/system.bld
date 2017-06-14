@@ -1,0 +1,456 @@
+Release 13.4 ngdbuild O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -p
+xc5vfx70tff1136-1 -nt timestamp -bm system.bmm
+/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/syst
+em.ngc -uc system.ucf system.ngd
+
+Reading NGO file
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/sys
+tem.ngc" ...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/ppc
+440_0_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/plb
+_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/xps
+_bram_if_cntlr_1_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/xps
+_bram_if_cntlr_1_bram_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/rs2
+32_uart_1_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/ddr
+2_sdram_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/clo
+ck_generator_0_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/jta
+gppc_cntlr_inst_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/pro
+c_sys_reset_0_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/xps
+_intc_0_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/har
+dorb_fpga_0_wrapper.ngc"...
+Loading design module
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/mea
+surtool_0_wrapper.ngc"...
+Applying constraints in
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/ddr
+2_sdram_wrapper.ncf" to module "DDR2_SDRAM"...
+Checking Constraint Associations...
+Applying constraints in
+"/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/har
+dorb_fpga_0_wrapper.ncf" to module "hardorb_fpga_0"...
+WARNING:ConstraintSystem - The Offset constraint <OFFSET = IN 6.000 BEFORE 
+   "hardorb_fpga_0_PHY_rx_clk_pin";>
+   [/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/
+   hardorb_fpga_0_wrapper.ncf(3)], is specified without a duration.  This will
+   result in a lack of hold time checks in timing reports.  If hold time checks
+   are desired a duration value should be specified following the 'VALID'
+   keyword.
+
+Checking Constraint Associations...
+WARNING:NgdBuild:1445 - No net associated with hardorb_fpga_0_PHY_rx_clk_pin
+   from OFFSET constraint <OFFSET = IN 6.000 BEFORE 
+   "hardorb_fpga_0_PHY_rx_clk_pin";>
+   [/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/
+   hardorb_fpga_0_wrapper.ncf(3)]
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "system.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0" TS_sys_clk_pin
+   * 1.5 PHASE 1.666666667 ns HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT1: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT1 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT1" TS_sys_clk_pin
+   * 1.5 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT2: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2" TS_sys_clk_pin
+   * 1.5 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT3: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT3 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT3" TS_sys_clk_pin
+   * 2 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT4: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT4 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT4" TS_sys_clk_pin
+   * 3 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into PLL_ADV instance
+   clock_generator_0/PLL0_INST/Using_PLL_ADV.PLL_ADV_inst. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT5: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT5 =
+   PERIOD "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT5" TS_sys_clk_pin
+   * 0.75 HIGH 50%>
+
+WARNING:ConstraintSystem - The Offset constraint <OFFSET = IN 6000.000000000 pS
+   BEFORE hardorb_fpga_0_PHY_rx_clk_pin;>, is specified without a duration. 
+   This will result in a lack of hold time checks in timing reports.  If hold
+   time checks are desired a duration value should be specified following the
+   'VALID' keyword.
+
+Done...
+
+Processing BMM file "system.bmm" ...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_bram_if_cntlr_1/xps_bram_if_cntlr_1/INCLUDE_BURST_SUPPORT.I_SLAVE_BURST_
+   ATTACH/I_DBEAT_CONTROL/I_DBEAT_CNTR/STRUCTURAL_A_GEN.I_ADDSUB_GEN[4].FDRE_I'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u
+   _phy_calib_0/gen_rden[1].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u
+   _phy_calib_0/gen_rden[2].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u
+   _phy_calib_0/gen_rden[3].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u
+   _phy_calib_0/gen_rden[4].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u
+   _phy_calib_0/gen_rden[5].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u
+   _phy_calib_0/gen_rden[6].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/u
+   _phy_calib_0/gen_rden[7].u_calib_rden_r' has unconnected output pin
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[3].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[2].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[1].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[1].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[0].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[0].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[3].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[0].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[2].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[0].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[1].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[0].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[0].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[2].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[3].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[2].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[2].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[2].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[1].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_read_fifos[2].gen_fifo
+   s.mpmc_read_fifo_0/gen_fifos_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.ge
+   n_brams[0].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[1].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[3].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[1].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[2].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[1].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[1].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[1].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[0].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[0].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[3].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[0].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[2].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[0].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[1].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[0].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[0].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[2].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[3].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[2].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[2].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[2].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[1].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[2].gen_fif
+   os.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/gen_brams_normal.gen_v4.g
+   en_brams[0].bram" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_FIFOS[0].GEN_RDDAT
+   A_PORT_ENABLE.URdDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[1].GEN_VIR
+   TEX4_RAM.ramb16_i" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_RDDATA_FIFOS[0].GEN_RDDAT
+   A_PORT_ENABLE.URdDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[0].GEN_VIR
+   TEX4_RAM.ramb16_i" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDAT
+   A_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[1].GEN_VIR
+   TEX4_RAM.ramb16_i" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:486 - Attribute "INIT_FILE" is not allowed on symbol
+   "DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/GEN_WRDATA_FIFOS[1].GEN_WRDAT
+   A_PORT_ENABLE.UWrDataFifo/memory0/GEN_DIFFERENT_WIDTH.gen_ram_ibit[0].GEN_VIR
+   TEX4_RAM.ramb16_i" of type "RAMB16".  This attribute will be ignored.
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/BU
+   10' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/BU
+   15' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/BU
+   20' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/BU
+   25' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/BU
+   30' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/BU
+   35' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/BU
+   130' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/TX/INST_TX_INTRFCE/I_TX_FIFO/BU
+   237' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/BU
+   10' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/BU
+   15' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/BU
+   20' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/BU
+   25' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/BU
+   30' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/BU
+   35' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/BU
+   130' has unconnected output pin
+WARNING:NgdBuild:440 - FF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/RX/INST_RX_INTRFCE/I_RX_FIFO/BU
+   237' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/EMAC_I/COLLISION_SYNC' has unconnected
+   output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.I_BKEND_CS_REG' has
+   unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_BURST_SUPPORT/RESPONSE_DBEAT_CNTR_I/STRUCTURAL_A_GEN.I_ADDSUB_GEN[7]
+   .FDRE_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_BURST_SUPPORT/CONTROL_DBEAT_CNTR_I/STRUCTURAL_A_GEN.I_ADDSUB_GEN[7].
+   FDRE_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[0].I_FDRSE_BE0
+   to3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[1].I_FDRSE_BE0
+   to3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[2].I_FDRSE_BE0
+   to3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_BUS_ADDRESS_COUNTER/I_FLEX_ADDR_CNTR/LDMUX_FDRSE_0to3[3].I_FDRSE_BE0
+   to3' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_BUS_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[0].I_SIZE_S_H_RE
+   G' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/XPS_IPIF_I/PLBV46_BURST_I/I_SLAVE_ATTA
+   CHMENT/I_STEER_ADDRESS_COUNTER/GEN_FOR_SHARED.GEN_S_H_SIZE_REG[0].I_SIZE_S_H_
+   REG' has unconnected output pin
+WARNING:NgdBuild:452 - logical net 'N100' has no driver
+WARNING:NgdBuild:452 - logical net 'N101' has no driver
+WARNING:NgdBuild:452 - logical net 'N102' has no driver
+WARNING:NgdBuild:452 - logical net 'N103' has no driver
+WARNING:NgdBuild:452 - logical net 'N104' has no driver
+WARNING:NgdBuild:452 - logical net 'N105' has no driver
+WARNING:NgdBuild:452 - logical net 'N106' has no driver
+WARNING:NgdBuild:452 - logical net 'N107' has no driver
+WARNING:NgdBuild:452 - logical net 'N108' has no driver
+WARNING:NgdBuild:452 - logical net 'N109' has no driver
+WARNING:NgdBuild:452 - logical net 'N110' has no driver
+WARNING:NgdBuild:452 - logical net 'N111' has no driver
+WARNING:NgdBuild:452 - logical net 'N112' has no driver
+WARNING:NgdBuild:452 - logical net 'N113' has no driver
+WARNING:NgdBuild:452 - logical net 'N114' has no driver
+WARNING:NgdBuild:452 - logical net 'N115' has no driver
+WARNING:NgdBuild:452 - logical net 'N116' has no driver
+WARNING:NgdBuild:452 - logical net 'N117' has no driver
+WARNING:NgdBuild:452 - logical net 'N118' has no driver
+WARNING:NgdBuild:452 - logical net 'N119' has no driver
+WARNING:NgdBuild:452 - logical net 'N120' has no driver
+WARNING:NgdBuild:452 - logical net 'N121' has no driver
+WARNING:NgdBuild:452 - logical net 'N122' has no driver
+WARNING:NgdBuild:452 - logical net 'N123' has no driver
+WARNING:NgdBuild:452 - logical net 'N124' has no driver
+WARNING:NgdBuild:452 - logical net 'N125' has no driver
+WARNING:NgdBuild:452 - logical net 'N126' has no driver
+WARNING:NgdBuild:452 - logical net 'N127' has no driver
+WARNING:NgdBuild:452 - logical net 'N128' has no driver
+WARNING:NgdBuild:452 - logical net 'N129' has no driver
+WARNING:NgdBuild:452 - logical net 'N130' has no driver
+WARNING:NgdBuild:452 - logical net 'N131' has no driver
+WARNING:NgdBuild:452 - logical net 'N132' has no driver
+WARNING:NgdBuild:452 - logical net 'N133' has no driver
+WARNING:NgdBuild:452 - logical net 'N134' has no driver
+WARNING:NgdBuild:452 - logical net 'N135' has no driver
+WARNING:NgdBuild:452 - logical net 'N136' has no driver
+WARNING:NgdBuild:452 - logical net 'N137' has no driver
+WARNING:NgdBuild:452 - logical net 'N138' has no driver
+WARNING:NgdBuild:452 - logical net 'N139' has no driver
+WARNING:NgdBuild:452 - logical net 'N140' has no driver
+WARNING:NgdBuild:452 - logical net 'N141' has no driver
+WARNING:NgdBuild:452 - logical net 'N142' has no driver
+WARNING:NgdBuild:452 - logical net 'N143' has no driver
+WARNING:NgdBuild:452 - logical net 'N144' has no driver
+WARNING:NgdBuild:452 - logical net 'N145' has no driver
+WARNING:NgdBuild:452 - logical net 'N146' has no driver
+WARNING:NgdBuild:452 - logical net 'N147' has no driver
+WARNING:NgdBuild:452 - logical net 'N148' has no driver
+WARNING:NgdBuild:452 - logical net 'N149' has no driver
+WARNING:NgdBuild:452 - logical net 'N150' has no driver
+WARNING:NgdBuild:452 - logical net 'N151' has no driver
+WARNING:NgdBuild:452 - logical net 'N152' has no driver
+WARNING:NgdBuild:452 - logical net 'N153' has no driver
+WARNING:NgdBuild:452 - logical net 'N154' has no driver
+WARNING:NgdBuild:452 - logical net 'N155' has no driver
+WARNING:NgdBuild:452 - logical net 'N156' has no driver
+WARNING:NgdBuild:452 - logical net 'N157' has no driver
+WARNING:NgdBuild:452 - logical net 'N158' has no driver
+WARNING:NgdBuild:452 - logical net 'N159' has no driver
+WARNING:NgdBuild:452 - logical net 'N160' has no driver
+WARNING:NgdBuild:452 - logical net 'N161' has no driver
+WARNING:NgdBuild:452 - logical net 'N162' has no driver
+WARNING:NgdBuild:452 - logical net 'N163' has no driver
+WARNING:NgdBuild:452 - logical net 'N84' has no driver
+WARNING:NgdBuild:452 - logical net 'N85' has no driver
+WARNING:NgdBuild:452 - logical net 'N86' has no driver
+WARNING:NgdBuild:452 - logical net 'N87' has no driver
+WARNING:NgdBuild:452 - logical net 'N88' has no driver
+WARNING:NgdBuild:452 - logical net 'N89' has no driver
+WARNING:NgdBuild:452 - logical net 'N90' has no driver
+WARNING:NgdBuild:452 - logical net 'N91' has no driver
+WARNING:NgdBuild:452 - logical net 'N92' has no driver
+WARNING:NgdBuild:452 - logical net 'N93' has no driver
+WARNING:NgdBuild:452 - logical net 'N94' has no driver
+WARNING:NgdBuild:452 - logical net 'N95' has no driver
+WARNING:NgdBuild:452 - logical net 'N96' has no driver
+WARNING:NgdBuild:452 - logical net 'N97' has no driver
+WARNING:NgdBuild:452 - logical net 'N98' has no driver
+WARNING:NgdBuild:452 - logical net 'N99' has no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings: 145
+
+Total memory usage is 677092 kilobytes
+
+Writing NGD file "system.ngd" ...
+Total REAL time to NGDBUILD completion:  38 sec
+Total CPU time to NGDBUILD completion:   38 sec
+
+Writing NGDBUILD log file "system.bld"...

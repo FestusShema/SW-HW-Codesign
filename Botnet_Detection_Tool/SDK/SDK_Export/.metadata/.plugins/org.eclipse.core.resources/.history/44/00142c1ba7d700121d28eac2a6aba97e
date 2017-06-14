@@ -1,0 +1,103 @@
+/*
+ * Empty C++ Application
+ */
+
+#include<iostream>
+#include<stdio.h>
+#include <time.h>
+#include "xparameters.h"
+#include "xuartlite_l.h"
+
+//=================================================================================================
+//						      Global variables to access the memory
+//=================================================================================================
+volatile u32 *TCPmessageCompletelyRcvd = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR;
+volatile u32 *IRCmsgDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000001;
+volatile u32 *nbPatternDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000002;
+volatile u32 *nbIRCmessageDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000003;
+volatile u32 *nbJOINmessageDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000004;
+volatile u32 *nbPINGmessageDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000005;
+volatile u32 *nbPONGmessageDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000006;
+volatile u32 *nbPRIVMSGmessageDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000007;
+volatile u8 *source_ip = (volatile u8 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000008;
+volatile u8 *dest_ip = (volatile u8 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000009;
+volatile u16 *source_port = (volatile u16 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x0000000A;
+volatile u16 *dest_port = (volatile u16 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x0000000B;
+volatile u8 *channel_name = (volatile u8 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x0000000C;
+volatile u8 *next_channel_name = (volatile u8 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000019;
+//=================================================================================================
+//						      Global variables to access the memory
+//=================================================================================================
+
+//=================================================================================================
+//						     		Function displayStat()
+//
+// This function is used to display the statistics
+//=================================================================================================
+	void displayStat()
+	{
+		int i,j = 51;
+
+		printf("\n--------------------------------------------------------------------------\n");
+		printf("                            General information                           \n");
+		printf("--------------------------------------------------------------------------\n");
+		printf("One TCP message has been completely received : %d \n", TCPmessageCompletelyRcvd[0]);
+		printf("The received TCP message is an IRC message : %d \n", TCPmessageCompletelyRcvd[0]);
+		printf("The number of malware patterns detected is : %d \n", nbPatternDetected[0]);
+		printf("The number of IRC packet detected is : %d \n", nbIRCmessageDetected[0]);
+		printf("The number of \"JOIN\" IRC packet detected is : %d \n", nbJOINmessageDetected[0]);
+		printf("The number of \"PING\" IRC packet detected is : %d \n", nbPINGmessageDetected[0]);
+		printf("The number of \"PONG\" IRC packet detected is : %d \n", nbPONGmessageDetected[0]);
+		printf("The number of \"PRIVMSG\" IRC packet detected is : %d \n\n", nbPRIVMSGmessageDetected[0]);
+
+		printf("--------------------------------------------------------------------------\n");
+		printf("                        Packet specific information                       \n");
+		printf("--------------------------------------------------------------------------\n");
+		printf("The source IP address of the packet is : %d.%d.%d.%d \n", source_ip[0], source_ip[1], source_ip[2], source_ip[3]);
+		printf("The destination IP address of the packet is : %d.%d.%d.%d \n", dest_ip[0], dest_ip[1], dest_ip[2], dest_ip[3]);
+		printf("The source port of the packet is : %d \n", source_port[1]);
+		printf("The destination port of the packet is : %d \n", dest_port[1]);
+
+
+		for(i=51; i>=0; --i)
+		{
+			if(i==51)
+				printf("The first channel name is : %c", channel_name[i]);
+			else
+				if(i==0)
+					printf("%c\n", channel_name[i]);
+				else
+					printf("%c", channel_name[i]);
+		}
+
+		for(j=51; j>=0; --j)
+		{
+			if(j==51)
+				printf("The second channel name is : %c", next_channel_name[j]);
+			else
+				if(j==0)
+					printf("%c\n", next_channel_name[j]);
+				else
+					printf("%c", next_channel_name[j]);
+		}
+
+	}
+//=================================================================================================
+//						     		Function displayStat()
+//
+// This function is used to display the statistics
+//=================================================================================================
+
+int main()
+{
+	 while(1)
+	 {
+	    if(*TCPmessageCompletelyRcvd == 1)
+	    {
+	    	TCPmessageCompletelyRcvd[0] = 0;
+	    	displayStat();
+	    }
+	 }
+
+	return 0;
+}

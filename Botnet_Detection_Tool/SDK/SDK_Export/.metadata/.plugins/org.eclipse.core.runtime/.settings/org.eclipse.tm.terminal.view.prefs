@@ -1,0 +1,9 @@
+#Mon Jun 17 19:29:42 CDT 2013
+Connectors.org.eclipse.tm.internal.terminal.serial.SerialConnector.SerialPort=/dev/ttyS0
+Connectors.org.eclipse.tm.internal.terminal.serial.SerialConnector.StopBits=1
+Connectors.org.eclipse.tm.internal.terminal.serial.SerialConnector.DataBits=8
+eclipse.preferences.version=1
+Connectors.ConnectionType=org.eclipse.tm.internal.terminal.serial.SerialConnector
+Connectors.org.eclipse.tm.internal.terminal.serial.SerialConnector.BaudRate=9600
+Connectors.org.eclipse.tm.internal.terminal.serial.SerialConnector.Parity=None
+Connectors.org.eclipse.tm.internal.terminal.serial.SerialConnector.FlowControl=None

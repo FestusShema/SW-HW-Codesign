@@ -1,0 +1,20 @@
+#Fri Jun 21 15:09:00 CDT 2013
+com.xilinx.sdk.linkgen.prefs.default\:.boot0=DDR2_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.default\:.sdata=DDR2_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.default\:Heap=DDR2_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.default\:.sdata2=DDR2_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.default\:.vectors=xps_bram_if_cntlr_1
+com.xilinx.sdk.linkgen.prefs.default\:.rodata=DDR2_SDRAM_MPMC_BASEADDR
+eclipse.preferences.version=1
+com.xilinx.sdk.linkgen.prefs.default\:.rodata1=DDR2_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.default\:.data=DDR2_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.default\:.sbss2=DDR2_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.default\:.data1=DDR2_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.default\:.sbss=DDR2_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.default\:.fixup=DDR2_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.default\:Heap-size=1024
+com.xilinx.sdk.linkgen.prefs.default\:Stack=DDR2_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.default\:.bss=DDR2_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.default\:.boot=DDR2_SDRAM_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.default\:Stack-size=1024
+com.xilinx.sdk.linkgen.prefs.default\:.text=xps_bram_if_cntlr_1

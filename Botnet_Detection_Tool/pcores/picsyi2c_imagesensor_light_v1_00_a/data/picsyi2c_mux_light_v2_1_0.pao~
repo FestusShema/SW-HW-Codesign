@@ -1,0 +1,8 @@
+##############################################################################
+## Filename:          /MyProcessorIPLib/pcores/picsyi2c_mux_light_v1_00_a/data/picsyi2c_mux_light_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Mon Feb 02 18:44:20 2009 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib picsyi2c_mux_light_v1_00_a picsyi2c_mux_light vhdl
+

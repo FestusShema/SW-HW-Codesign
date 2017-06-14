@@ -1,0 +1,74 @@
+// File: /home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/system_stub.bmm
+
+ADDRESS_MAP ppc440_0 PPC440 100
+	ADDRESS_SPACE xps_bram_if_cntlr_1_bram_combined COMBINED [0xfffc0000:0xffffffff]
+		ADDRESS_RANGE RAMB32
+		BUS_BLOCK
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_0 [63:63] INPUT = xps_bram_if_cntlr_1_bram_combined_0.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_1 [62:62] INPUT = xps_bram_if_cntlr_1_bram_combined_1.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_2 [61:61] INPUT = xps_bram_if_cntlr_1_bram_combined_2.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_3 [60:60] INPUT = xps_bram_if_cntlr_1_bram_combined_3.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_4 [59:59] INPUT = xps_bram_if_cntlr_1_bram_combined_4.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_5 [58:58] INPUT = xps_bram_if_cntlr_1_bram_combined_5.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_6 [57:57] INPUT = xps_bram_if_cntlr_1_bram_combined_6.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_7 [56:56] INPUT = xps_bram_if_cntlr_1_bram_combined_7.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_8 [55:55] INPUT = xps_bram_if_cntlr_1_bram_combined_8.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_9 [54:54] INPUT = xps_bram_if_cntlr_1_bram_combined_9.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_10 [53:53] INPUT = xps_bram_if_cntlr_1_bram_combined_10.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_11 [52:52] INPUT = xps_bram_if_cntlr_1_bram_combined_11.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_12 [51:51] INPUT = xps_bram_if_cntlr_1_bram_combined_12.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_13 [50:50] INPUT = xps_bram_if_cntlr_1_bram_combined_13.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_14 [49:49] INPUT = xps_bram_if_cntlr_1_bram_combined_14.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_15 [48:48] INPUT = xps_bram_if_cntlr_1_bram_combined_15.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_16 [47:47] INPUT = xps_bram_if_cntlr_1_bram_combined_16.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_17 [46:46] INPUT = xps_bram_if_cntlr_1_bram_combined_17.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_18 [45:45] INPUT = xps_bram_if_cntlr_1_bram_combined_18.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_19 [44:44] INPUT = xps_bram_if_cntlr_1_bram_combined_19.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_20 [43:43] INPUT = xps_bram_if_cntlr_1_bram_combined_20.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_21 [42:42] INPUT = xps_bram_if_cntlr_1_bram_combined_21.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_22 [41:41] INPUT = xps_bram_if_cntlr_1_bram_combined_22.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_23 [40:40] INPUT = xps_bram_if_cntlr_1_bram_combined_23.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_24 [39:39] INPUT = xps_bram_if_cntlr_1_bram_combined_24.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_25 [38:38] INPUT = xps_bram_if_cntlr_1_bram_combined_25.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_26 [37:37] INPUT = xps_bram_if_cntlr_1_bram_combined_26.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_27 [36:36] INPUT = xps_bram_if_cntlr_1_bram_combined_27.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_28 [35:35] INPUT = xps_bram_if_cntlr_1_bram_combined_28.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_29 [34:34] INPUT = xps_bram_if_cntlr_1_bram_combined_29.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_30 [33:33] INPUT = xps_bram_if_cntlr_1_bram_combined_30.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_31 [32:32] INPUT = xps_bram_if_cntlr_1_bram_combined_31.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_32 [31:31] INPUT = xps_bram_if_cntlr_1_bram_combined_32.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_33 [30:30] INPUT = xps_bram_if_cntlr_1_bram_combined_33.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_34 [29:29] INPUT = xps_bram_if_cntlr_1_bram_combined_34.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_35 [28:28] INPUT = xps_bram_if_cntlr_1_bram_combined_35.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_36 [27:27] INPUT = xps_bram_if_cntlr_1_bram_combined_36.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_37 [26:26] INPUT = xps_bram_if_cntlr_1_bram_combined_37.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_38 [25:25] INPUT = xps_bram_if_cntlr_1_bram_combined_38.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_39 [24:24] INPUT = xps_bram_if_cntlr_1_bram_combined_39.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_40 [23:23] INPUT = xps_bram_if_cntlr_1_bram_combined_40.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_41 [22:22] INPUT = xps_bram_if_cntlr_1_bram_combined_41.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_42 [21:21] INPUT = xps_bram_if_cntlr_1_bram_combined_42.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_43 [20:20] INPUT = xps_bram_if_cntlr_1_bram_combined_43.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_44 [19:19] INPUT = xps_bram_if_cntlr_1_bram_combined_44.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_45 [18:18] INPUT = xps_bram_if_cntlr_1_bram_combined_45.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_46 [17:17] INPUT = xps_bram_if_cntlr_1_bram_combined_46.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_47 [16:16] INPUT = xps_bram_if_cntlr_1_bram_combined_47.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_48 [15:15] INPUT = xps_bram_if_cntlr_1_bram_combined_48.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_49 [14:14] INPUT = xps_bram_if_cntlr_1_bram_combined_49.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_50 [13:13] INPUT = xps_bram_if_cntlr_1_bram_combined_50.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_51 [12:12] INPUT = xps_bram_if_cntlr_1_bram_combined_51.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_52 [11:11] INPUT = xps_bram_if_cntlr_1_bram_combined_52.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_53 [10:10] INPUT = xps_bram_if_cntlr_1_bram_combined_53.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_54 [9:9] INPUT = xps_bram_if_cntlr_1_bram_combined_54.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_55 [8:8] INPUT = xps_bram_if_cntlr_1_bram_combined_55.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_56 [7:7] INPUT = xps_bram_if_cntlr_1_bram_combined_56.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_57 [6:6] INPUT = xps_bram_if_cntlr_1_bram_combined_57.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_58 [5:5] INPUT = xps_bram_if_cntlr_1_bram_combined_58.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_59 [4:4] INPUT = xps_bram_if_cntlr_1_bram_combined_59.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_60 [3:3] INPUT = xps_bram_if_cntlr_1_bram_combined_60.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_61 [2:2] INPUT = xps_bram_if_cntlr_1_bram_combined_61.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_62 [1:1] INPUT = xps_bram_if_cntlr_1_bram_combined_62.mem ;
+			system_i/xps_bram_if_cntlr_1_bram/xps_bram_if_cntlr_1_bram/ramb36_63 [0:0] INPUT = xps_bram_if_cntlr_1_bram_combined_63.mem ;
+		END_BUS_BLOCK;
+		END_ADDRESS_RANGE;
+	END_ADDRESS_SPACE;
+END_ADDRESS_MAP;

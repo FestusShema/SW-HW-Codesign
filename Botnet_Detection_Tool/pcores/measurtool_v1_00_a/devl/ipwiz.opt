@@ -1,0 +1,12 @@
+-batch 
+-create measurtool 
+-ver 1.00.a 
+-dir "/home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib10/MyProcessorIPLib" 
+-lang vhdl 
+-bus plbv46 s 
+-isc 3 
+-intrn 1 5 
+-reg 8 
+-xps 
+-ise 
+-driver 

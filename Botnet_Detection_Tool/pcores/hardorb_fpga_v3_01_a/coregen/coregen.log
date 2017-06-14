@@ -1,0 +1,83 @@
+Welcome to Xilinx CORE Generator.
+Opened project file
+/home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib10/UniPotsdam/pcores/hardor
+b_fpga_v3_01_a/coregen/coregen.cgp.
+Recustomizing IP...
+Finished Recustomizing.
+Recustomizing IP...
+Finished Recustomizing.
+Regenerating IP...
+Generating Implementation files.
+assertion failure.  Backtrace:
+#0 /usr/lib/libxcb-xlib.so.0 [0x6c12b767]
+#1 /usr/lib/libxcb-xlib.so.0(xcb_xlib_unlock+0x31) [0x6c12b8b1]
+#2 /usr/lib/libX11.so.6(_XReply+0xfd) [0x6b7081bd]
+#3 /opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/xawt/libmawt.so
+[0x6ba4dd3e]
+#4 /opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/xawt/libmawt.so
+[0x6ba37d47]
+#5 /opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/xawt/libmawt.so
+[0x6ba37ec3]
+#6
+/opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/xawt/libmawt.so(Java_sun_aw
+t_X11GraphicsEnvironment_initDisplay+0x26) [0x6ba38106]
+#7 [0xb1600ba8]
+#8 [0xb15fab6b]
+#9 [0xb15fab6b]
+#10 [0xb15f8234]
+#11 /opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/server/libjvm.so
+[0xb76bf75c]
+#12 /opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/server/libjvm.so
+[0xb788db48]
+#13 /opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/server/libjvm.so
+[0xb76bf58f]
+#14
+/opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/server/libjvm.so(JVM_DoPriv
+ileged+0x32d) [0xb771cd7d]
+#15
+/opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/libjava.so(Java_java_securi
+ty_AccessController_doPrivileged__Ljava_security_PrivilegedAction_2+0x3d)
+[0xb71732cd]
+#16 [0xb16004d8]
+#17 [0xb15faa94]
+#18 [0xb15f8234]
+#19 /opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/server/libjvm.so
+[0xb76bf75c]
+Locking assertion failure.  Backtrace:
+#0 /usr/lib/libxcb-xlib.so.0 [0x6c12b767]
+#1 /usr/lib/libxcb-xlib.so.0(xcb_xlib_lock+0x2e) [0x6c12b81e]
+#2 /usr/lib/libX11.so.6 [0x6b707518]
+#3 /usr/lib/libX11.so.6(XGetVisualInfo+0x26) [0x6b6fe0a6]
+#4 /opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/xawt/libmawt.so
+[0x6ba37089]
+#5 /opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/xawt/libmawt.so
+[0x6ba372d3]
+#6 /opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/xawt/libmawt.so
+[0x6ba37f71]
+#7
+/opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/xawt/libmawt.so(Java_sun_aw
+t_X11GraphicsEnvironment_initDisplay+0x26) [0x6ba38106]
+#8 [0xb1600ba8]
+#9 [0xb15fab6b]
+#10 [0xb15fab6b]
+#11 [0xb15f8234]
+#12 /opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/server/libjvm.so
+[0xb76bf75c]
+#13 /opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/server/libjvm.so
+[0xb788db48]
+#14 /opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/server/libjvm.so
+[0xb76bf58f]
+#15
+/opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/server/libjvm.so(JVM_DoPriv
+ileged+0x32d) [0xb771cd7d]
+#16
+/opt/local/Xilinx10.1i+SP3/ISE/java/lin/jre/lib/i386/libjava.so(Java_java_securi
+ty_AccessController_doPrivileged__Ljava_security_PrivilegedAction_2+0x3d)
+[0xb71732cd]
+#17 [0xb16004d8]
+#18 [0xb15faa94]
+#19 [0xb15f8234]
+Generating NGC file.
+Finished Regenerating.
+Successfully generated dma_fifo_v4_wr_32.
+Closed project file.

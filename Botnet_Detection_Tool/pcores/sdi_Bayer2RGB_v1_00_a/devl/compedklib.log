@@ -1,0 +1,22 @@
+Executing: compedklib -s isim -lp /home/hartmann/picsy/EDK/ -zip_models -o /tmp/xil_fARSf8 -log_file /home/hartmann/picsy/EDK/hand_follower_sw/pcores//sdi_Bayer2RGB_v1_00_a/devl/compedklib.log -X /tmp/xil_fARSf8 -c sdi_Bayer2RGB_v1_00_a
+
+Scanning repositories
+Collecting HDL files
+Compiling pcores
+Compiling sdi_Bayer2RGB_v1_00_a
+Executing: vhpcomp -work sdi_Bayer2RGB_v1_00_a -prj /tmp/xil_fARSf8/CompileListFiles/sdi_Bayer2RGB_v1_00_a_compile_order.prj
+
+Analyzing VHDL file /home/hartmann/picsy/EDK/hand_follower_sw/pcores/sdi_Bayer2RGB_v1_00_a/hdl/vhdl/Bayer2RGB.vhd
+Restoring VHDL parse-tree ieee.std_logic_1164 from /opt/local/Xilinx10.1i/ISE/vhdl/hdp/lin/ieee/std_logic_1164.vdb
+Restoring VHDL parse-tree std.standard from /opt/local/Xilinx10.1i/ISE/vhdl/hdp/lin/std/standard.vdb
+Restoring VHDL parse-tree ieee.std_logic_unsigned from /opt/local/Xilinx10.1i/ISE/vhdl/hdp/lin/ieee/std_logic_unsigned.vdb
+Restoring VHDL parse-tree ieee.std_logic_arith from /opt/local/Xilinx10.1i/ISE/vhdl/hdp/lin/ieee/std_logic_arith.vdb
+Analyzing VHDL file /home/hartmann/picsy/EDK/hand_follower_sw/pcores/sdi_Bayer2RGB_v1_00_a/hdl/vhdl/ColorRAM.vhd
+Restoring VHDL parse-tree xilinxcorelib.blk_mem_gen_v2_8 from /opt/local/Xilinx10.1i/ISE/vhdl/hdp/lin/xilinxcorelib/xilinxcorelib.vdbl
+Restoring VHDL parse-tree std.textio from /opt/local/Xilinx10.1i/ISE/vhdl/hdp/lin/std/textio.vdb
+Restoring VHDL parse-tree ieee.std_logic_textio from /opt/local/Xilinx10.1i/ISE/vhdl/hdp/lin/ieee/std_logic_textio.vdb
+Saving VHDL parse-tree sdi_bayer2rgb_v1_00_a.sdi_bayer2rgb into /tmp/xil_fARSf8/sdi_Bayer2RGB_v1_00_a/sdi_bayer2rgb.vdb
+Saving VHDL parse-tree sdi_bayer2rgb_v1_00_a.colorram into /tmp/xil_fARSf8/sdi_Bayer2RGB_v1_00_a/colorram.vdb
+Executing: zip -qr sdi_Bayer2RGB_v1_00_a.zip sdi_Bayer2RGB_v1_00_a
+
+Compilation completed, no errors.

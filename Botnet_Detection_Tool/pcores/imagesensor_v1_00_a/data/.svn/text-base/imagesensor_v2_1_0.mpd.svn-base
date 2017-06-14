@@ -1,0 +1,72 @@
+###################################################################
+##
+## Name     : imagesensor
+## Desc     : Microprocessor Peripheral Description
+## By       : University of Potsdam - Department of Computer Sceince 
+###################################################################
+
+BEGIN imagesensor
+
+## Peripheral Options
+OPTION IPTYPE = PERIPHERAL
+OPTION IMP_NETLIST = TRUE
+OPTION HDL = VHDL
+OPTION ALERT = Please refer to the imagesensor_v1_00_a data sheet for details.
+OPTION LAST_UPDATED = 10.1.2
+OPTION USAGE_LEVEL = BASE_USER
+OPTION ARCH_SUPPORT_MAP = (virtex4fx=PREFERRED)
+OPTION IP_GROUP = MICROBLAZE:PPC:USER
+OPTION DESC = PICSY CAMERA HEAD BOARD (IMAGE SENSOR) INTERFACE MODULE
+
+IO_INTERFACE IO_IF = imagesensor_0, IO_TYPE = IMAGESENSOR_V1
+
+## Bus Interfaces
+#BUS_INTERFACE BUS = STREAM_OUT, BUS_TYPE = INITIATOR, BUS_STD = DATASTREAM
+
+## Generics for VHDL or Parameters for Verilog
+PARAMETER C_RECOMPILE = 0, DT = INTEGER, VALUES = (0= AGAIN, 1= ONCE_AGAIN)
+PARAMETER C_DWIDTH = 64, DT = INTEGER, RANGE = (32, 64, 128)
+PARAMETER C_NUM_CONFIG_REGS = 4, DT = INTEGER, ASSIGNMENT = CONSTANT
+PARAMETER C_IMAGE_WIDTH = 2048, DT = INTEGER, ASSIGNMENT = CONSTANT
+PARAMETER C_IMAGE_HIGHT = 1536, DT = INTEGER, ASSIGNMENT = CONSTANT
+
+
+## Peripheral ports
+PORT clk = "", DIR = I, SIGIS = Clk
+PORT rst = "", DIR = I, SIGIS = Rst
+
+## SDI Interface
+PORT pu_reset = "", DIR = I, SIGIS = RST
+PORT pu_eof = "", DIR = O
+PORT pu_eof_ack = "", DIR = I
+PORT request_frame = "", DIR = I
+PORT config_regs = "", DIR = I, VEC = [((C_NUM_CONFIG_REGS*8)-1):0]
+## stream out
+#PORT stream_out_stop = stream_stop, DIR = I, BUS = STREAM_OUT
+#PORT stream_out_valid = stream_valid, DIR = O, BUS = STREAM_OUT
+#PORT stream_out_data = stream_data, DIR = O, VEC = [(C_DWIDTH-1):0], BUS = STREAM_OUT
+PORT stream_out_stop = "", DIR = I
+PORT stream_out_valid = "", DIR = O
+PORT stream_out_data = "", DIR = O, VEC = [(C_DWIDTH-1):0]
+
+PORT ISI_D = "", DIR = I, VEC = [11:0], PERMIT = BASE_USER, DESC = 'Pixel data output bit 0, DOUT[9] (MSB), DOUT[0] (LSB)', IO_IF = imagesensor_0, IO_IS = ISI_DATA
+PORT ISI_FRM_VLD = "", DIR = I, PERMIT = BASE_USER, DESC = 'Output is pulsed HIGH during frame of valid pixel data', IO_IF = imagesensor_0, IO_IS = ISI_FRAM_VALID
+PORT ISI_LNE_VLD = "", DIR = I, PERMIT = BASE_USER, DESC = 'Output is pulsed HIGH during line of selectable valid pixel data', IO_IF = imagesensor_0, IO_IS = ISI_LINE_VALID
+PORT ISI_PXCLK = "", DIR = I, PERMIT = BASE_USER, DESC = 'Pixel data outputs are valid during falling edge of this clock. Frequency = master clock', IO_IF = imagesensor_0, IO_IS = ISI_PIXL_CLK
+PORT ISI_XMCLK = "", DIR = O, PERMIT = BASE_USER, DESC = 'Output is pulsed HIGH during frame of valid pixel data', IO_IF = imagesensor_0, IO_IS = ISI_MASTER_CLK
+PORT ISI_RESET_N = "", DIR = O, PERMIT = BASE_USER, DESC = 'Activates (LOW) asynchronous reset of sensor. All registers assume factory defaults', IO_IF = imagesensor_0, IO_IS = ISI_RESET
+PORT ISI_GSHT_CTL = "", DIR = O, PERMIT = BASE_USER, DESC = 'Global shutter control', IO_IF = imagesensor_0, IO_IS = ISI_SHUTR_CTRL
+PORT ISI_TRIGGER = "", DIR = O, PERMIT = BASE_USER, DESC = 'Activates (HIGH) snapshot sequence', IO_IF = imagesensor_0, IO_IS = ISI_SNPSHOT
+PORT ISI_OE_N = "", DIR = O, PERMIT = BASE_USER, DESC = 'when HIGH, places outputs DOUT[9:0], FRAME_VALID, LINE_VALID, PIXCLK, and STROBE into a tri-state configuration', IO_IF = imagesensor_0, IO_IS = ISI_OE
+PORT ISI_STB = "", DIR = I, PERMIT = BASE_USER, DESC = 'Output is pulsed HIGH to indicate sensor reset operation of pixel array has completed', IO_IF = imagesensor_0, IO_IS = ISI_STROBE
+PORT ISI_STDBY = "", DIR = O, PERMIT = BASE_USER, DESC = 'Activates (HIGH) standby mode, disables analog bias circuitry for power saving mode', IO_IF = imagesensor_0, IO_IS = ISI_STANDBY
+PORT ISI_RES0 = "", DIR = IO, THREE_STATE = TRUE, TRI_I = ISI_RES0_I, TRI_O = ISI_RES0_O, TRI_T = ISI_RES0_T, PERMIT = BASE_USER, DESC = 'Spare IO Pin', IO_IF = imagesensor_0, IO_IS = ISI_RES0
+PORT ISI_RES0_I = "", DIR = I
+PORT ISI_RES0_O = "", DIR = O
+PORT ISI_RES0_T = "", DIR = O
+PORT ISI_RES1 = "", DIR = IO, THREE_STATE = TRUE, TRI_I = ISI_RES1_I, TRI_O = ISI_RES1_O, TRI_T = ISI_RES1_T, PERMIT = BASE_USER, DESC = 'Spare IO Pin', IO_IF = imagesensor_0, IO_IS = ISI_RES1
+PORT ISI_RES1_I = "", DIR = I
+PORT ISI_RES1_O = "", DIR = O
+PORT ISI_RES1_T = "", DIR = O
+END
+

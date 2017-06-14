@@ -1,0 +1,1590 @@
+Release 14.4 - xst P.49d (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: SSL.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "SSL.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "SSL"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-fgg484
+
+---- Source Options
+Top Module Name                    : SSL
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/festus/Documents/SSL/SSL/modmult.vhd" into library work
+Parsing entity <modmult>.
+Parsing architecture <modmult1> of entity <modmult>.
+Parsing VHDL file "/home/festus/Documents/SSL/SSL/rsacypher_encrypt.vhd" into library work
+Parsing entity <RSACypher_encrypt>.
+Parsing architecture <Behavioral> of entity <rsacypher_encrypt>.
+Parsing VHDL file "/home/festus/Documents/SSL/SSL/rsacypher_decrypt.vhd" into library work
+Parsing entity <rsacypher_decrypt>.
+Parsing architecture <Behavioral> of entity <rsacypher_decrypt>.
+Parsing VHDL file "/home/festus/Documents/SSL/SSL/outputcon.vhd" into library work
+Parsing entity <outputcon>.
+Parsing architecture <Behavioral> of entity <outputcon>.
+Parsing VHDL file "/home/festus/Documents/SSL/SSL/inputcon.vhd" into library work
+Parsing entity <inputcon>.
+Parsing architecture <Behavioral> of entity <inputcon>.
+Parsing VHDL file "/home/festus/Documents/SSL/SSL/des56_encrypt.vhd" into library work
+Parsing entity <des56_encrypt>.
+Parsing architecture <Behavioral> of entity <des56_encrypt>.
+Parsing VHDL file "/home/festus/Documents/SSL/SSL/des56_decrypt.vhd" into library work
+Parsing entity <des56_decrypt>.
+Parsing architecture <Behavioral> of entity <des56_decrypt>.
+Parsing VHDL file "/home/festus/Documents/SSL/SSL/SSL.vhd" into library work
+Parsing entity <SSL>.
+Parsing architecture <Behavioral> of entity <ssl>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <SSL> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <inputcon> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <RSACypher_encrypt> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:871 - "/home/festus/Documents/SSL/SSL/rsacypher_encrypt.vhd" Line 101: Using initial value "0000000000000000000000000000000000000000000000000000000000000101" for inexp since it is never assigned
+WARNING:HDLCompiler:871 - "/home/festus/Documents/SSL/SSL/rsacypher_encrypt.vhd" Line 102: Using initial value "1110111111111111111111100100001011010010000101111010100100100001" for inmod since it is never assigned
+
+Elaborating entity <modmult> (architecture <modmult1>) with generics from library <work>.
+
+Elaborating entity <rsacypher_decrypt> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:871 - "/home/festus/Documents/SSL/SSL/rsacypher_decrypt.vhd" Line 101: Using initial value "0010111111111111111111111001111000001110011011000000111111010001" for inexp since it is never assigned
+WARNING:HDLCompiler:871 - "/home/festus/Documents/SSL/SSL/rsacypher_decrypt.vhd" Line 102: Using initial value "1110111111111111111111100100001011010010000101111010100100100001" for inmod since it is never assigned
+
+Elaborating entity <outputcon> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <des56_encrypt> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "/home/festus/Documents/SSL/SSL/des56_encrypt.vhd" Line 29: Using initial value "0000001100110100010101110111100110011011101111001101111111110000" for decipher since it is never assigned
+
+Elaborating entity <des56_decrypt> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "/home/festus/Documents/SSL/SSL/des56_decrypt.vhd" Line 29: Using initial value "0001001100110100010101110111100110011011101111001101111111110000" for decipher since it is never assigned
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <SSL>.
+    Related source file is "/home/festus/Documents/SSL/SSL/SSL.vhd".
+INFO:Xst:3210 - "/home/festus/Documents/SSL/SSL/SSL.vhd" line 123: Output port <ready> of the instance <U1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/festus/Documents/SSL/SSL/SSL.vhd" line 132: Output port <ready> of the instance <U2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/festus/Documents/SSL/SSL/SSL.vhd" line 147: Output port <rdy_next_next_cycle> of the instance <U4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/festus/Documents/SSL/SSL/SSL.vhd" line 147: Output port <rdy_next_cycle> of the instance <U4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/festus/Documents/SSL/SSL/SSL.vhd" line 147: Output port <rdy> of the instance <U4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/festus/Documents/SSL/SSL/SSL.vhd" line 158: Output port <rdy_next_next_cycle> of the instance <U5> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/festus/Documents/SSL/SSL/SSL.vhd" line 158: Output port <rdy_next_cycle> of the instance <U5> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <SSL> synthesized.
+
+Synthesizing Unit <inputcon>.
+    Related source file is "/home/festus/Documents/SSL/SSL/inputcon.vhd".
+    Found 64-bit register for signal <array_out>.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+Unit <inputcon> synthesized.
+
+Synthesizing Unit <RSACypher_encrypt>.
+    Related source file is "/home/festus/Documents/SSL/SSL/rsacypher_encrypt.vhd".
+        KEYSIZE = 64
+    Found 1-bit register for signal <done>.
+    Found 64-bit register for signal <root>.
+    Found 64-bit register for signal <modreg>.
+    Found 64-bit register for signal <tempin>.
+    Found 64-bit register for signal <sqrin>.
+    Found 64-bit register for signal <count>.
+    Found 1-bit register for signal <multgo>.
+    Found 64-bit register for signal <cypher>.
+    Summary:
+	inferred 386 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <RSACypher_encrypt> synthesized.
+
+Synthesizing Unit <modmult>.
+    Related source file is "/home/festus/Documents/SSL/SSL/modmult.vhd".
+        MPWID = 64
+    Found 1-bit register for signal <first>.
+    Found 64-bit register for signal <mpreg>.
+    Found 66-bit register for signal <mcreg>.
+    Found 66-bit register for signal <modreg1>.
+    Found 66-bit register for signal <modreg2>.
+    Found 66-bit register for signal <prodreg>.
+    Found 66-bit adder for signal <prodreg[65]_mcreg[65]_add_1_OUT> created at line 104.
+    Found 66-bit subtractor for signal <prodreg2> created at line 91.
+    Found 66-bit subtractor for signal <prodreg3> created at line 91.
+    Found 66-bit subtractor for signal <mcreg1> created at line 89.
+    Found 66-bit 3-to-1 multiplexer for signal <prodreg4> created at line 115.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred 329 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <modmult> synthesized.
+
+Synthesizing Unit <rsacypher_decrypt>.
+    Related source file is "/home/festus/Documents/SSL/SSL/rsacypher_decrypt.vhd".
+        KEYSIZE = 64
+    Found 1-bit register for signal <done>.
+    Found 64-bit register for signal <root>.
+    Found 64-bit register for signal <modreg>.
+    Found 64-bit register for signal <tempin>.
+    Found 64-bit register for signal <sqrin>.
+    Found 64-bit register for signal <count>.
+    Found 1-bit register for signal <multgo>.
+    Found 64-bit register for signal <cypher>.
+    Summary:
+	inferred 386 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <rsacypher_decrypt> synthesized.
+
+Synthesizing Unit <outputcon>.
+    Related source file is "/home/festus/Documents/SSL/SSL/outputcon.vhd".
+    Found 64-bit register for signal <array_out>.
+    Summary:
+	inferred  64 D-type flip-flop(s).
+Unit <outputcon> synthesized.
+
+Synthesizing Unit <des56_encrypt>.
+    Related source file is "/home/festus/Documents/SSL/SSL/des56_encrypt.vhd".
+WARNING:Xst:647 - Input <inkey<7:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <inkey<15:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <inkey<23:23>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <inkey<31:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <inkey<39:39>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <inkey<47:47>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <inkey<55:55>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <inkey<63:63>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <ready>.
+    Found 5-bit register for signal <countup>.
+    Found 1-bit register for signal <rdy>.
+    Found 1-bit register for signal <rdy_next_cycle>.
+    Found 1-bit register for signal <rdy_next_next_cycle>.
+    Found 28-bit register for signal <key_r>.
+    Found 64-bit register for signal <inmsg>.
+    Found 64-bit register for signal <outdata>.
+    Found 28-bit register for signal <key_l>.
+    Found 5-bit adder for signal <countup[4]_GND_15_o_add_24_OUT> created at line 352.
+    Found 64x4-bit Read Only RAM for signal <s1>
+    Found 64x4-bit Read Only RAM for signal <s2>
+    Found 64x4-bit Read Only RAM for signal <s3>
+    Found 64x4-bit Read Only RAM for signal <s4>
+    Found 64x4-bit Read Only RAM for signal <s5>
+    Found 64x4-bit Read Only RAM for signal <s6>
+    Found 64x4-bit Read Only RAM for signal <s7>
+    Found 64x4-bit Read Only RAM for signal <s8>
+    Found 5-bit comparator greater for signal <countup[4]_GND_15_o_LessThan_22_o> created at line 346
+    Found 5-bit comparator greater for signal <countup[4]_GND_15_o_LessThan_24_o> created at line 349
+    Summary:
+	inferred   8 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred 193 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  29 Multiplexer(s).
+Unit <des56_encrypt> synthesized.
+
+Synthesizing Unit <des56_decrypt>.
+    Related source file is "/home/festus/Documents/SSL/SSL/des56_decrypt.vhd".
+WARNING:Xst:647 - Input <inkey<7:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <inkey<15:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <inkey<23:23>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <inkey<31:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <inkey<39:39>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <inkey<47:47>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <inkey<55:55>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <inkey<63:63>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <ready>.
+    Found 5-bit register for signal <countup>.
+    Found 1-bit register for signal <rdy>.
+    Found 1-bit register for signal <rdy_next_cycle>.
+    Found 1-bit register for signal <rdy_next_next_cycle>.
+    Found 28-bit register for signal <key_r>.
+    Found 64-bit register for signal <inmsg>.
+    Found 64-bit register for signal <outdata>.
+    Found 28-bit register for signal <key_l>.
+    Found 5-bit adder for signal <countup[4]_GND_17_o_add_24_OUT> created at line 352.
+    Found 64x4-bit Read Only RAM for signal <s1>
+    Found 64x4-bit Read Only RAM for signal <s2>
+    Found 64x4-bit Read Only RAM for signal <s3>
+    Found 64x4-bit Read Only RAM for signal <s4>
+    Found 64x4-bit Read Only RAM for signal <s5>
+    Found 64x4-bit Read Only RAM for signal <s6>
+    Found 64x4-bit Read Only RAM for signal <s7>
+    Found 64x4-bit Read Only RAM for signal <s8>
+    Found 5-bit comparator greater for signal <countup[4]_GND_17_o_LessThan_22_o> created at line 346
+    Found 5-bit comparator greater for signal <countup[4]_GND_17_o_LessThan_24_o> created at line 349
+    Summary:
+	inferred   8 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred 193 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  29 Multiplexer(s).
+Unit <des56_decrypt> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 16
+ 64x4-bit single-port Read Only RAM                    : 16
+# Adders/Subtractors                                   : 18
+ 5-bit adder                                           : 2
+ 66-bit adder                                          : 4
+ 66-bit subtractor                                     : 12
+# Registers                                            : 60
+ 1-bit register                                        : 16
+ 28-bit register                                       : 4
+ 5-bit register                                        : 2
+ 64-bit register                                       : 22
+ 66-bit register                                       : 16
+# Comparators                                          : 4
+ 5-bit comparator greater                              : 4
+# Multiplexers                                         : 88
+ 1-bit 2-to-1 multiplexer                              : 14
+ 28-bit 2-to-1 multiplexer                             : 36
+ 5-bit 2-to-1 multiplexer                              : 6
+ 64-bit 2-to-1 multiplexer                             : 16
+ 66-bit 2-to-1 multiplexer                             : 12
+ 66-bit 3-to-1 multiplexer                             : 4
+# Xors                                                 : 18
+ 32-bit xor2                                           : 2
+ 6-bit xor2                                            : 16
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <modreg1_6> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_7> 
+INFO:Xst:2261 - The FF/Latch <modreg1_7> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_8> 
+INFO:Xst:2261 - The FF/Latch <modreg1_8> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_9> 
+INFO:Xst:2261 - The FF/Latch <modreg1_9> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_10> 
+INFO:Xst:2261 - The FF/Latch <modreg1_10> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_11> 
+INFO:Xst:2261 - The FF/Latch <modreg1_11> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_12> 
+INFO:Xst:2261 - The FF/Latch <modreg1_64> in Unit <modmultiply> is equivalent to the following 3 FFs/Latches, which will be removed : <modreg1_65> <modreg2_0> <modreg2_65> 
+INFO:Xst:2261 - The FF/Latch <modreg1_12> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_13> 
+INFO:Xst:2261 - The FF/Latch <modreg1_13> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_14> 
+INFO:Xst:2261 - The FF/Latch <modreg1_14> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_15> 
+INFO:Xst:2261 - The FF/Latch <modreg1_15> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_16> 
+INFO:Xst:2261 - The FF/Latch <modreg1_20> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_21> 
+INFO:Xst:2261 - The FF/Latch <modreg1_16> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_17> 
+INFO:Xst:2261 - The FF/Latch <modreg1_21> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_22> 
+INFO:Xst:2261 - The FF/Latch <modreg1_17> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_18> 
+INFO:Xst:2261 - The FF/Latch <modreg1_22> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_23> 
+INFO:Xst:2261 - The FF/Latch <modreg1_18> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_19> 
+INFO:Xst:2261 - The FF/Latch <modreg1_23> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_24> 
+INFO:Xst:2261 - The FF/Latch <modreg1_19> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_20> 
+INFO:Xst:2261 - The FF/Latch <modreg1_24> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_25> 
+INFO:Xst:2261 - The FF/Latch <modreg1_25> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_26> 
+INFO:Xst:2261 - The FF/Latch <modreg1_30> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_31> 
+INFO:Xst:2261 - The FF/Latch <modreg1_26> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_27> 
+INFO:Xst:2261 - The FF/Latch <modreg1_31> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_32> 
+INFO:Xst:2261 - The FF/Latch <modreg1_27> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_28> 
+INFO:Xst:2261 - The FF/Latch <modreg1_32> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_33> 
+INFO:Xst:2261 - The FF/Latch <modreg1_28> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_29> 
+INFO:Xst:2261 - The FF/Latch <modreg1_33> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_34> 
+INFO:Xst:2261 - The FF/Latch <modreg1_29> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_30> 
+INFO:Xst:2261 - The FF/Latch <modreg1_34> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_35> 
+INFO:Xst:2261 - The FF/Latch <modreg1_35> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_36> 
+INFO:Xst:2261 - The FF/Latch <modreg1_40> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_41> 
+INFO:Xst:2261 - The FF/Latch <modreg1_36> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_37> 
+INFO:Xst:2261 - The FF/Latch <modreg1_41> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_42> 
+INFO:Xst:2261 - The FF/Latch <modreg1_37> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_38> 
+INFO:Xst:2261 - The FF/Latch <modreg1_42> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_43> 
+INFO:Xst:2261 - The FF/Latch <modreg1_38> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_39> 
+INFO:Xst:2261 - The FF/Latch <modreg1_43> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_44> 
+INFO:Xst:2261 - The FF/Latch <modreg1_39> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_40> 
+INFO:Xst:2261 - The FF/Latch <modreg1_44> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_45> 
+INFO:Xst:2261 - The FF/Latch <modreg1_45> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_46> 
+INFO:Xst:2261 - The FF/Latch <modreg1_50> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_51> 
+INFO:Xst:2261 - The FF/Latch <modreg1_46> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_47> 
+INFO:Xst:2261 - The FF/Latch <modreg1_51> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_52> 
+INFO:Xst:2261 - The FF/Latch <modreg1_47> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_48> 
+INFO:Xst:2261 - The FF/Latch <modreg1_52> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_53> 
+INFO:Xst:2261 - The FF/Latch <modreg1_48> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_49> 
+INFO:Xst:2261 - The FF/Latch <modreg1_53> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_54> 
+INFO:Xst:2261 - The FF/Latch <modreg1_49> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_50> 
+INFO:Xst:2261 - The FF/Latch <modreg1_54> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_55> 
+INFO:Xst:2261 - The FF/Latch <modreg1_0> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_1> 
+INFO:Xst:2261 - The FF/Latch <modreg1_55> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_56> 
+INFO:Xst:2261 - The FF/Latch <modreg1_60> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_61> 
+INFO:Xst:2261 - The FF/Latch <modreg1_1> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_2> 
+INFO:Xst:2261 - The FF/Latch <modreg1_56> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_57> 
+INFO:Xst:2261 - The FF/Latch <modreg1_61> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_62> 
+INFO:Xst:2261 - The FF/Latch <modreg1_2> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_3> 
+INFO:Xst:2261 - The FF/Latch <modreg1_57> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_58> 
+INFO:Xst:2261 - The FF/Latch <modreg1_62> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_63> 
+INFO:Xst:2261 - The FF/Latch <modreg1_3> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_4> 
+INFO:Xst:2261 - The FF/Latch <modreg1_58> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_59> 
+INFO:Xst:2261 - The FF/Latch <modreg1_63> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_64> 
+INFO:Xst:2261 - The FF/Latch <modreg1_4> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_5> 
+INFO:Xst:2261 - The FF/Latch <modreg1_59> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_60> 
+INFO:Xst:2261 - The FF/Latch <modreg1_5> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_6> 
+INFO:Xst:2261 - The FF/Latch <modreg1_6> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_7> 
+INFO:Xst:2261 - The FF/Latch <modreg1_7> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_8> 
+INFO:Xst:2261 - The FF/Latch <modreg1_8> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_9> 
+INFO:Xst:2261 - The FF/Latch <modreg1_9> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_10> 
+INFO:Xst:2261 - The FF/Latch <modreg1_10> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_11> 
+INFO:Xst:2261 - The FF/Latch <modreg1_11> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_12> 
+INFO:Xst:2261 - The FF/Latch <modreg1_64> in Unit <modsqr> is equivalent to the following 3 FFs/Latches, which will be removed : <modreg1_65> <modreg2_0> <modreg2_65> 
+INFO:Xst:2261 - The FF/Latch <modreg1_12> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_13> 
+INFO:Xst:2261 - The FF/Latch <modreg1_13> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_14> 
+INFO:Xst:2261 - The FF/Latch <modreg1_14> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_15> 
+INFO:Xst:2261 - The FF/Latch <modreg1_15> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_16> 
+INFO:Xst:2261 - The FF/Latch <modreg1_20> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_21> 
+INFO:Xst:2261 - The FF/Latch <modreg1_16> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_17> 
+INFO:Xst:2261 - The FF/Latch <modreg1_21> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_22> 
+INFO:Xst:2261 - The FF/Latch <modreg1_17> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_18> 
+INFO:Xst:2261 - The FF/Latch <modreg1_22> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_23> 
+INFO:Xst:2261 - The FF/Latch <modreg1_18> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_19> 
+INFO:Xst:2261 - The FF/Latch <modreg1_23> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_24> 
+INFO:Xst:2261 - The FF/Latch <modreg1_19> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_20> 
+INFO:Xst:2261 - The FF/Latch <modreg1_24> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_25> 
+INFO:Xst:2261 - The FF/Latch <modreg1_25> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_26> 
+INFO:Xst:2261 - The FF/Latch <modreg1_30> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_31> 
+INFO:Xst:2261 - The FF/Latch <modreg1_26> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_27> 
+INFO:Xst:2261 - The FF/Latch <modreg1_31> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_32> 
+INFO:Xst:2261 - The FF/Latch <modreg1_27> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_28> 
+INFO:Xst:2261 - The FF/Latch <modreg1_32> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_33> 
+INFO:Xst:2261 - The FF/Latch <modreg1_28> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_29> 
+INFO:Xst:2261 - The FF/Latch <modreg1_33> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_34> 
+INFO:Xst:2261 - The FF/Latch <modreg1_29> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_30> 
+INFO:Xst:2261 - The FF/Latch <modreg1_34> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_35> 
+INFO:Xst:2261 - The FF/Latch <modreg1_35> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_36> 
+INFO:Xst:2261 - The FF/Latch <modreg1_40> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_41> 
+INFO:Xst:2261 - The FF/Latch <modreg1_36> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_37> 
+INFO:Xst:2261 - The FF/Latch <modreg1_41> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_42> 
+INFO:Xst:2261 - The FF/Latch <modreg1_37> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_38> 
+INFO:Xst:2261 - The FF/Latch <modreg1_42> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_43> 
+INFO:Xst:2261 - The FF/Latch <modreg1_38> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_39> 
+INFO:Xst:2261 - The FF/Latch <modreg1_43> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_44> 
+INFO:Xst:2261 - The FF/Latch <modreg1_39> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_40> 
+INFO:Xst:2261 - The FF/Latch <modreg1_44> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_45> 
+INFO:Xst:2261 - The FF/Latch <modreg1_45> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_46> 
+INFO:Xst:2261 - The FF/Latch <modreg1_50> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_51> 
+INFO:Xst:2261 - The FF/Latch <modreg1_46> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_47> 
+INFO:Xst:2261 - The FF/Latch <modreg1_51> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_52> 
+INFO:Xst:2261 - The FF/Latch <modreg1_47> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_48> 
+INFO:Xst:2261 - The FF/Latch <modreg1_52> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_53> 
+INFO:Xst:2261 - The FF/Latch <modreg1_48> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_49> 
+INFO:Xst:2261 - The FF/Latch <modreg1_53> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_54> 
+INFO:Xst:2261 - The FF/Latch <modreg1_49> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_50> 
+INFO:Xst:2261 - The FF/Latch <modreg1_54> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_55> 
+INFO:Xst:2261 - The FF/Latch <modreg1_0> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_1> 
+INFO:Xst:2261 - The FF/Latch <modreg1_55> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_56> 
+INFO:Xst:2261 - The FF/Latch <modreg1_60> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_61> 
+INFO:Xst:2261 - The FF/Latch <modreg1_1> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_2> 
+INFO:Xst:2261 - The FF/Latch <modreg1_56> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_57> 
+INFO:Xst:2261 - The FF/Latch <modreg1_61> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_62> 
+INFO:Xst:2261 - The FF/Latch <modreg1_2> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_3> 
+INFO:Xst:2261 - The FF/Latch <modreg1_57> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_58> 
+INFO:Xst:2261 - The FF/Latch <modreg1_62> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_63> 
+INFO:Xst:2261 - The FF/Latch <modreg1_3> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_4> 
+INFO:Xst:2261 - The FF/Latch <modreg1_58> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_59> 
+INFO:Xst:2261 - The FF/Latch <modreg1_63> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_64> 
+INFO:Xst:2261 - The FF/Latch <modreg1_4> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_5> 
+INFO:Xst:2261 - The FF/Latch <modreg1_59> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_60> 
+INFO:Xst:2261 - The FF/Latch <modreg1_5> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_6> 
+INFO:Xst:2261 - The FF/Latch <_i000029_0> in Unit <U1> is equivalent to the following 37 FFs/Latches, which will be removed : <_i000029_5> <_i000029_8> <_i000029_11> <_i000029_13> <_i000029_15> <_i000029_16> <_i000029_17> <_i000029_18> <_i000029_20> <_i000029_25> <_i000029_28> <_i000029_30> <_i000029_31> <_i000029_33> <_i000029_38> <_i000029_41> <_i000029_42> <_i000029_43> <_i000029_44> <_i000029_45> <_i000029_46> <_i000029_47> <_i000029_48> <_i000029_49> <_i000029_50> <_i000029_51> <_i000029_52> <_i000029_53> <_i000029_54> <_i000029_55> <_i000029_56> <_i000029_57> <_i000029_58> <_i000029_59> <_i000029_61> <_i000029_62> <_i000029_63> 
+INFO:Xst:2261 - The FF/Latch <_i000029_1> in Unit <U1> is equivalent to the following 25 FFs/Latches, which will be removed : <_i000029_2> <_i000029_3> <_i000029_4> <_i000029_6> <_i000029_7> <_i000029_9> <_i000029_10> <_i000029_12> <_i000029_14> <_i000029_19> <_i000029_21> <_i000029_22> <_i000029_23> <_i000029_24> <_i000029_26> <_i000029_27> <_i000029_29> <_i000029_32> <_i000029_34> <_i000029_35> <_i000029_36> <_i000029_37> <_i000029_39> <_i000029_40> <_i000029_60> 
+INFO:Xst:2261 - The FF/Latch <modreg1_6> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_7> 
+INFO:Xst:2261 - The FF/Latch <modreg1_7> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_8> 
+INFO:Xst:2261 - The FF/Latch <modreg1_8> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_9> 
+INFO:Xst:2261 - The FF/Latch <modreg1_9> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_10> 
+INFO:Xst:2261 - The FF/Latch <modreg1_10> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_11> 
+INFO:Xst:2261 - The FF/Latch <modreg1_11> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_12> 
+INFO:Xst:2261 - The FF/Latch <modreg1_64> in Unit <modmultiply> is equivalent to the following 3 FFs/Latches, which will be removed : <modreg1_65> <modreg2_0> <modreg2_65> 
+INFO:Xst:2261 - The FF/Latch <modreg1_12> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_13> 
+INFO:Xst:2261 - The FF/Latch <modreg1_13> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_14> 
+INFO:Xst:2261 - The FF/Latch <modreg1_14> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_15> 
+INFO:Xst:2261 - The FF/Latch <modreg1_15> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_16> 
+INFO:Xst:2261 - The FF/Latch <modreg1_20> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_21> 
+INFO:Xst:2261 - The FF/Latch <modreg1_16> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_17> 
+INFO:Xst:2261 - The FF/Latch <modreg1_21> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_22> 
+INFO:Xst:2261 - The FF/Latch <modreg1_17> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_18> 
+INFO:Xst:2261 - The FF/Latch <modreg1_22> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_23> 
+INFO:Xst:2261 - The FF/Latch <modreg1_18> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_19> 
+INFO:Xst:2261 - The FF/Latch <modreg1_23> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_24> 
+INFO:Xst:2261 - The FF/Latch <modreg1_19> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_20> 
+INFO:Xst:2261 - The FF/Latch <modreg1_24> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_25> 
+INFO:Xst:2261 - The FF/Latch <modreg1_25> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_26> 
+INFO:Xst:2261 - The FF/Latch <modreg1_30> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_31> 
+INFO:Xst:2261 - The FF/Latch <modreg1_26> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_27> 
+INFO:Xst:2261 - The FF/Latch <modreg1_31> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_32> 
+INFO:Xst:2261 - The FF/Latch <modreg1_27> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_28> 
+INFO:Xst:2261 - The FF/Latch <modreg1_32> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_33> 
+INFO:Xst:2261 - The FF/Latch <modreg1_28> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_29> 
+INFO:Xst:2261 - The FF/Latch <modreg1_33> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_34> 
+INFO:Xst:2261 - The FF/Latch <modreg1_29> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_30> 
+INFO:Xst:2261 - The FF/Latch <modreg1_34> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_35> 
+INFO:Xst:2261 - The FF/Latch <modreg1_35> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_36> 
+INFO:Xst:2261 - The FF/Latch <modreg1_40> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_41> 
+INFO:Xst:2261 - The FF/Latch <modreg1_36> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_37> 
+INFO:Xst:2261 - The FF/Latch <modreg1_41> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_42> 
+INFO:Xst:2261 - The FF/Latch <modreg1_37> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_38> 
+INFO:Xst:2261 - The FF/Latch <modreg1_42> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_43> 
+INFO:Xst:2261 - The FF/Latch <modreg1_38> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_39> 
+INFO:Xst:2261 - The FF/Latch <modreg1_43> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_44> 
+INFO:Xst:2261 - The FF/Latch <modreg1_39> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_40> 
+INFO:Xst:2261 - The FF/Latch <modreg1_44> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_45> 
+INFO:Xst:2261 - The FF/Latch <modreg1_45> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_46> 
+INFO:Xst:2261 - The FF/Latch <modreg1_50> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_51> 
+INFO:Xst:2261 - The FF/Latch <modreg1_46> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_47> 
+INFO:Xst:2261 - The FF/Latch <modreg1_51> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_52> 
+INFO:Xst:2261 - The FF/Latch <modreg1_47> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_48> 
+INFO:Xst:2261 - The FF/Latch <modreg1_52> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_53> 
+INFO:Xst:2261 - The FF/Latch <modreg1_48> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_49> 
+INFO:Xst:2261 - The FF/Latch <modreg1_53> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_54> 
+INFO:Xst:2261 - The FF/Latch <modreg1_49> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_50> 
+INFO:Xst:2261 - The FF/Latch <modreg1_54> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_55> 
+INFO:Xst:2261 - The FF/Latch <modreg1_0> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_1> 
+INFO:Xst:2261 - The FF/Latch <modreg1_55> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_56> 
+INFO:Xst:2261 - The FF/Latch <modreg1_60> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_61> 
+INFO:Xst:2261 - The FF/Latch <modreg1_1> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_2> 
+INFO:Xst:2261 - The FF/Latch <modreg1_56> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_57> 
+INFO:Xst:2261 - The FF/Latch <modreg1_61> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_62> 
+INFO:Xst:2261 - The FF/Latch <modreg1_2> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_3> 
+INFO:Xst:2261 - The FF/Latch <modreg1_57> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_58> 
+INFO:Xst:2261 - The FF/Latch <modreg1_62> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_63> 
+INFO:Xst:2261 - The FF/Latch <modreg1_3> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_4> 
+INFO:Xst:2261 - The FF/Latch <modreg1_58> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_59> 
+INFO:Xst:2261 - The FF/Latch <modreg1_63> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_64> 
+INFO:Xst:2261 - The FF/Latch <modreg1_4> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_5> 
+INFO:Xst:2261 - The FF/Latch <modreg1_59> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_60> 
+INFO:Xst:2261 - The FF/Latch <modreg1_5> in Unit <modmultiply> is equivalent to the following FF/Latch, which will be removed : <modreg2_6> 
+INFO:Xst:2261 - The FF/Latch <modreg1_6> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_7> 
+INFO:Xst:2261 - The FF/Latch <modreg1_7> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_8> 
+INFO:Xst:2261 - The FF/Latch <modreg1_8> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_9> 
+INFO:Xst:2261 - The FF/Latch <modreg1_9> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_10> 
+INFO:Xst:2261 - The FF/Latch <modreg1_10> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_11> 
+INFO:Xst:2261 - The FF/Latch <modreg1_11> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_12> 
+INFO:Xst:2261 - The FF/Latch <modreg1_64> in Unit <modsqr> is equivalent to the following 3 FFs/Latches, which will be removed : <modreg1_65> <modreg2_0> <modreg2_65> 
+INFO:Xst:2261 - The FF/Latch <modreg1_12> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_13> 
+INFO:Xst:2261 - The FF/Latch <modreg1_13> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_14> 
+INFO:Xst:2261 - The FF/Latch <modreg1_14> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_15> 
+INFO:Xst:2261 - The FF/Latch <modreg1_15> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_16> 
+INFO:Xst:2261 - The FF/Latch <modreg1_20> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_21> 
+INFO:Xst:2261 - The FF/Latch <modreg1_16> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_17> 
+INFO:Xst:2261 - The FF/Latch <modreg1_21> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_22> 
+INFO:Xst:2261 - The FF/Latch <modreg1_17> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_18> 
+INFO:Xst:2261 - The FF/Latch <modreg1_22> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_23> 
+INFO:Xst:2261 - The FF/Latch <modreg1_18> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_19> 
+INFO:Xst:2261 - The FF/Latch <modreg1_23> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_24> 
+INFO:Xst:2261 - The FF/Latch <modreg1_19> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_20> 
+INFO:Xst:2261 - The FF/Latch <modreg1_24> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_25> 
+INFO:Xst:2261 - The FF/Latch <modreg1_25> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_26> 
+INFO:Xst:2261 - The FF/Latch <modreg1_30> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_31> 
+INFO:Xst:2261 - The FF/Latch <modreg1_26> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_27> 
+INFO:Xst:2261 - The FF/Latch <modreg1_31> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_32> 
+INFO:Xst:2261 - The FF/Latch <modreg1_27> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_28> 
+INFO:Xst:2261 - The FF/Latch <modreg1_32> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_33> 
+INFO:Xst:2261 - The FF/Latch <modreg1_28> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_29> 
+INFO:Xst:2261 - The FF/Latch <modreg1_33> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_34> 
+INFO:Xst:2261 - The FF/Latch <modreg1_29> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_30> 
+INFO:Xst:2261 - The FF/Latch <modreg1_34> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_35> 
+INFO:Xst:2261 - The FF/Latch <modreg1_35> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_36> 
+INFO:Xst:2261 - The FF/Latch <modreg1_40> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_41> 
+INFO:Xst:2261 - The FF/Latch <modreg1_36> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_37> 
+INFO:Xst:2261 - The FF/Latch <modreg1_41> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_42> 
+INFO:Xst:2261 - The FF/Latch <modreg1_37> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_38> 
+INFO:Xst:2261 - The FF/Latch <modreg1_42> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_43> 
+INFO:Xst:2261 - The FF/Latch <modreg1_38> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_39> 
+INFO:Xst:2261 - The FF/Latch <modreg1_43> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_44> 
+INFO:Xst:2261 - The FF/Latch <modreg1_39> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_40> 
+INFO:Xst:2261 - The FF/Latch <modreg1_44> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_45> 
+INFO:Xst:2261 - The FF/Latch <modreg1_45> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_46> 
+INFO:Xst:2261 - The FF/Latch <modreg1_50> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_51> 
+INFO:Xst:2261 - The FF/Latch <modreg1_46> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_47> 
+INFO:Xst:2261 - The FF/Latch <modreg1_51> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_52> 
+INFO:Xst:2261 - The FF/Latch <modreg1_47> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_48> 
+INFO:Xst:2261 - The FF/Latch <modreg1_52> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_53> 
+INFO:Xst:2261 - The FF/Latch <modreg1_48> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_49> 
+INFO:Xst:2261 - The FF/Latch <modreg1_53> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_54> 
+INFO:Xst:2261 - The FF/Latch <modreg1_49> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_50> 
+INFO:Xst:2261 - The FF/Latch <modreg1_54> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_55> 
+INFO:Xst:2261 - The FF/Latch <modreg1_0> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_1> 
+INFO:Xst:2261 - The FF/Latch <modreg1_55> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_56> 
+INFO:Xst:2261 - The FF/Latch <modreg1_60> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_61> 
+INFO:Xst:2261 - The FF/Latch <modreg1_1> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_2> 
+INFO:Xst:2261 - The FF/Latch <modreg1_56> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_57> 
+INFO:Xst:2261 - The FF/Latch <modreg1_61> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_62> 
+INFO:Xst:2261 - The FF/Latch <modreg1_2> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_3> 
+INFO:Xst:2261 - The FF/Latch <modreg1_57> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_58> 
+INFO:Xst:2261 - The FF/Latch <modreg1_62> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_63> 
+INFO:Xst:2261 - The FF/Latch <modreg1_3> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_4> 
+INFO:Xst:2261 - The FF/Latch <modreg1_58> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_59> 
+INFO:Xst:2261 - The FF/Latch <modreg1_63> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_64> 
+INFO:Xst:2261 - The FF/Latch <modreg1_4> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_5> 
+INFO:Xst:2261 - The FF/Latch <modreg1_59> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_60> 
+INFO:Xst:2261 - The FF/Latch <modreg1_5> in Unit <modsqr> is equivalent to the following FF/Latch, which will be removed : <modreg2_6> 
+INFO:Xst:2261 - The FF/Latch <_i000029_0> in Unit <U2> is equivalent to the following 37 FFs/Latches, which will be removed : <_i000029_5> <_i000029_8> <_i000029_11> <_i000029_13> <_i000029_15> <_i000029_16> <_i000029_17> <_i000029_18> <_i000029_20> <_i000029_25> <_i000029_28> <_i000029_30> <_i000029_31> <_i000029_33> <_i000029_38> <_i000029_41> <_i000029_42> <_i000029_43> <_i000029_44> <_i000029_45> <_i000029_46> <_i000029_47> <_i000029_48> <_i000029_49> <_i000029_50> <_i000029_51> <_i000029_52> <_i000029_53> <_i000029_54> <_i000029_55> <_i000029_56> <_i000029_57> <_i000029_58> <_i000029_59> <_i000029_61> <_i000029_62> <_i000029_63> 
+INFO:Xst:2261 - The FF/Latch <_i000029_1> in Unit <U2> is equivalent to the following 25 FFs/Latches, which will be removed : <_i000029_2> <_i000029_3> <_i000029_4> <_i000029_6> <_i000029_7> <_i000029_9> <_i000029_10> <_i000029_12> <_i000029_14> <_i000029_19> <_i000029_21> <_i000029_22> <_i000029_23> <_i000029_24> <_i000029_26> <_i000029_27> <_i000029_29> <_i000029_32> <_i000029_34> <_i000029_35> <_i000029_36> <_i000029_37> <_i000029_39> <_i000029_40> <_i000029_60> 
+WARNING:Xst:1710 - FF/Latch <modreg1_64> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_60> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_40> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_39> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_37> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_36> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_35> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_34> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_32> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_29> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_27> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_26> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_24> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_23> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_22> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_21> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_19> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_14> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_12> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_10> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_9> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_7> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_6> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_4> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_3> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_2> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_1> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <_i000029_1> (without init value) has a constant value of 0 in block <U2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_64> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_60> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_40> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_39> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_37> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_36> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_35> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_34> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_32> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_29> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_27> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_26> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_24> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_23> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_22> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_21> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_19> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_14> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_12> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_10> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_9> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_7> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_6> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_4> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_3> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_2> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_1> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_64> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_60> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_40> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_39> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_37> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_36> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_35> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_34> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_32> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_29> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_27> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_26> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_24> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_23> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_22> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_21> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_19> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_14> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_12> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_10> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_9> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_7> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_6> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_4> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_3> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_2> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_1> (without init value) has a constant value of 0 in block <modmultiply>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <_i000029_1> (without init value) has a constant value of 0 in block <U1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_64> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_60> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_40> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_39> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_37> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_36> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_35> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_34> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_32> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_29> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_27> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_26> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_24> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_23> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_22> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_21> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_19> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_14> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_12> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_10> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_9> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_7> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_6> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_4> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_3> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_2> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg1_1> (without init value) has a constant value of 0 in block <modsqr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <cypher_0> of sequential type is unconnected in block <U2>.
+WARNING:Xst:2677 - Node <cypher_8> of sequential type is unconnected in block <U2>.
+WARNING:Xst:2677 - Node <cypher_16> of sequential type is unconnected in block <U2>.
+WARNING:Xst:2677 - Node <cypher_24> of sequential type is unconnected in block <U2>.
+WARNING:Xst:2677 - Node <cypher_32> of sequential type is unconnected in block <U2>.
+WARNING:Xst:2677 - Node <cypher_40> of sequential type is unconnected in block <U2>.
+WARNING:Xst:2677 - Node <cypher_48> of sequential type is unconnected in block <U2>.
+WARNING:Xst:2677 - Node <cypher_56> of sequential type is unconnected in block <U2>.
+WARNING:Xst:2677 - Node <array_out_63> of sequential type is unconnected in block <U3>.
+WARNING:Xst:2677 - Node <array_out_55> of sequential type is unconnected in block <U3>.
+WARNING:Xst:2677 - Node <array_out_47> of sequential type is unconnected in block <U3>.
+WARNING:Xst:2677 - Node <array_out_39> of sequential type is unconnected in block <U3>.
+WARNING:Xst:2677 - Node <array_out_31> of sequential type is unconnected in block <U3>.
+WARNING:Xst:2677 - Node <array_out_23> of sequential type is unconnected in block <U3>.
+WARNING:Xst:2677 - Node <array_out_15> of sequential type is unconnected in block <U3>.
+WARNING:Xst:2677 - Node <array_out_7> of sequential type is unconnected in block <U3>.
+WARNING:Xst:2404 -  FFs/Latches <modreg1<65:64>> (without init value) have a constant value of 0 in block <modmult>.
+WARNING:Xst:2404 -  FFs/Latches <modreg2<65:65>> (without init value) have a constant value of 0 in block <modmult>.
+
+Synthesizing (advanced) Unit <des56_decrypt>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_s8> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <b8>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s8>            |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_s5> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <b5>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s5>            |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_s6> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <b6>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s6>            |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_s7> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <b7>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s7>            |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_s1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <b1>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s1>            |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_s2> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <b2>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s2>            |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_s3> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <b3>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s3>            |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_s4> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <b4>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s4>            |          |
+    -----------------------------------------------------------------------
+Unit <des56_decrypt> synthesized (advanced).
+
+Synthesizing (advanced) Unit <des56_encrypt>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_s8> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <b8>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s8>            |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_s5> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <b5>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s5>            |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_s6> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <b6>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s6>            |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_s7> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <b7>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s7>            |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_s1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <b1>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s1>            |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_s2> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <b2>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s2>            |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_s3> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <b3>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s3>            |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_s4> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 4-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <b4>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <s4>            |          |
+    -----------------------------------------------------------------------
+Unit <des56_encrypt> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 16
+ 64x4-bit single-port distributed Read Only RAM        : 16
+# Adders/Subtractors                                   : 18
+ 5-bit adder                                           : 2
+ 66-bit adder                                          : 4
+ 66-bit subtractor                                     : 12
+# Registers                                            : 2590
+ Flip-Flops                                            : 2590
+# Comparators                                          : 4
+ 5-bit comparator greater                              : 4
+# Multiplexers                                         : 340
+ 1-bit 2-to-1 multiplexer                              : 270
+ 28-bit 2-to-1 multiplexer                             : 36
+ 5-bit 2-to-1 multiplexer                              : 6
+ 64-bit 2-to-1 multiplexer                             : 12
+ 66-bit 2-to-1 multiplexer                             : 12
+ 66-bit 3-to-1 multiplexer                             : 4
+# Xors                                                 : 18
+ 32-bit xor2                                           : 2
+ 6-bit xor2                                            : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <_i000029_60> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_40> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_39> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_37> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_36> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_35> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_34> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_32> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_29> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_27> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_26> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_24> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_23> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_22> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_21> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_19> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_14> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_12> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_10> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_9> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_7> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_6> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_4> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_3> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_2> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_1> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <modreg2_0> (without init value) has a constant value of 0 in block <modmult>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <_i000029_60> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_40> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_39> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_37> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_36> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_35> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_34> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_32> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_29> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_27> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_26> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_24> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_23> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_22> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_21> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_19> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_14> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_12> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_10> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_9> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_7> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_6> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_4> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_3> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_2> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <_i000029_1> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <_i000029_0> in Unit <RSACypher_encrypt> is equivalent to the following 37 FFs/Latches, which will be removed : <_i000029_5> <_i000029_8> <_i000029_11> <_i000029_13> <_i000029_15> <_i000029_16> <_i000029_17> <_i000029_18> <_i000029_20> <_i000029_25> <_i000029_28> <_i000029_30> <_i000029_31> <_i000029_33> <_i000029_38> <_i000029_41> <_i000029_42> <_i000029_43> <_i000029_44> <_i000029_45> <_i000029_46> <_i000029_47> <_i000029_48> <_i000029_49> <_i000029_50> <_i000029_51> <_i000029_52> <_i000029_53> <_i000029_54> <_i000029_55> <_i000029_56> <_i000029_57> <_i000029_58> <_i000029_59> <_i000029_61> <_i000029_62> <_i000029_63> 
+INFO:Xst:2261 - The FF/Latch <modreg2_7> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_6> 
+INFO:Xst:2261 - The FF/Latch <modreg2_8> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_7> 
+INFO:Xst:2261 - The FF/Latch <modreg2_9> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_8> 
+INFO:Xst:2261 - The FF/Latch <modreg2_10> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_9> 
+INFO:Xst:2261 - The FF/Latch <modreg2_11> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_10> 
+INFO:Xst:2261 - The FF/Latch <modreg2_12> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_11> 
+INFO:Xst:2261 - The FF/Latch <modreg2_13> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_12> 
+INFO:Xst:2261 - The FF/Latch <modreg2_14> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_13> 
+INFO:Xst:2261 - The FF/Latch <modreg2_15> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_14> 
+INFO:Xst:2261 - The FF/Latch <modreg2_16> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_15> 
+INFO:Xst:2261 - The FF/Latch <modreg2_21> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_20> 
+INFO:Xst:2261 - The FF/Latch <modreg2_17> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_16> 
+INFO:Xst:2261 - The FF/Latch <modreg2_22> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_21> 
+INFO:Xst:2261 - The FF/Latch <modreg2_18> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_17> 
+INFO:Xst:2261 - The FF/Latch <modreg2_23> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_22> 
+INFO:Xst:2261 - The FF/Latch <modreg2_19> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_18> 
+INFO:Xst:2261 - The FF/Latch <modreg2_24> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_23> 
+INFO:Xst:2261 - The FF/Latch <modreg2_20> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_19> 
+INFO:Xst:2261 - The FF/Latch <modreg2_25> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_24> 
+INFO:Xst:2261 - The FF/Latch <modreg2_26> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_25> 
+INFO:Xst:2261 - The FF/Latch <modreg2_31> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_30> 
+INFO:Xst:2261 - The FF/Latch <modreg2_27> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_26> 
+INFO:Xst:2261 - The FF/Latch <modreg2_32> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_31> 
+INFO:Xst:2261 - The FF/Latch <modreg2_28> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_27> 
+INFO:Xst:2261 - The FF/Latch <modreg2_33> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_32> 
+INFO:Xst:2261 - The FF/Latch <modreg2_29> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_28> 
+INFO:Xst:2261 - The FF/Latch <modreg2_34> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_33> 
+INFO:Xst:2261 - The FF/Latch <modreg2_30> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_29> 
+INFO:Xst:2261 - The FF/Latch <modreg2_35> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_34> 
+INFO:Xst:2261 - The FF/Latch <modreg2_36> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_35> 
+INFO:Xst:2261 - The FF/Latch <modreg2_41> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_40> 
+INFO:Xst:2261 - The FF/Latch <modreg2_37> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_36> 
+INFO:Xst:2261 - The FF/Latch <modreg2_42> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_41> 
+INFO:Xst:2261 - The FF/Latch <modreg2_38> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_37> 
+INFO:Xst:2261 - The FF/Latch <modreg2_43> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_42> 
+INFO:Xst:2261 - The FF/Latch <modreg2_39> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_38> 
+INFO:Xst:2261 - The FF/Latch <modreg2_44> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_43> 
+INFO:Xst:2261 - The FF/Latch <modreg2_40> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_39> 
+INFO:Xst:2261 - The FF/Latch <modreg2_45> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_44> 
+INFO:Xst:2261 - The FF/Latch <modreg2_46> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_45> 
+INFO:Xst:2261 - The FF/Latch <modreg2_51> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_50> 
+INFO:Xst:2261 - The FF/Latch <modreg2_47> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_46> 
+INFO:Xst:2261 - The FF/Latch <modreg2_52> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_51> 
+INFO:Xst:2261 - The FF/Latch <modreg2_48> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_47> 
+INFO:Xst:2261 - The FF/Latch <modreg2_53> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_52> 
+INFO:Xst:2261 - The FF/Latch <modreg2_49> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_48> 
+INFO:Xst:2261 - The FF/Latch <modreg2_54> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_53> 
+INFO:Xst:2261 - The FF/Latch <modreg2_50> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_49> 
+INFO:Xst:2261 - The FF/Latch <modreg2_55> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_54> 
+INFO:Xst:2261 - The FF/Latch <modreg2_1> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_0> 
+INFO:Xst:2261 - The FF/Latch <modreg2_56> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_55> 
+INFO:Xst:2261 - The FF/Latch <modreg2_61> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_60> 
+INFO:Xst:2261 - The FF/Latch <modreg2_2> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_1> 
+INFO:Xst:2261 - The FF/Latch <modreg2_57> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_56> 
+INFO:Xst:2261 - The FF/Latch <modreg2_62> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_61> 
+INFO:Xst:2261 - The FF/Latch <modreg2_3> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_2> 
+INFO:Xst:2261 - The FF/Latch <modreg2_58> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_57> 
+INFO:Xst:2261 - The FF/Latch <modreg2_63> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_62> 
+INFO:Xst:2261 - The FF/Latch <modreg2_4> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_3> 
+INFO:Xst:2261 - The FF/Latch <modreg2_59> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_58> 
+INFO:Xst:2261 - The FF/Latch <modreg2_64> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_63> 
+INFO:Xst:2261 - The FF/Latch <modreg2_5> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_4> 
+INFO:Xst:2261 - The FF/Latch <modreg2_60> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_59> 
+INFO:Xst:2261 - The FF/Latch <modreg2_6> in Unit <modmult> is equivalent to the following FF/Latch, which will be removed : <modreg1_5> 
+INFO:Xst:2261 - The FF/Latch <_i000029_0> in Unit <rsacypher_decrypt> is equivalent to the following 37 FFs/Latches, which will be removed : <_i000029_5> <_i000029_8> <_i000029_11> <_i000029_13> <_i000029_15> <_i000029_16> <_i000029_17> <_i000029_18> <_i000029_20> <_i000029_25> <_i000029_28> <_i000029_30> <_i000029_31> <_i000029_33> <_i000029_38> <_i000029_41> <_i000029_42> <_i000029_43> <_i000029_44> <_i000029_45> <_i000029_46> <_i000029_47> <_i000029_48> <_i000029_49> <_i000029_50> <_i000029_51> <_i000029_52> <_i000029_53> <_i000029_54> <_i000029_55> <_i000029_56> <_i000029_57> <_i000029_58> <_i000029_59> <_i000029_61> <_i000029_62> <_i000029_63> 
+WARNING:Xst:1710 - FF/Latch <count_63> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_62> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_61> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_60> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_59> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_58> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_57> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_56> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_55> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_54> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_53> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_52> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_51> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_50> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_49> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_48> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_47> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_46> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_45> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_44> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_43> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_42> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_41> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_40> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_39> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_38> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_37> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_36> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_35> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_34> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_33> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_32> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_31> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_30> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_29> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_28> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_27> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_26> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_25> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_24> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_23> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_22> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_21> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_20> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_19> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_18> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_17> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_16> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_15> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_14> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_13> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_12> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_11> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_10> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_9> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_8> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_7> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_6> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_5> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_4> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_3> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_2> (without init value) has a constant value of 0 in block <RSACypher_encrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_63> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_62> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_61> (without init value) has a constant value of 0 in block <rsacypher_decrypt>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <SSL> ...
+
+Optimizing unit <inputcon> ...
+
+Optimizing unit <outputcon> ...
+
+Optimizing unit <des56_encrypt> ...
+WARNING:Xst:1293 - FF/Latch <countup_4> has a constant value of 0 in block <des56_encrypt>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <RSACypher_encrypt> ...
+
+Optimizing unit <modmult> ...
+
+Optimizing unit <rsacypher_decrypt> ...
+
+Optimizing unit <des56_decrypt> ...
+WARNING:Xst:1293 - FF/Latch <countup_4> has a constant value of 0 in block <des56_decrypt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U2/modmultiply/modreg2_61> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_41> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_40> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_38> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_37> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_36> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_35> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_33> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_30> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_28> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_27> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_25> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_24> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_23> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_22> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_20> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_15> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_13> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_11> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_10> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_8> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_7> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_5> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_4> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_3> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modmultiply/modreg2_2> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_61> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_41> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_40> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_38> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_37> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_36> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_35> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_33> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_30> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_28> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_27> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_25> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_24> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_23> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_22> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_20> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_15> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_13> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_11> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_10> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_8> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_7> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_5> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_4> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_3> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U2/modsqr/modreg2_2> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_2> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_3> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_4> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_5> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_7> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_8> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_10> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_11> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_13> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_15> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_20> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_22> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_23> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_24> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_25> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_27> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_28> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_30> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_33> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_35> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_36> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_37> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_38> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_40> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_41> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modsqr/modreg2_61> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_2> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_3> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_4> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_5> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_7> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_8> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_10> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_11> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_13> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_15> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_20> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_22> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_23> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_24> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_25> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_27> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_28> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_30> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_33> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_35> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_36> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_37> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_38> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_40> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_41> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <U1/modmultiply/modreg2_61> (without init value) has a constant value of 0 in block <SSL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <U4/rdy_next_next_cycle> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U4/rdy_next_cycle> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U4/rdy> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U2/cypher_56> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U2/cypher_48> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U2/cypher_40> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U2/cypher_32> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U2/cypher_24> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U2/cypher_16> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U2/cypher_8> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U2/cypher_0> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U3/array_out_7> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U3/array_out_15> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U3/array_out_23> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U3/array_out_31> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U3/array_out_39> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U3/array_out_47> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U3/array_out_55> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U3/array_out_63> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U5/rdy_next_next_cycle> of sequential type is unconnected in block <SSL>.
+WARNING:Xst:2677 - Node <U5/rdy_next_cycle> of sequential type is unconnected in block <SSL>.
+INFO:Xst:2261 - The FF/Latch <U4/ready> in Unit <SSL> is equivalent to the following FF/Latch, which will be removed : <U5/ready> 
+INFO:Xst:2261 - The FF/Latch <U4/countup_0> in Unit <SSL> is equivalent to the following FF/Latch, which will be removed : <U5/countup_0> 
+INFO:Xst:2261 - The FF/Latch <U4/countup_1> in Unit <SSL> is equivalent to the following FF/Latch, which will be removed : <U5/countup_1> 
+INFO:Xst:2261 - The FF/Latch <U4/countup_2> in Unit <SSL> is equivalent to the following FF/Latch, which will be removed : <U5/countup_2> 
+INFO:Xst:2261 - The FF/Latch <U4/countup_3> in Unit <SSL> is equivalent to the following FF/Latch, which will be removed : <U5/countup_3> 
+INFO:Xst:2261 - The FF/Latch <U1/modmultiply/modreg2_64> in Unit <SSL> is equivalent to the following 37 FFs/Latches, which will be removed : <U1/modmultiply/modreg2_63> <U1/modmultiply/modreg2_62> <U1/modmultiply/modreg2_60> <U1/modmultiply/modreg2_59> <U1/modmultiply/modreg2_58> <U1/modmultiply/modreg2_57> <U1/modmultiply/modreg2_56> <U1/modmultiply/modreg2_55> <U1/modmultiply/modreg2_54> <U1/modmultiply/modreg2_53> <U1/modmultiply/modreg2_52> <U1/modmultiply/modreg2_51> <U1/modmultiply/modreg2_50> <U1/modmultiply/modreg2_49> <U1/modmultiply/modreg2_48> <U1/modmultiply/modreg2_47> <U1/modmultiply/modreg2_46> <U1/modmultiply/modreg2_45> <U1/modmultiply/modreg2_44> <U1/modmultiply/modreg2_43> <U1/modmultiply/modreg2_42> <U1/modmultiply/modreg2_39> <U1/modmultiply/modreg2_34> <U1/modmultiply/modreg2_32> <U1/modmultiply/modreg2_31> <U1/modmultiply/modreg2_29> <U1/modmultiply/modreg2_26> <U1/modmultiply/modreg2_21> <U1/modmultiply/modreg2_19> <U1/modmultiply/modreg2_18> <U1/modmultiply/modreg2_17>
+   <U1/modmultiply/modreg2_16> <U1/modmultiply/modreg2_14> <U1/modmultiply/modreg2_12> <U1/modmultiply/modreg2_9> <U1/modmultiply/modreg2_6> <U1/modmultiply/modreg2_1> 
+INFO:Xst:2261 - The FF/Latch <U2/modmultiply/modreg2_1> in Unit <SSL> is equivalent to the following 37 FFs/Latches, which will be removed : <U2/modmultiply/modreg2_6> <U2/modmultiply/modreg2_9> <U2/modmultiply/modreg2_12> <U2/modmultiply/modreg2_14> <U2/modmultiply/modreg2_16> <U2/modmultiply/modreg2_17> <U2/modmultiply/modreg2_18> <U2/modmultiply/modreg2_19> <U2/modmultiply/modreg2_21> <U2/modmultiply/modreg2_26> <U2/modmultiply/modreg2_29> <U2/modmultiply/modreg2_31> <U2/modmultiply/modreg2_32> <U2/modmultiply/modreg2_34> <U2/modmultiply/modreg2_39> <U2/modmultiply/modreg2_42> <U2/modmultiply/modreg2_43> <U2/modmultiply/modreg2_44> <U2/modmultiply/modreg2_45> <U2/modmultiply/modreg2_46> <U2/modmultiply/modreg2_47> <U2/modmultiply/modreg2_48> <U2/modmultiply/modreg2_49> <U2/modmultiply/modreg2_50> <U2/modmultiply/modreg2_51> <U2/modmultiply/modreg2_52> <U2/modmultiply/modreg2_53> <U2/modmultiply/modreg2_54> <U2/modmultiply/modreg2_55> <U2/modmultiply/modreg2_56> <U2/modmultiply/modreg2_57>
+   <U2/modmultiply/modreg2_58> <U2/modmultiply/modreg2_59> <U2/modmultiply/modreg2_60> <U2/modmultiply/modreg2_62> <U2/modmultiply/modreg2_63> <U2/modmultiply/modreg2_64> 
+INFO:Xst:2261 - The FF/Latch <U2/modsqr/modreg2_1> in Unit <SSL> is equivalent to the following 37 FFs/Latches, which will be removed : <U2/modsqr/modreg2_6> <U2/modsqr/modreg2_9> <U2/modsqr/modreg2_12> <U2/modsqr/modreg2_14> <U2/modsqr/modreg2_16> <U2/modsqr/modreg2_17> <U2/modsqr/modreg2_18> <U2/modsqr/modreg2_19> <U2/modsqr/modreg2_21> <U2/modsqr/modreg2_26> <U2/modsqr/modreg2_29> <U2/modsqr/modreg2_31> <U2/modsqr/modreg2_32> <U2/modsqr/modreg2_34> <U2/modsqr/modreg2_39> <U2/modsqr/modreg2_42> <U2/modsqr/modreg2_43> <U2/modsqr/modreg2_44> <U2/modsqr/modreg2_45> <U2/modsqr/modreg2_46> <U2/modsqr/modreg2_47> <U2/modsqr/modreg2_48> <U2/modsqr/modreg2_49> <U2/modsqr/modreg2_50> <U2/modsqr/modreg2_51> <U2/modsqr/modreg2_52> <U2/modsqr/modreg2_53> <U2/modsqr/modreg2_54> <U2/modsqr/modreg2_55> <U2/modsqr/modreg2_56> <U2/modsqr/modreg2_57> <U2/modsqr/modreg2_58> <U2/modsqr/modreg2_59> <U2/modsqr/modreg2_60> <U2/modsqr/modreg2_62> <U2/modsqr/modreg2_63> <U2/modsqr/modreg2_64> 
+INFO:Xst:2261 - The FF/Latch <U1/modsqr/modreg2_64> in Unit <SSL> is equivalent to the following 37 FFs/Latches, which will be removed : <U1/modsqr/modreg2_63> <U1/modsqr/modreg2_62> <U1/modsqr/modreg2_60> <U1/modsqr/modreg2_59> <U1/modsqr/modreg2_58> <U1/modsqr/modreg2_57> <U1/modsqr/modreg2_56> <U1/modsqr/modreg2_55> <U1/modsqr/modreg2_54> <U1/modsqr/modreg2_53> <U1/modsqr/modreg2_52> <U1/modsqr/modreg2_51> <U1/modsqr/modreg2_50> <U1/modsqr/modreg2_49> <U1/modsqr/modreg2_48> <U1/modsqr/modreg2_47> <U1/modsqr/modreg2_46> <U1/modsqr/modreg2_45> <U1/modsqr/modreg2_44> <U1/modsqr/modreg2_43> <U1/modsqr/modreg2_42> <U1/modsqr/modreg2_39> <U1/modsqr/modreg2_34> <U1/modsqr/modreg2_32> <U1/modsqr/modreg2_31> <U1/modsqr/modreg2_29> <U1/modsqr/modreg2_26> <U1/modsqr/modreg2_21> <U1/modsqr/modreg2_19> <U1/modsqr/modreg2_18> <U1/modsqr/modreg2_17> <U1/modsqr/modreg2_16> <U1/modsqr/modreg2_14> <U1/modsqr/modreg2_12> <U1/modsqr/modreg2_9> <U1/modsqr/modreg2_6> <U1/modsqr/modreg2_1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block SSL, actual ratio is 14.
+FlipFlop U1/modmultiply/modreg2_64 has been replicated 1 time(s)
+FlipFlop U1/modmultiply/mpreg_0 has been replicated 3 time(s)
+FlipFlop U1/modsqr/modreg2_64 has been replicated 1 time(s)
+FlipFlop U1/modsqr/mpreg_0 has been replicated 3 time(s)
+FlipFlop U2/modmultiply/modreg2_1 has been replicated 1 time(s)
+FlipFlop U2/modmultiply/mpreg_0 has been replicated 3 time(s)
+FlipFlop U2/modsqr/modreg2_1 has been replicated 1 time(s)
+FlipFlop U2/modsqr/mpreg_0 has been replicated 3 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1875
+ Flip-Flops                                            : 1875
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : SSL.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 5736
+#      GND                         : 1
+#      INV                         : 329
+#      LUT2                        : 691
+#      LUT3                        : 1295
+#      LUT4                        : 84
+#      LUT5                        : 766
+#      LUT6                        : 434
+#      MUXCY                       : 1087
+#      VCC                         : 1
+#      XORCY                       : 1048
+# FlipFlops/Latches                : 1875
+#      FD                          : 8
+#      FDC                         : 125
+#      FDCE                        : 451
+#      FDE                         : 1020
+#      FDP                         : 7
+#      FDRE                        : 264
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 195
+#      IBUF                        : 130
+#      OBUF                        : 65
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45fgg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1875  out of  54576     3%  
+ Number of Slice LUTs:                 3599  out of  27288    13%  
+    Number used as Logic:              3599  out of  27288    13%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3913
+   Number with an unused Flip Flop:    2038  out of   3913    52%  
+   Number with an unused LUT:           314  out of   3913     8%  
+   Number of fully used LUT-FF pairs:  1561  out of   3913    39%  
+   Number of unique control sets:        20
+
+IO Utilization: 
+ Number of IOs:                         196
+ Number of bonded IOBs:                 196  out of    316    62%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 1875  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.787ns (Maximum Frequency: 147.334MHz)
+   Minimum input arrival time before clock: 6.174ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.787ns (frequency: 147.334MHz)
+  Total number of paths / destination ports: 35217731 / 3698
+-------------------------------------------------------------------------
+Delay:               6.787ns (Levels of Logic = 70)
+  Source:            U1/modsqr/mpreg_0_2 (FF)
+  Destination:       U1/sqrin_63 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: U1/modsqr/mpreg_0_2 to U1/sqrin_63
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             10   0.447   0.857  U1/modsqr/mpreg_0_2 (U1/modsqr/mpreg_0_2)
+     LUT3:I2->O            1   0.205   0.000  U1/modsqr/Mmux_prodreg1_rs_lut<0> (U1/modsqr/Mmux_prodreg1_rs_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<0> (U1/modsqr/Mmux_prodreg1_rs_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<1> (U1/modsqr/Mmux_prodreg1_rs_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<2> (U1/modsqr/Mmux_prodreg1_rs_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<3> (U1/modsqr/Mmux_prodreg1_rs_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<4> (U1/modsqr/Mmux_prodreg1_rs_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<5> (U1/modsqr/Mmux_prodreg1_rs_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<6> (U1/modsqr/Mmux_prodreg1_rs_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<7> (U1/modsqr/Mmux_prodreg1_rs_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<8> (U1/modsqr/Mmux_prodreg1_rs_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<9> (U1/modsqr/Mmux_prodreg1_rs_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<10> (U1/modsqr/Mmux_prodreg1_rs_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<11> (U1/modsqr/Mmux_prodreg1_rs_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<12> (U1/modsqr/Mmux_prodreg1_rs_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<13> (U1/modsqr/Mmux_prodreg1_rs_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<14> (U1/modsqr/Mmux_prodreg1_rs_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<15> (U1/modsqr/Mmux_prodreg1_rs_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<16> (U1/modsqr/Mmux_prodreg1_rs_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<17> (U1/modsqr/Mmux_prodreg1_rs_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<18> (U1/modsqr/Mmux_prodreg1_rs_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<19> (U1/modsqr/Mmux_prodreg1_rs_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<20> (U1/modsqr/Mmux_prodreg1_rs_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<21> (U1/modsqr/Mmux_prodreg1_rs_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<22> (U1/modsqr/Mmux_prodreg1_rs_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<23> (U1/modsqr/Mmux_prodreg1_rs_cy<23>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<24> (U1/modsqr/Mmux_prodreg1_rs_cy<24>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<25> (U1/modsqr/Mmux_prodreg1_rs_cy<25>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<26> (U1/modsqr/Mmux_prodreg1_rs_cy<26>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<27> (U1/modsqr/Mmux_prodreg1_rs_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<28> (U1/modsqr/Mmux_prodreg1_rs_cy<28>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<29> (U1/modsqr/Mmux_prodreg1_rs_cy<29>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<30> (U1/modsqr/Mmux_prodreg1_rs_cy<30>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<31> (U1/modsqr/Mmux_prodreg1_rs_cy<31>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<32> (U1/modsqr/Mmux_prodreg1_rs_cy<32>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<33> (U1/modsqr/Mmux_prodreg1_rs_cy<33>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<34> (U1/modsqr/Mmux_prodreg1_rs_cy<34>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<35> (U1/modsqr/Mmux_prodreg1_rs_cy<35>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<36> (U1/modsqr/Mmux_prodreg1_rs_cy<36>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<37> (U1/modsqr/Mmux_prodreg1_rs_cy<37>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<38> (U1/modsqr/Mmux_prodreg1_rs_cy<38>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<39> (U1/modsqr/Mmux_prodreg1_rs_cy<39>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<40> (U1/modsqr/Mmux_prodreg1_rs_cy<40>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<41> (U1/modsqr/Mmux_prodreg1_rs_cy<41>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<42> (U1/modsqr/Mmux_prodreg1_rs_cy<42>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<43> (U1/modsqr/Mmux_prodreg1_rs_cy<43>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<44> (U1/modsqr/Mmux_prodreg1_rs_cy<44>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<45> (U1/modsqr/Mmux_prodreg1_rs_cy<45>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<46> (U1/modsqr/Mmux_prodreg1_rs_cy<46>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<47> (U1/modsqr/Mmux_prodreg1_rs_cy<47>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<48> (U1/modsqr/Mmux_prodreg1_rs_cy<48>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<49> (U1/modsqr/Mmux_prodreg1_rs_cy<49>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<50> (U1/modsqr/Mmux_prodreg1_rs_cy<50>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<51> (U1/modsqr/Mmux_prodreg1_rs_cy<51>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<52> (U1/modsqr/Mmux_prodreg1_rs_cy<52>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<53> (U1/modsqr/Mmux_prodreg1_rs_cy<53>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<54> (U1/modsqr/Mmux_prodreg1_rs_cy<54>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<55> (U1/modsqr/Mmux_prodreg1_rs_cy<55>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<56> (U1/modsqr/Mmux_prodreg1_rs_cy<56>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<57> (U1/modsqr/Mmux_prodreg1_rs_cy<57>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<58> (U1/modsqr/Mmux_prodreg1_rs_cy<58>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<59> (U1/modsqr/Mmux_prodreg1_rs_cy<59>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<60> (U1/modsqr/Mmux_prodreg1_rs_cy<60>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<61> (U1/modsqr/Mmux_prodreg1_rs_cy<61>)
+     MUXCY:CI->O           1   0.019   0.000  U1/modsqr/Mmux_prodreg1_rs_cy<62> (U1/modsqr/Mmux_prodreg1_rs_cy<62>)
+     XORCY:CI->O           5   0.180   0.715  U1/modsqr/Mmux_prodreg1_rs_xor<63> (U1/modsqr/prodreg1<63>)
+     LUT2:I1->O            1   0.205   0.000  U1/modsqr/Msub_prodreg3_lut<63> (U1/modsqr/Msub_prodreg3_lut<63>)
+     MUXCY:S->O            1   0.172   0.000  U1/modsqr/Msub_prodreg3_cy<63> (U1/modsqr/Msub_prodreg3_cy<63>)
+     MUXCY:CI->O           0   0.019   0.000  U1/modsqr/Msub_prodreg3_cy<64> (U1/modsqr/Msub_prodreg3_cy<64>)
+     XORCY:CI->O         194   0.180   2.152  U1/modsqr/Msub_prodreg3_xor<65> (U1/modsqr/prodreg3<65>)
+     LUT4:I2->O            1   0.203   0.000  U1/modsqr/Mmux_prodreg4110 (U1/square<0>)
+     FDRE:D                    0.102          U1/modsqr/prodreg_0
+    ----------------------------------------
+    Total                      6.787ns (3.063ns logic, 3.724ns route)
+                                       (45.1% logic, 54.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2797 / 2669
+-------------------------------------------------------------------------
+Offset:              6.174ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       U4/outdata_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to U4/outdata_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           603   1.222   2.476  reset_IBUF (reset_IBUF)
+     LUT6:I0->O          128   0.203   1.950  U4/_n0218_inv1 (U4/_n0218_inv)
+     FDE:CE                    0.322          U4/inmsg_63
+    ----------------------------------------
+    Total                      6.174ns (1.747ns logic, 4.427ns route)
+                                       (28.3% logic, 71.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 65 / 65
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            U5/outdata_0 (FF)
+  Destination:       outdata<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: U5/outdata_0 to outdata<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  U5/outdata_0 (U5/outdata_0)
+     OBUF:I->O                 2.571          outdata_0_OBUF (outdata<0>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.787|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.42 secs
+ 
+--> 
+
+
+Total memory usage is 424004 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  395 (   0 filtered)
+Number of infos    :  363 (   0 filtered)
+

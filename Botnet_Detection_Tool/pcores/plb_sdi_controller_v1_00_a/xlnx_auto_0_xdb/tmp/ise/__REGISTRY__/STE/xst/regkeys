@@ -1,0 +1,6 @@
+CommandLine
+/opt/local/Xilinx10.1i+SP3/ISE/bin/lin/unwrapped/xst -ifn /home/akzare/Projects/PICSY/Hardware/CoreGen/FIFO/tmp/_cg/_bbx/fifo_generator_v4_4_fifo_generator_v4_4_xst_1.scr -ofn /home/akzare/Projects/PICSY/Hardware/CoreGen/FIFO/tmp/_cg/_bbx/fifo_generator_v4_4_fifo_generator_v4_4_xst_1_xst.log -intstyle silent -finalclean 1
+s
+FormatString
+xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
+s

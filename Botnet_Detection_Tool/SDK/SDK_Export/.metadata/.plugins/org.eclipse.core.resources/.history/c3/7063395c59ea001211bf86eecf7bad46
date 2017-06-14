@@ -1,0 +1,82 @@
+/*
+ * IRC_Channel_stats.h
+ *
+ *  Created on: Jun 19, 2013
+ *      Author: jupiter
+ */
+
+#ifndef IRC_CHANNEL_STATS_H_
+#define IRC_CHANNEL_STATS_H_
+
+#include <string>
+#include <vector>
+#include <sstream>
+#include "IP_Address.h"
+
+class IRC_Channel_stats {
+
+private:
+//==================================
+//				Attributes
+//==================================
+	std::string _channel_name;
+	unsigned int _total_IRC_Messages;
+	unsigned int _nb_JOIN;
+	unsigned int _nb_PING;
+	unsigned int _nb_PONG;
+	unsigned int _nb_PRIVMSG;
+	std::vector<IP_Address*> _IP_addresses;
+
+public:
+
+//==================================
+//	  Constructor + Destructor
+//==================================
+	IRC_Channel_stats();
+	virtual ~IRC_Channel_stats();
+
+//==================================
+//				Getter
+//==================================
+	std::string getChannelName();
+	std::vector<IP_Address*> getIPaddresses();
+
+//==================================
+//				Setter
+//==================================
+	void setchannelName(std::string s);
+
+//==================================
+//			 Increment
+//==================================
+	void IncTotalIRCMessages(unsigned int i);
+	void IncNbJoin(unsigned int i);
+	void IncNbPing(unsigned int i);
+	void IncNbPong(unsigned int i);
+	void IncNbPrivmsg(unsigned int i);
+
+//==================================
+//			Display Statistics
+//==================================
+	void displayStat();
+	void display_IP_Per_Channel();
+
+//==================================
+//		Look For an IP address
+//
+//@return return -1 if IP address not found
+//		  return the index of the IP address in the vector
+//==================================
+	int contains(IP_Address ip);
+
+//===============================================
+//  Add an IP address to the _IP_addresses vector
+//===============================================
+	void push_back_IP(IP_Address *ip);
+
+
+
+
+};
+
+#endif /* IRC_CHANNEL_STATS_H_ */

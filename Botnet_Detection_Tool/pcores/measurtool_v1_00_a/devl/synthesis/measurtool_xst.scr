@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "/home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib10/MyProcessorIPLib/pcores/measurtool_v1_00_a/devl/synthesis/measurtool_xst.prj"
+-top measurtool
+-p virtex5
+-ofn "/home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib10/MyProcessorIPLib/pcores/measurtool_v1_00_a/devl/synthesis/measurtool_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib measurtool_v1_00_a

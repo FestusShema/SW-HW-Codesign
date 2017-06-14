@@ -1,0 +1,31 @@
+//INFO
+/*
+ * Name: Festus Hategekimana
+ * Email: fhategek@uark.edu
+ * Projects License: GPL 
+ * Release date: 2016
+ */
+ 
+//PROJECTS
+ 
+1. A network intrusion and IRC botnet detection tool.
+   Implemented as SoC.
+   Target: Virtex 5 FPGA.
+   Status: Project Completed
+	
+2. SSL protocol implementation.
+   Implemented in VHDL.
+   Target: Any Xilinx FPGA
+   Status: Not yet completed
+
+3. Rolling Averages classifier
+   Implemented in VHDL
+   Target: Any Xilinx FPGA
+   Status: Completed
+   
+4. BigInt
+   A C++ library which implements basic operations
+   on large operands (NBits > 3000+)
+   Status: Completed
+   
+   

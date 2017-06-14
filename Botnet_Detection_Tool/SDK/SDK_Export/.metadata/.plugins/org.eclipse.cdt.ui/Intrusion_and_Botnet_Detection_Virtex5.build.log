@@ -1,0 +1,34 @@
+
+**** Build of configuration Debug for project Intrusion_and_Botnet_Detection_Virtex5 ****
+
+make all 
+Building file: ../src/IRC_Channel_Stats.cpp
+Invoking: PowerPC g++ compiler
+powerpc-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../Intrusion_and_Botnet_Detection_Virtex5_bsp/ppc440_0/include -mcpu=440 -MMD -MP -MF"src/IRC_Channel_Stats.d" -MT"src/IRC_Channel_Stats.d" -o"src/IRC_Channel_Stats.o" "../src/IRC_Channel_Stats.cpp"
+Finished building: ../src/IRC_Channel_Stats.cpp
+ 
+Building target: Intrusion_and_Botnet_Detection_Virtex5.elf
+Invoking: PowerPC g++ linker
+powerpc-eabi-g++ -Wl,-T -Wl,../src/linker.ld -L../../Intrusion_and_Botnet_Detection_Virtex5_bsp/ppc440_0/lib -mcpu=440 -o"Intrusion_and_Botnet_Detection_Virtex5.elf"  ./src/IP_Address.o ./src/IRC_Channel_Stats.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Intrusion_and_Botnet_Detection_Virtex5.elf
+ 
+Invoking: PowerPC Print Size
+powerpc-eabi-size Intrusion_and_Botnet_Detection_Virtex5.elf  |tee "Intrusion_and_Botnet_Detection_Virtex5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  89744	  11628	   4412	 105784	  19d38	Intrusion_and_Botnet_Detection_Virtex5.elf
+Finished building: Intrusion_and_Botnet_Detection_Virtex5.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck Intrusion_and_Botnet_Detection_Virtex5.elf -hw ../../Intrusion_and_Botnet_Detection_Virtex5_hw_platform/system.xml -pe ppc440_0  |tee "Intrusion_and_Botnet_Detection_Virtex5.elf.elfcheck"
+elfcheck
+Xilinx EDK 13.4 Build EDK_O.87xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw
+../../Intrusion_and_Botnet_Detection_Virtex5_hw_platform/system.xml -pe ppc440_0
+Intrusion_and_Botnet_Detection_Virtex5.elf 
+
+ELF file	: Intrusion_and_Botnet_Detection_Virtex5.elf
+elfcheck passed.
+Finished building: Intrusion_and_Botnet_Detection_Virtex5.elf.elfcheck
+ 

@@ -1,0 +1,171 @@
+
+library ieee;
+  use ieee.std_logic_1164.all;
+  use ieee.std_logic_unsigned.all;
+  use ieee.std_logic_arith.all;
+  
+entity sdi_bayer2rgb is
+generic(
+	C_IMAGE_WIDTH           : integer := 640;
+   C_IMAGE_HEIGHT           : integer := 480;
+	C_DWIDTH                : integer := 64
+	);
+port(
+	-- Streaming I/O
+    rst               : in std_logic;
+    clk               : in std_logic;
+	 pu_reset : in std_logic;
+	 stream_in_stop   : out std_logic;
+    stream_in_valid  : in std_logic;
+    stream_in_data   : in std_logic_vector(C_DWIDTH-1 downto 0);
+	 stream_out_stop   : in std_logic;
+    stream_out_valid  : out std_logic;
+    stream_out_data   : out std_logic_vector(C_DWIDTH-1 downto 0);
+	 sof_in : in std_logic;
+	 sof_out : out std_logic
+);
+end sdi_bayer2rgb;
+
+architecture behavior of sdi_bayer2rgb is
+
+type ROW_STATES is (GR, BG);
+signal row_state : ROW_STATES;
+
+type PIXELS is (IDLE, PIXEL0, PIXEL1);
+signal pixel : PIXELS;
+
+signal addr : std_logic_vector(8 downto 0);
+signal dout_g1, dout_g2, dout_b, dout_r : std_logic_vector(31 downto 0);
+signal greens1, greens2, blues, reds : std_logic_vector(31 downto 0);
+signal b1,g1,r1,g2,b2,r2 : std_logic_vector(7 downto 0);
+signal wea_g1, wea_g2, wea_b, wea_r : std_logic_vector(0 downto 0);
+signal column : integer range 0 to C_IMAGE_WIDTH;
+component ColorRAM
+	port (
+	clka: IN std_logic;
+	dina: IN std_logic_VECTOR(31 downto 0);
+	addra: IN std_logic_VECTOR(8 downto 0);
+	wea: IN std_logic_VECTOR(0 downto 0);
+	douta: OUT std_logic_VECTOR(31 downto 0));
+end component;
+
+begin
+
+	greens1 <= stream_in_data(55 downto 48) & stream_in_data(39 downto 32) & stream_in_data(23 downto 16) & stream_in_data(7 downto 0);
+	greens2 <= stream_in_data(63 downto 56) & stream_in_data(47 downto 40) & stream_in_data(31 downto 24) & stream_in_data(15 downto 8);
+	blues <= stream_in_data(55 downto 48) & stream_in_data(39 downto 32) & stream_in_data(23 downto 16) & stream_in_data(7 downto 0);
+	reds <= stream_in_data(63 downto 56) & stream_in_data(47 downto 40) & stream_in_data(31 downto 24) & stream_in_data(15 downto 8);
+	
+	RAM_G1 : ColorRAM
+		port map (
+			clka => clk,
+			dina => greens1,
+			addra => addr,
+			wea => wea_g1,
+			douta => dout_g1);
+	RAM_R : ColorRAM
+		port map (
+			clka => clk,
+			dina => reds,
+			addra => addr,
+			wea => wea_r,
+			douta => dout_r);
+	RAM_B : ColorRAM
+		port map (
+			clka => clk,
+			dina => blues,
+			addra => addr,
+			wea => wea_b,
+			douta => dout_b);
+	RAM_G2 : ColorRAM
+		port map (
+			clka => clk,
+			dina => greens2,
+			addra => addr,
+			wea => wea_g2,
+			douta => dout_g2);
+	
+
+	
+	sof_out <= sof_in;
+	stream_in_stop <= stream_out_stop;
+	stream_out_data <= x"00" & b2 & g2 & r2 & x"00" & b1 & g1 & r1;
+
+	STD_PROC : process (clk,rst,pu_reset)
+	begin
+		if rst='1' or pu_reset='1' then
+			addr <= ( others => '0' );
+			stream_out_valid <= '0';
+			wea_g1(0) <= '0';
+			wea_g2(0) <= '0';
+			wea_b(0) <= '0';
+			wea_r(0) <= '0';
+			pixel <= IDLE;
+		elsif rising_edge(clk) then
+			stream_out_valid <= '0';
+			wea_g1(0) <= '0';
+			wea_g2(0) <= '0';
+			wea_b(0) <= '0';
+			wea_r(0) <= '0';
+			
+			case pixel is
+			when IDLE =>
+				if sof_in = '1' then
+					addr <= (others => '0');
+					row_state <= GR;
+					column <= 0;
+				elsif stream_in_valid = '1' then
+					--store current pixel
+					if row_state = GR then
+						wea_g1(0) <= '1';
+						wea_r(0) <= '1';
+					else
+						wea_b(0) <= '1';
+						wea_g2(0) <= '1';
+					end if;
+					
+					pixel <= PIXEL0;
+					
+				end if;
+				
+			when PIXEL0 => --select first two bytes of each color RAM
+				stream_out_valid <= '1';
+				g1 <= ('0'&dout_g1(7 downto 1)) + ('0'+dout_g2(7 downto 1));
+				b1 <= dout_b(7 downto 0);
+				r1 <= dout_r(7 downto 0);
+				g2 <= ('0'&dout_g1(15 downto 9)) + ('0'+dout_g2(15 downto 9));
+				b2 <= dout_b(15 downto 8);
+				r2 <= dout_r(15 downto 8);
+				
+				pixel <= PIXEL1;
+			
+			when PIXEL1 => --select second two bytes of each color RAM
+				stream_out_valid <= '1';
+				g1 <= ('0'&dout_g1(23 downto 17)) + ('0'+dout_g2(23 downto 17));
+				b1 <= dout_b(23 downto 16);
+				r1 <= dout_r(23 downto 16);
+				g2 <= ('0'&dout_g1(31 downto 25)) + ('0'+dout_g2(31 downto 25));
+				b2 <= dout_b(31 downto 24);
+				r2 <= dout_r(31 downto 24);
+				
+				--update row, column
+				if column < C_IMAGE_WIDTH-8 then
+					column <= column + 8;
+					addr <= addr + 1;
+				else
+					column <= 0;
+					if row_state = GR then
+						row_state = BG;
+					else
+						row_state <= GR;
+					end if;
+					addr <= ( others => '0' );
+				end if;
+				
+				pixel <= IDLE;
+				
+			end case;
+ 		end if; --clk
+	end process STD_PROC;
+	
+end behavior;

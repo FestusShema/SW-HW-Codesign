@@ -1,0 +1,52 @@
+8
+
+dir
+1502
+https://svn.haiti.cs.uni-potsdam.de/svn/reposTI/projects/PICSY/src/hw/IPcores/PICSY/pcores/plb_sdi_controller_v1_00_a/coregen
+https://svn.haiti.cs.uni-potsdam.de/svn/reposTI
+
+
+
+2009-05-15T08:50:53.596476Z
+1332
+akzare
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+dbcb3e68-cf28-0410-abe5-9f9a03f8f783
+
+coregen.cgp
+file
+
+
+
+
+2009-03-20T20:21:50.000000Z
+a5f67cee231d736187570cd681c5f880
+2009-04-02T14:55:18.677286Z
+1246
+akzare
+
+fifo_generator_v4_4.xco
+file
+
+
+
+
+2009-04-27T19:29:21.000000Z
+3e711318cd3bd211e3799ea836f786b4
+2009-05-15T08:50:53.596476Z
+1332
+akzare
+

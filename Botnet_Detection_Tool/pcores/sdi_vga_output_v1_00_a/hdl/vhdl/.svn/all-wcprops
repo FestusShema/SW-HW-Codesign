@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/reposTI/!svn/ver/1503/projects/PICSY/src/hw/IPcores/PICSY/pcores/sdi_vga_output_v1_00_a/hdl/vhdl
+END
+sdi_vga_output.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/reposTI/!svn/ver/1615/projects/PICSY/src/hw/IPcores/PICSY/pcores/sdi_vga_output_v1_00_a/hdl/vhdl/sdi_vga_output.vhd
+END
+vga_timer.vhd
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/reposTI/!svn/ver/1620/projects/PICSY/src/hw/IPcores/PICSY/pcores/sdi_vga_output_v1_00_a/hdl/vhdl/vga_timer.vhd
+END

@@ -1,0 +1,44 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CPP_SRCS += \
+../src/IP_Address.cpp \
+../src/IRC_Channel_Stats.cpp 
+
+LD_SRCS += \
+../src/linker.ld 
+
+CC_SRCS += \
+../src/main.cc 
+
+OBJS += \
+./src/IP_Address.o \
+./src/IRC_Channel_Stats.o \
+./src/main.o 
+
+CC_DEPS += \
+./src/main.d 
+
+CPP_DEPS += \
+./src/IP_Address.d \
+./src/IRC_Channel_Stats.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+src/%.o: ../src/%.cpp
+	@echo Building file: $<
+	@echo Invoking: PowerPC g++ compiler
+	powerpc-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../Intrusion_and_Botnet_Detection_Virtex5_bsp/ppc440_0/include -mcpu=440 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o"$@" "$<"
+	@echo Finished building: $<
+	@echo ' '
+
+src/%.o: ../src/%.cc
+	@echo Building file: $<
+	@echo Invoking: PowerPC g++ compiler
+	powerpc-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../Intrusion_and_Botnet_Detection_Virtex5_bsp/ppc440_0/include -mcpu=440 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o"$@" "$<"
+	@echo Finished building: $<
+	@echo ' '
+
+

@@ -1,0 +1,8 @@
+##############################################################################
+## Filename:          /MyProcessorIPLib/pcores/imagesensor_v1_00_a/data/imagesensor_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Mon Feb 02 18:44:20 2009 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib imagesensor_v1_00_a imagesensor vhdl
+

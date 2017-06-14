@@ -1,0 +1,10 @@
+##############################################################################
+## Filename:          /home/jupiter/Desktop/Hard_ORB_Client_14.4_Virtex5/pcores/regperiph_v1_00_a/data/regperiph_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Tue May 14 11:16:57 2013 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib plbv46_slave_single_v1_01_a  all 
+lib regperiph_v1_00_a user_logic vhdl
+lib regperiph_v1_00_a regperiph vhdl

@@ -1,0 +1,20 @@
+# Date: Fri Mar 20 20:21:50 2009
+SET addpads = False
+SET asysymbol = True
+SET busformat = BusFormatAngleBracketNotRipped
+SET createndf = False
+SET designentry = VHDL
+SET device = xc4vfx20
+SET devicefamily = virtex4
+SET flowvendor = Foundation_iSE
+SET formalverification = False
+SET foundationsym = False
+SET implementationfiletype = Ngc
+SET package = ff672
+SET removerpms = False
+SET simulationfiles = Behavioral
+SET speedgrade = -10
+SET verilogsim = False
+SET vhdlsim = True
+SET workingdirectory = /home/akzare/Projects/PICSY/Hardware/CoreGen/FIFO/tmp
+

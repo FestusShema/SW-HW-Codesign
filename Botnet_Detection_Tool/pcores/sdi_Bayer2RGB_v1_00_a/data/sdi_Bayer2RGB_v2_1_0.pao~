@@ -1,0 +1,9 @@
+##############################################################################
+## Filename:          /home/hartmann/picsy/EDK/hand_follower_sw/pcores/sdi_Bayer2RGB_v1_00_a/data/sdi_Bayer2RGB_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Thu Feb 11 15:41:47 2010 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib sdi_Bayer2RGB_v1_00_a sdi_Bayer2RGB vhdl
+lib sdi_Bayer2RGB_v1_00_a Bayer2RGB vhdl
+lib sdi_Bayer2RGB_v1_00_a ColorRAM vhdl

@@ -1,0 +1,40 @@
+8
+
+dir
+1502
+https://svn.haiti.cs.uni-potsdam.de/svn/reposTI/projects/PICSY/src/hw/IPcores/PICSY/pcores/plb_sdi_controller_v1_00_a/netlist
+https://svn.haiti.cs.uni-potsdam.de/svn/reposTI
+
+
+
+2009-05-15T08:50:53.596476Z
+1332
+akzare
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+dbcb3e68-cf28-0410-abe5-9f9a03f8f783
+
+fifo_generator_v4_4.ngc
+file
+
+
+
+
+2009-04-27T19:29:21.000000Z
+ba7a9458363195f0662c2ed9dfae6d02
+2009-05-15T08:50:53.596476Z
+1332
+akzare
+

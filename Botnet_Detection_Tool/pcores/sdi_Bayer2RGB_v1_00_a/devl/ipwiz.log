@@ -1,0 +1,90 @@
+HDL language for the peripheral (top level) design unit ColorRAM is vhdl ...
+INFO:MDT - Create temparary xst project file:
+   /home/hartmann/picsy/EDK/hand_follower_sw/pcores/sdi_Bayer2RGB.prj
+Compiling vhdl file
+"/home/hartmann/picsy/EDK/hand_follower_sw/pcores/sdi_Bayer2RGB_v1_00_a/hdl/vhdl
+/ColorRAM.vhd" in Library sdi_Bayer2RGB_v1_00_a.
+Entity <ColorRAM> compiled.
+Entity <ColorRAM> (Architecture <ColorRAM_a>) compiled.
+Compiling vhdl file
+"/home/hartmann/picsy/EDK/hand_follower_sw/pcores/sdi_Bayer2RGB_v1_00_a/hdl/vhdl
+/Bayer2RGB.vhd" in Library sdi_Bayer2RGB_v1_00_a.
+Entity <sdi_bayer2rgb> compiled.
+Entity <sdi_bayer2rgb> (Architecture <behavior>) compiled.
+
+
+Analyzing HDL attributes ...
+INFO:MDT - IPTYPE set to value : PERIPHERAL
+INFO:MDT - IMP_NETLIST set to value : TRUE
+INFO:MDT - HDL set to value : VHDL
+HDL language for the peripheral (top level) design unit ColorRAM is vhdl ...
+INFO:MDT - Create temparary xst project file:
+   /home/hartmann/picsy/EDK/hand_follower_sw/pcores/sdi_Bayer2RGB.prj
+Compiling vhdl file
+"/home/hartmann/picsy/EDK/hand_follower_sw/pcores/sdi_Bayer2RGB_v1_00_a/hdl/vhdl
+/ColorRAM.vhd" in Library sdi_Bayer2RGB_v1_00_a.
+Entity <ColorRAM> compiled.
+Entity <ColorRAM> (Architecture <ColorRAM_a>) compiled.
+Compiling vhdl file
+"/home/hartmann/picsy/EDK/hand_follower_sw/pcores/sdi_Bayer2RGB_v1_00_a/hdl/vhdl
+/Bayer2RGB.vhd" in Library sdi_Bayer2RGB_v1_00_a.
+Entity <sdi_bayer2rgb> compiled.
+Entity <sdi_bayer2rgb> (Architecture <behavior>) compiled.
+
+
+Analyzing HDL attributes ...
+INFO:MDT - IPTYPE set to value : PERIPHERAL
+INFO:MDT - IMP_NETLIST set to value : TRUE
+INFO:MDT - HDL set to value : VHDL
+Copying file Bayer2RGB.vhd to
+/home/hartmann/picsy/EDK/hand_follower_sw/pcores/sdi_Bayer2RGB_v1_00_a/hdl/vhdl/
+...
+Copying file ColorRAM.vhd to
+/home/hartmann/picsy/EDK/hand_follower_sw/pcores/sdi_Bayer2RGB_v1_00_a/hdl/vhdl/
+...
+
+Simulation Library Compilation Wizard Xilinx EDK 10.1.03 Build EDK_K_SP3.6
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+
+-- Scanning repositories                    1  % complete,   0 errors
+-- Collecting HDL files                     5  % complete,   0 errors
+-- HDL files collected for 15 pcores        20 % complete,   0 errors
+-- Compiling pcores                         20 % complete,   0 errors
+-- Compiling sdi_Bayer2RGB_v1_00_a          99 % complete,   0 errors
+-- Compilation completed, no errors.        100% complete,   0 errors
+See
+/home/hartmann/picsy/EDK/hand_follower_sw/pcores//sdi_Bayer2RGB_v1_00_a/devl/com
+pedklib.log for execution log.
+ISim simulation model generated successfully...
+
+Thank you for using Create and Import Peripheral Wizard! Please find your
+imported peripheral under
+/home/hartmann/picsy/EDK/hand_follower_sw/pcores/sdi_Bayer2RGB_v1_00_a.
+
+Summary:
+
+  Logical library     : sdi_Bayer2RGB_v1_00_a
+  Version             : 1.00.a
+  Bus interface(s)    : None
+
+The following sub-directories will be created:
+
+  - sdi_Bayer2RGB_v1_00_a/data
+  - sdi_Bayer2RGB_v1_00_a/hdl
+  - sdi_Bayer2RGB_v1_00_a/hdl/vhdl
+
+
+The following HDL source files will be copied into the
+sdi_bayer2rgb_v1_00_a/hdl/vhdl directory:
+
+  - Bayer2RGB.vhd
+  - ColorRAM.vhd
+
+The following files will be created under the sdi_Bayer2RGB_v1_00_a/data
+directory:
+
+  - sdi_Bayer2RGB_v2_1_0.mpd
+  - sdi_Bayer2RGB_v2_1_0.pao
+
+

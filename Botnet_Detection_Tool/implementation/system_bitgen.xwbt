@@ -1,0 +1,7 @@
+INFILE=/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/system.ncd
+OUTFILE=/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation/system.bit
+FAMILY=Virtex5
+PART=xc5vfx70t-1ff1136
+WORKINGDIR=/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/implementation
+LICENSE=ISE
+USER_INFO=174134878_174134879_210554765_603

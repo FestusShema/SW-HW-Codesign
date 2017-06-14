@@ -1,0 +1,147 @@
+/*
+ * IRC_Channel_stats.cpp
+ *
+ *  Created on: Jun 19, 2013
+ *      Author: jupiter
+ */
+
+#include "IRC_Channel_Stats.h"
+
+//===========================================
+//				Constructor
+//===========================================
+IRC_Channel_stats::IRC_Channel_stats()
+{
+	// TODO Auto-generated constructor stub
+	_channel_name = "";
+	_total_IRC_Messages = 0;
+	_nb_JOIN = 0;
+	_nb_PING = 0;
+	_nb_PONG = 0;
+	_nb_PRIVMSG = 0;
+	_IP_addresses = std::vector<IP_Address*>();
+
+}
+
+//===========================================
+//				destructor
+//===========================================
+IRC_Channel_stats::~IRC_Channel_stats()
+{
+	// TODO Auto-generated destructor stub
+}
+
+//===========================================
+//				Getter
+//===========================================
+std::string IRC_Channel_stats::getChannelName()
+{
+	return _channel_name;
+}
+
+std::vector<IP_Address*> IRC_Channel_stats::getIPaddresses()
+{
+	return _IP_addresses;
+}
+
+//===========================================
+//				Setter
+//===========================================
+void IRC_Channel_stats::setchannelName(std::string s)
+{
+	_channel_name = s;
+}
+
+//===========================================
+//				Incrementers
+//===========================================
+void IRC_Channel_stats::IncTotalIRCMessages(unsigned int i)
+{
+	_total_IRC_Messages += i;
+}
+
+void IRC_Channel_stats::IncNbJoin(unsigned int i)
+{
+	_nb_JOIN += i;
+}
+
+void IRC_Channel_stats::IncNbPing(unsigned int i)
+{
+	_nb_PING += i;
+}
+
+void IRC_Channel_stats::IncNbPong(unsigned int i)
+{
+	_nb_PONG += i;
+}
+
+void IRC_Channel_stats::IncNbPrivmsg(unsigned int i)
+{
+	_nb_PRIVMSG += i;
+}
+
+//===========================================
+//				Display Statistics
+//===========================================
+void IRC_Channel_stats::displayStat()
+{
+	std::string str = "";
+	std::string str1 = "";
+	std::string str2 = "";
+
+	if(_total_IRC_Messages < 10)
+		str = "      " + _total_IRC_Messages;
+		str += "     ";
+
+	if(_nb_JOIN < 10)
+		str1 = "      " + _total_IRC_Messages;
+		str1 += "     ";
+
+	if(_nb_PRIVMSG < 10)
+		str2 = "      " + _total_IRC_Messages;
+		str2 += "     ";
+	xil_printf("          a          b");
+	//xil_printf("|                      %s                      |     %d      |     %d     |      %d     |        %d        | \r\n", _channel_name.c_str(), _total_IRC_Messages, _nb_JOIN, _nb_PRIVMSG, _IP_addresses.size());
+
+}
+
+void IRC_Channel_stats::display_IP_Per_Channel()
+{
+	xil_printf("\r\n|==================================================|\r\n");
+	xil_printf("|                     %s                     |\r\n", _channel_name.c_str());
+	xil_printf("|==================================================|\r\n");
+
+	for(unsigned int i=0; i<_IP_addresses.size(); ++i)
+		xil_printf("|                   %d.%d.%d.%d                    |\r\n", _IP_addresses.at(i)->getFirstOctet(), _IP_addresses.at(i)->getSecondOctet(), _IP_addresses.at(i)-> getThirdOctet(), _IP_addresses.at(i)->getFourthOctet());
+
+}
+
+//==================================
+//		Look For an IP address
+//
+//@return return -1 if IP address not found
+//		  return the index of the IP address in the vector
+//==================================
+int IRC_Channel_stats::contains(IP_Address ip)
+{
+	int ret = -1;
+
+	for(unsigned int i=0; i<this->_IP_addresses.size(); ++i)
+	{
+		if(this->_IP_addresses.at(i)->operator ==(ip))
+			ret = i;
+	}
+
+	return ret;
+
+}
+
+//===============================================
+//  Add an IP address to the _IP_addresses vector
+//===============================================
+void IRC_Channel_stats::push_back_IP(IP_Address *ip)
+{
+	_IP_addresses.push_back(ip);
+}
+
+

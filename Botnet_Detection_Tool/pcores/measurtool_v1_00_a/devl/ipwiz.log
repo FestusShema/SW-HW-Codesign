@@ -1,0 +1,191 @@
+
+----------------------------------------------------------------------------
+--                            Design Analysis                             --
+----------------------------------------------------------------------------
+Analyze pcore measurtool ...
+
+
+----------------------------------------------------------------------------
+--                            File Generation                             --
+----------------------------------------------------------------------------
+Creating HDL source directory ...
+Generating top peripheral VHDL template ...
+Generating stub user logic VHDL template ...
+HDL templates successfully generated ...
+Creating data directory ...
+Generating XPS inteface files ...
+Compiling vhdl file
+"/opt/local/Xilinx10.1i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/h
+dl/vhdl/proc_common_pkg.vhd" in Library proc_common_v2_00_a.
+Package <proc_common_pkg> compiled.
+Package body <proc_common_pkg> compiled.
+Compiling vhdl file
+"/opt/local/Xilinx10.1i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/h
+dl/vhdl/or_muxcy.vhd" in Library proc_common_v2_00_a.
+Entity <or_muxcy> compiled.
+Entity <or_muxcy> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/opt/local/Xilinx10.1i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/h
+dl/vhdl/family_support.vhd" in Library proc_common_v2_00_a.
+Package <family_support> compiled.
+Package body <family_support> compiled.
+Compiling vhdl file
+"/opt/local/Xilinx10.1i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/h
+dl/vhdl/counter_f.vhd" in Library proc_common_v2_00_a.
+Entity <counter_f> compiled.
+Entity <counter_f> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/opt/local/Xilinx10.1i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/h
+dl/vhdl/pselect_f.vhd" in Library proc_common_v2_00_a.
+Entity <pselect_f> compiled.
+Entity <pselect_f> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/opt/local/Xilinx10.1i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/h
+dl/vhdl/or_gate128.vhd" in Library proc_common_v2_00_a.
+Entity <or_gate128> compiled.
+Entity <or_gate128> (Architecture <imp>) compiled.
+Compiling vhdl file
+"/opt/local/Xilinx10.1i/EDK/hw/XilinxProcessorIPLib/pcores/proc_common_v2_00_a/h
+dl/vhdl/ipif_pkg.vhd" in Library proc_common_v2_00_a.
+Package <ipif_pkg> compiled.
+Package body <ipif_pkg> compiled.
+Compiling vhdl file
+"/opt/local/Xilinx10.1i/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v
+1_00_a/hdl/vhdl/plb_address_decoder.vhd" in Library plbv46_slave_single_v1_00_a.
+Entity <plb_address_decoder> compiled.
+Entity <plb_address_decoder> (Architecture <IMP>) compiled.
+Compiling vhdl file
+"/opt/local/Xilinx10.1i/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v
+1_00_a/hdl/vhdl/plb_slave_attachment.vhd" in Library
+plbv46_slave_single_v1_00_a.
+Entity <plb_slave_attachment> compiled.
+Entity <plb_slave_attachment> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/opt/local/Xilinx10.1i/EDK/hw/XilinxProcessorIPLib/pcores/interrupt_control_v2_
+00_a/hdl/vhdl/interrupt_control.vhd" in Library interrupt_control_v2_00_a.
+Entity <interrupt_control> compiled.
+Entity <interrupt_control> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/opt/local/Xilinx10.1i/EDK/hw/XilinxProcessorIPLib/pcores/plbv46_slave_single_v
+1_00_a/hdl/vhdl/plbv46_slave_single.vhd" in Library plbv46_slave_single_v1_00_a.
+Entity <plbv46_slave_single> compiled.
+Entity <plbv46_slave_single> (Architecture <implementation>) compiled.
+Compiling vhdl file
+"/home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib10/MyProcessorIPLib/pcores
+/measurtool_v1_00_a/data/../hdl/vhdl/user_logic.vhd" in Library
+measurtool_v1_00_a.
+Entity <user_logic> compiled.
+Entity <user_logic> (Architecture <IMP>) compiled.
+Compiling vhdl file
+"/home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib10/MyProcessorIPLib/pcores
+/measurtool_v1_00_a/data/../hdl/vhdl/measurtool.vhd" in Library
+measurtool_v1_00_a.
+Entity <measurtool> compiled.
+Entity <measurtool> (Architecture <IMP>) compiled.
+
+
+Analyzing HDL attributes ...
+INFO:MDT - IPTYPE set to value : PERIPHERAL
+INFO:MDT - IMP_NETLIST set to value : TRUE
+INFO:MDT - HDL set to value : VHDL
+XPS interface files successfully generated ...
+Creating development directory ...
+Generating command option file ...
+Generating readme file ...
+Development misc files successfully generated ...
+Creating projnav directory ...
+Generating ProjNav support files ...
+ProjNav support files successfully generated ...
+Creating synthesis directory ...
+Generating XST synthesis support files ...
+XST synthesis support files successfully generated ...
+No BFM simulation files will be generated at this time ...
+Creating software driver data directory ...
+Generating software driver XPS interface (mdd/tcl) files ...
+Software driver data definition file (.mdd) successfully generated ...
+Software driver data generation file (.tcl) successfully generated ...
+Creating software driver src directory ...
+Generating software driver template files ...
+Software driver compile file (Makefile) successfully generated ...
+output user slave register(s) offset to software driver header ...
+output interrupt control register(s) offset to software driver header ...
+Software driver header file (.h) successfully generated ...
+Software driver source file (.c) successfully generated ...
+Software driver SelfTest file (.c) successfully generated ...
+Software driver template files successfully generated ...
+
+----------------------------------------------------------------------------
+--                              Final Report                              --
+----------------------------------------------------------------------------
+Thank you for using Create and Import Peripheral Wizard! Please find your
+peripheral hardware templates under
+/home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib10/MyProcessorIPLib/pcores/
+measurtool_v1_00_a and peripheral software templates under
+/home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib10/MyProcessorIPLib/drivers
+/measurtool_v1_00_a respectively.
+
+Peripheral Summary:
+
+  top name       : measurtool
+  version        : 1.00.a
+  type           : PLB (v4.6) slave
+  features       : slave attachment
+                   interrupt control
+                   user s/w registers
+
+Address Block Summary:
+
+  user logic slv : C_BASEADDR + 0x00000000
+                 : C_BASEADDR + 0x000000FF
+  interrupt      : C_BASEADDR + 0x00000100
+                 : C_BASEADDR + 0x000001FF
+
+File Summary
+
+  - HDL source -
+/home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib10/MyProcessorIPLib/pcores/
+measurtool_v1_00_a/hdl
+  top entity     : vhdl/measurtool.vhd
+  user logic     : vhdl/user_logic.vhd
+
+  - XPS interface -
+/home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib10/MyProcessorIPLib/pcores/
+measurtool_v1_00_a/data
+  mpd            : measurtool_v2_1_0.mpd
+  pao            : measurtool_v2_1_0.pao
+
+  - ISE project -
+/home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib10/MyProcessorIPLib/pcores/
+measurtool_v1_00_a/devl/projnav
+  ise project    : measurtool.ise
+  cli command    : measurtool.cli
+
+
+  - XST synthesis -
+/home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib10/MyProcessorIPLib/pcores/
+measurtool_v1_00_a/devl/synthesis
+  xst script     : measurtool_xst.scr
+  xst project    : measurtool_xst.prj
+
+  - Misc file -
+/home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib10/MyProcessorIPLib/pcores/
+measurtool_v1_00_a/devl
+  help           : README.txt
+  option         : ipwiz.opt
+  log            : ipwiz.log
+
+  - Driver source -
+/home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib10/MyProcessorIPLib/drivers
+/measurtool_v1_00_a/src
+  makefile       : Makefile
+  header         : measurtool.h
+  source         : measurtool.c
+  selftest       : measurtool_selftest.c
+
+  - Driver interface -
+/home/akzare/Projects/PICSY/Hardware/MyProcessorIPLib10/MyProcessorIPLib/drivers
+/measurtool_v1_00_a/data
+  mdd            : measurtool_v2_1_0.mdd
+  tcl            : measurtool_v2_1_0.tcl
+
+

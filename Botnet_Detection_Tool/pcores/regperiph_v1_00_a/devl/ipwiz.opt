@@ -1,0 +1,9 @@
+-batch 
+-create regperiph 
+-ver 1.00.a 
+-dir "/home/jupiter/Desktop/Hard_ORB_Client_14.4_Virtex5" 
+-lang vhdl 
+-bus plbv46 s 
+-reg 20 
+-xps 
+-driver 

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/SDK/SDK_Export/Intrusion_and_Botnet_Detection_Virtex5/Debug/Intrusion_and_Botnet_Detection_Virtex5.elf" key="Intrusion_and_Botnet_Detection_Virtex5_hw_platform-ppc440_0-initElf"/>
+	<item value="/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/SDK/SDK_Export/Intrusion_and_Botnet_Detection_Virtex5_hw_platform/system_bd.bmm" key="Intrusion_and_Botnet_Detection_Virtex5_hw_platform-bmmFile"/>
+	<item value="/home/jupiter/Desktop/Intrusion_and_Botnet_Detection_Virtex5/SDK/SDK_Export/Intrusion_and_Botnet_Detection_Virtex5_hw_platform/system.bit" key="Intrusion_and_Botnet_Detection_Virtex5_hw_platform-bitFile"/>
+</section>

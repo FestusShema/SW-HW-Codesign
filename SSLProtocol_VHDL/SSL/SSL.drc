@@ -1,0 +1,8 @@
+Release 14.4 Drc P.49d (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Fri May  1 14:59:39 2015
+
+drc -z SSL.ncd SSL.pcf
+
+DRC detected 0 errors and 0 warnings.

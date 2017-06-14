@@ -1,0 +1,34 @@
+/*
+ * Empty C++ Application
+ */
+
+#include<iostream>
+#include <time.h>
+#include "xparameters.h"
+#include "xuartlite_l.h"
+
+//=================================================================================================
+//						      Global variables to access the memory
+//=================================================================================================
+volatile u32 *TCPmessageCompletelyRcvd = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR;
+volatile u32 *IRCmsgDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000001;
+volatile u32 *nbPatternDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000002;
+volatile u32 *nbIRCmessageDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000003;
+volatile u32 *nbJOINmessageDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000004;
+volatile u32 *nbPINGmessageDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000005;
+volatile u32 *nbPONGmessageDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000006;
+volatile u32 *nbPRIVMSGmessageDetected = (volatile u32 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000007;
+volatile u8 *source_ip = (volatile u8 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000008;
+volatile u8 *dest_ip = (volatile u8 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000009;
+volatile u16 *source_port = (volatile u16 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x0000000A;
+volatile u16 *dest_port = (volatile u16 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x0000000B;
+volatile u8 *channel_name = (volatile u8 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x0000000C;
+volatile u8 *next_channel_name = (volatile u8 *) XPAR_DDR2_SDRAM_MPMC_BASEADDR + 0x00000019;
+//=================================================================================================
+//						      Global variables to access the memory
+//=================================================================================================
+
+int main()
+{
+	return 0;
+}

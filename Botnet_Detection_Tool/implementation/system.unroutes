@@ -1,0 +1,14 @@
+Release 13.4 - par O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Thu Jun 27 17:42:03 2013
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   xps_bram_if_cntlr_1_port_BRAM_Addr<30>
+   xps_bram_if_cntlr_1_port_BRAM_Addr<31>
+
+

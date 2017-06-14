@@ -1,0 +1,1183 @@
+--------------------------------------------------------------------------------
+Release 13.4 Trace  (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/trce -e 3 -xml system.twx
+system.ncd system.pcf
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,package,speed:     xc5vfx70t,ff1136,-1 (PRODUCTION 1.73 2012-01-07, STEPPING level 0)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: NET "hardorb_fpga_0_PHY_rx_clk_pin_IBUF" MAXSKEW = 5 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net skew is   1.845ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "hardorb_fpga_0_PHY_rx_clk_pin_IBUF" PERIOD = 40 ns HIGH 
+14 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 122 paths analyzed, 115 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   9.791ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "hardorb_fpga_0/hardorb_fpga_0/phy_tx_clk_i" MAXSKEW = 5 
+ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net skew is   4.753ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "hardorb_fpga_0/hardorb_fpga_0/phy_tx_clk_i" PERIOD = 40 
+ns HIGH 14 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 114 paths analyzed, 65 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   8.117ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr<2>"         MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.426ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr<3>"         MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.404ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_CMD_FIFOS[0].UCmdFifo/ConsObjPtr<2>"         MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.927ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_CMD_FIFOS[0].UCmdFifo/ConsObjPtr<3>"         MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.696ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFifo/ProdObjPtr<1>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.297ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFifo/ProdObjPtr<5>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.376ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFifo/ProdObjPtr<4>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.506ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFifo/ProdObjPtr<3>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.532ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFifo/ProdObjPtr<2>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.447ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_RDDATA_FIFOS[0].GEN_RDDATA_PORT_ENABLE.URdDataFifo/ProdObjPtr<0>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.573ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ConsObjPtr<3>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.954ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ConsObjPtr<2>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.284ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ConsObjPtr<0>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.115ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ConsObjPtr<5>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.164ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ConsObjPtr<1>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.029ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ConsObjPtr<4>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.119ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ProdObjPtr<1>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.038ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ProdObjPtr<5>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.105ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ProdObjPtr<4>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.159ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ProdObjPtr<3>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.918ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ProdObjPtr<2>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.088ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_WRDATA_FIFOS[1].GEN_WRDATA_PORT_ENABLE.UWrDataFifo/ProdObjPtr<0>"         
+MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.089ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr<0>"         MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.579ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_CMD_FIFOS[0].UCmdFifo/ProdObjPtr<1>"         MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.305ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_CMD_FIFOS[0].UCmdFifo/ConsObjPtr<0>"         MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.684ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+GEN_CMD_FIFOS[0].UCmdFifo/ConsObjPtr<1>"         MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.512ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+rdfifo_reset_or_flush<0>"         MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.288ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET 
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/cmd_reset<0>"        
+ MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.642ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/VFBC2_INST.vfbc/VFBC1_PIM_NGC/UVFBC/
+wrfifo_reset_or_flush<1>"         MAXDELAY = 2 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   1.913ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+en_dqs<7>"         MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.522ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+en_dqs<6>"         MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.522ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+en_dqs<5>"         MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.522ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+en_dqs<4>"         MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.522ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+en_dqs<3>"         MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.522ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+en_dqs<2>"         MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.522ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+en_dqs<1>"         MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.528ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+en_dqs<0>"         MAXDELAY = 0.6 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.522ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+gen_dqs[7].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.803ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+gen_dqs[6].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.803ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+gen_dqs[5].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.805ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+gen_dqs[4].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.803ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+gen_dqs[3].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.803ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+gen_dqs[2].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.803ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+gen_dqs[1].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.835ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET         
+"DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_v5_ddr2_phy.mpmc_phy_if_0/u_phy_io_0/
+gen_dqs[0].u_iob_dqs/en_dqs_sync"         MAXDELAY = 0.85 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.805ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TSTXOUT_hardorb_fpga_0 = MAXDELAY FROM TIMEGRP 
+"TXCLK_GRP_hardorb_fpga_0" TO         TIMEGRP "PADS" 10 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 5 paths analyzed, 5 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   2.577ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   4.000ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_RD_DATA_SEL = MAXDELAY FROM TIMEGRP "TNM_RD_DATA_SEL" 
+TO TIMEGRP "FFS"         12 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 384 paths analyzed, 384 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   4.722ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_PHY_INIT_DATA_SEL_0 = MAXDELAY FROM TIMEGRP 
+"TNM_PHY_INIT_DATA_SEL" TO         TIMEGRP "FFS" 12 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_PHY_INIT_DATA_SEL_90 = MAXDELAY FROM TIMEGRP 
+"TNM_PHY_INIT_DATA_SEL" TO         TIMEGRP "FFS" 12 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 50 paths analyzed, 50 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   4.945ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_GATE_DLY = MAXDELAY FROM TIMEGRP "TNM_GATE_DLY" TO 
+TIMEGRP "FFS" 12 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 40 paths analyzed, 40 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   3.286ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_RDEN_DLY = MAXDELAY FROM TIMEGRP "TNM_RDEN_DLY" TO 
+TIMEGRP "FFS" 12 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 5 paths analyzed, 5 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   1.722ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_MC_CAL_RDEN_DLY = MAXDELAY FROM TIMEGRP 
+"TNM_CAL_RDEN_DLY" TO TIMEGRP "FFS"         12 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 5 paths analyzed, 5 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   1.910ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_DQ_CE = MAXDELAY FROM TIMEGRP "TNM_DQ_CE_IDDR" TO TIMEGRP 
+"TNM_DQS_FLOPS"         1.9 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 128 paths analyzed, 64 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   3.676ns.
+ Maximum delay is   1.862ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT0" 
+TS_sys_clk_pin         * 1.5 PHASE 1.66666667 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 898 paths analyzed, 764 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.024ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT1 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT1" 
+TS_sys_clk_pin         * 1.5 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.100ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT2" 
+TS_sys_clk_pin         * 1.5 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 28687 paths analyzed, 12748 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.638ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT3 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT3" 
+TS_sys_clk_pin         * 2 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.666ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT4 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT4" 
+TS_sys_clk_pin         * 3 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.666ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT5 = 
+PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLL0_CLKOUT5" 
+TS_sys_clk_pin         * 0.75 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 5305868383 paths analyzed, 32267 endpoints analyzed, 1034 failing endpoints
+ 1034 timing errors detected. (1034 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  16.410ns.
+--------------------------------------------------------------------------------
+Slack:                  -3.077ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv_1 (FF)
+  Destination:          hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_63 (FF)
+  Requirement:          13.333ns
+  Data Path Delay:      16.457ns (Levels of Logic = 16)
+  Clock Path Skew:      0.139ns (1.327 - 1.188)
+  Source Clock:         clk_75_0000MHzPLL0_ADJUST rising at 0.000ns
+  Destination Clock:    clk_75_0000MHzPLL0_ADJUST rising at 13.333ns
+  Clock Uncertainty:    0.092ns
+
+  Clock Uncertainty:          0.092ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.170ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv_1 to hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_63
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X40Y90.BQ      Tcko                  0.471   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv<3>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv_1
+    SLICE_X40Y91.B4      net (fanout=4)        0.528   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv<1>
+    SLICE_X40Y91.COUT    Topcyb                0.483   measurtool_0/measurtool_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i<12>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv<1>_rt
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<3>
+    SLICE_X40Y92.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<3>
+    SLICE_X40Y92.COUT    Tbyp                  0.104   plb_SPLB_Rst<4>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<7>
+    SLICE_X40Y93.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<7>
+    SLICE_X40Y93.COUT    Tbyp                  0.104   measurtool_0/measurtool_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg<22>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<11>
+    SLICE_X40Y94.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<11>
+    SLICE_X40Y94.DMUX    Tcind                 0.405   DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[2].gen_fifos.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/PopData<72>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<15>
+    SLICE_X42Y94.B4      net (fanout=2)        0.531   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/sub0000_add0000<15>
+    SLICE_X42Y94.COUT    Topcyb                0.501   measurtool_0/measurtool_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg<19>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__not0000<15>11_INV_0
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__sub0001_cy<17>
+    SLICE_X42Y95.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__sub0001_cy<17>
+    SLICE_X42Y95.COUT    Tbyp                  0.104   plb_Sl_rdDBus<76>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__sub0001_cy<21>
+    SLICE_X42Y96.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__sub0001_cy<21>
+    SLICE_X42Y96.BMUX    Tcinb                 0.335   measurtool_0/measurtool_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i<8>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__sub0001_cy<25>
+    SLICE_X43Y96.A1      net (fanout=1)        0.708   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/_sub0001<23>
+    SLICE_X43Y96.A       Tilo                  0.094   plb_Sl_rdDBus<111>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_392_and0000193
+    SLICE_X53Y91.C2      net (fanout=1)        1.264   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_392_and0000193
+    SLICE_X53Y91.C       Tilo                  0.094   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_375_cmp_eq0006
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_392_and00001180
+    SLICE_X74Y83.B5      net (fanout=262)      1.986   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N1311
+    SLICE_X74Y83.B       Tilo                  0.094   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_39_and0203
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_39_cmp_eq00041
+    SLICE_X62Y111.D6     net (fanout=89)       2.270   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_39_cmp_eq0004
+    SLICE_X62Y111.D      Tilo                  0.094   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N272
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/SFDecomp_29811
+    SLICE_X75Y83.A5      net (fanout=21)       2.138   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N272
+    SLICE_X75Y83.COUT    Topcya                0.509   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or000011_wg_cy<7>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or000011_wg_lut<4>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or000011_wg_cy<7>
+    SLICE_X75Y84.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or000011_wg_cy<7>
+    SLICE_X75Y84.DMUX    Tcind                 0.330   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N2861
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or000011_wg_cy<11>
+    SLICE_X68Y106.C6     net (fanout=3)        1.269   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N2861
+    SLICE_X68Y106.C      Tilo                  0.094   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/ila_comp/U0/I_YES_D.U_ILA/iARM
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or00001
+    SLICE_X61Y114.B6     net (fanout=17)       1.297   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N147
+    SLICE_X61Y114.B      Tilo                  0.094   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channelName<57>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_61_or0000
+    SLICE_X63Y111.A6     net (fanout=16)       0.530   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_61_or0000
+    SLICE_X63Y111.CLK    Tas                   0.026   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name<74>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_63_mux00011
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_63
+    -------------------------------------------------  ---------------------------
+    Total                                     16.457ns (3.936ns logic, 12.521ns route)
+                                                       (23.9% logic, 76.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -3.077ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv_1 (FF)
+  Destination:          hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_63 (FF)
+  Requirement:          13.333ns
+  Data Path Delay:      16.457ns (Levels of Logic = 16)
+  Clock Path Skew:      0.139ns (1.327 - 1.188)
+  Source Clock:         clk_75_0000MHzPLL0_ADJUST rising at 0.000ns
+  Destination Clock:    clk_75_0000MHzPLL0_ADJUST rising at 13.333ns
+  Clock Uncertainty:    0.092ns
+
+  Clock Uncertainty:          0.092ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.170ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv_1 to hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_63
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X40Y90.BQ      Tcko                  0.471   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv<3>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv_1
+    SLICE_X40Y91.B4      net (fanout=4)        0.528   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv<1>
+    SLICE_X40Y91.COUT    Topcyb                0.483   measurtool_0/measurtool_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i<12>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv<1>_rt
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<3>
+    SLICE_X40Y92.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<3>
+    SLICE_X40Y92.COUT    Tbyp                  0.104   plb_SPLB_Rst<4>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<7>
+    SLICE_X40Y93.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<7>
+    SLICE_X40Y93.COUT    Tbyp                  0.104   measurtool_0/measurtool_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg<22>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<11>
+    SLICE_X40Y94.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<11>
+    SLICE_X40Y94.COUT    Tbyp                  0.104   DDR2_SDRAM/DDR2_SDRAM/mpmc_core_0/gen_paths.mpmc_data_path_0/gen_write_fifos[2].gen_fifos.mpmc_write_fifo_0/gen_fifo_bram.mpmc_bram_fifo_0/PopData<72>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<15>
+    SLICE_X40Y95.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<15>
+    SLICE_X40Y95.DMUX    Tcind                 0.405   measurtool_0/measurtool_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i<16>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<19>
+    SLICE_X42Y95.B4      net (fanout=2)        0.531   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/sub0000_add0000<19>
+    SLICE_X42Y95.COUT    Topcyb                0.501   plb_Sl_rdDBus<76>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__not0000<19>11_INV_0
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__sub0001_cy<21>
+    SLICE_X42Y96.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__sub0001_cy<21>
+    SLICE_X42Y96.BMUX    Tcinb                 0.335   measurtool_0/measurtool_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i<8>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__sub0001_cy<25>
+    SLICE_X43Y96.A1      net (fanout=1)        0.708   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/_sub0001<23>
+    SLICE_X43Y96.A       Tilo                  0.094   plb_Sl_rdDBus<111>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_392_and0000193
+    SLICE_X53Y91.C2      net (fanout=1)        1.264   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_392_and0000193
+    SLICE_X53Y91.C       Tilo                  0.094   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_375_cmp_eq0006
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_392_and00001180
+    SLICE_X74Y83.B5      net (fanout=262)      1.986   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N1311
+    SLICE_X74Y83.B       Tilo                  0.094   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_39_and0203
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_39_cmp_eq00041
+    SLICE_X62Y111.D6     net (fanout=89)       2.270   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_39_cmp_eq0004
+    SLICE_X62Y111.D      Tilo                  0.094   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N272
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/SFDecomp_29811
+    SLICE_X75Y83.A5      net (fanout=21)       2.138   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N272
+    SLICE_X75Y83.COUT    Topcya                0.509   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or000011_wg_cy<7>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or000011_wg_lut<4>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or000011_wg_cy<7>
+    SLICE_X75Y84.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or000011_wg_cy<7>
+    SLICE_X75Y84.DMUX    Tcind                 0.330   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N2861
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or000011_wg_cy<11>
+    SLICE_X68Y106.C6     net (fanout=3)        1.269   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N2861
+    SLICE_X68Y106.C      Tilo                  0.094   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/ila_comp/U0/I_YES_D.U_ILA/iARM
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or00001
+    SLICE_X61Y114.B6     net (fanout=17)       1.297   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N147
+    SLICE_X61Y114.B      Tilo                  0.094   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channelName<57>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_61_or0000
+    SLICE_X63Y111.A6     net (fanout=16)       0.530   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_61_or0000
+    SLICE_X63Y111.CLK    Tas                   0.026   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name<74>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_63_mux00011
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_63
+    -------------------------------------------------  ---------------------------
+    Total                                     16.457ns (3.936ns logic, 12.521ns route)
+                                                       (23.9% logic, 76.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  -3.077ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv_1 (FF)
+  Destination:          hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_63 (FF)
+  Requirement:          13.333ns
+  Data Path Delay:      16.457ns (Levels of Logic = 16)
+  Clock Path Skew:      0.139ns (1.327 - 1.188)
+  Source Clock:         clk_75_0000MHzPLL0_ADJUST rising at 0.000ns
+  Destination Clock:    clk_75_0000MHzPLL0_ADJUST rising at 13.333ns
+  Clock Uncertainty:    0.092ns
+
+  Clock Uncertainty:          0.092ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.170ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv_1 to hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_63
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X40Y90.BQ      Tcko                  0.471   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv<3>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv_1
+    SLICE_X40Y91.B4      net (fanout=4)        0.528   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv<1>
+    SLICE_X40Y91.COUT    Topcyb                0.483   measurtool_0/measurtool_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i<12>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/nbCharChanNameRecv<1>_rt
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<3>
+    SLICE_X40Y92.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<3>
+    SLICE_X40Y92.COUT    Tbyp                  0.104   plb_SPLB_Rst<4>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<7>
+    SLICE_X40Y93.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<7>
+    SLICE_X40Y93.DMUX    Tcind                 0.405   measurtool_0/measurtool_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg<22>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd_sub0000_add0000_cy<11>
+    SLICE_X42Y93.B4      net (fanout=2)        0.531   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/sub0000_add0000<11>
+    SLICE_X42Y93.COUT    Topcyb                0.501   measurtool_0/measurtool_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg<15>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__not0000<11>11_INV_0
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__sub0001_cy<13>
+    SLICE_X42Y94.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__sub0001_cy<13>
+    SLICE_X42Y94.COUT    Tbyp                  0.104   measurtool_0/measurtool_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg<19>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__sub0001_cy<17>
+    SLICE_X42Y95.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__sub0001_cy<17>
+    SLICE_X42Y95.COUT    Tbyp                  0.104   plb_Sl_rdDBus<76>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__sub0001_cy<21>
+    SLICE_X42Y96.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__sub0001_cy<21>
+    SLICE_X42Y96.BMUX    Tcinb                 0.335   measurtool_0/measurtool_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i<8>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/Madd__sub0001_cy<25>
+    SLICE_X43Y96.A1      net (fanout=1)        0.708   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/_sub0001<23>
+    SLICE_X43Y96.A       Tilo                  0.094   plb_Sl_rdDBus<111>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_392_and0000193
+    SLICE_X53Y91.C2      net (fanout=1)        1.264   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_392_and0000193
+    SLICE_X53Y91.C       Tilo                  0.094   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_375_cmp_eq0006
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_392_and00001180
+    SLICE_X74Y83.B5      net (fanout=262)      1.986   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N1311
+    SLICE_X74Y83.B       Tilo                  0.094   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_39_and0203
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_39_cmp_eq00041
+    SLICE_X62Y111.D6     net (fanout=89)       2.270   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_39_cmp_eq0004
+    SLICE_X62Y111.D      Tilo                  0.094   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N272
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/SFDecomp_29811
+    SLICE_X75Y83.A5      net (fanout=21)       2.138   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N272
+    SLICE_X75Y83.COUT    Topcya                0.509   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or000011_wg_cy<7>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or000011_wg_lut<4>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or000011_wg_cy<7>
+    SLICE_X75Y84.CIN     net (fanout=1)        0.000   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or000011_wg_cy<7>
+    SLICE_X75Y84.DMUX    Tcind                 0.330   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N2861
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or000011_wg_cy<11>
+    SLICE_X68Y106.C6     net (fanout=3)        1.269   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N2861
+    SLICE_X68Y106.C      Tilo                  0.094   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/ila_comp/U0/I_YES_D.U_ILA/iARM
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_69_or00001
+    SLICE_X61Y114.B6     net (fanout=17)       1.297   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/N147
+    SLICE_X61Y114.B      Tilo                  0.094   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channelName<57>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_61_or0000
+    SLICE_X63Y111.A6     net (fanout=16)       0.530   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_61_or0000
+    SLICE_X63Y111.CLK    Tas                   0.026   hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name<74>
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_63_mux00011
+                                                       hardorb_fpga_0/hardorb_fpga_0/XEMAC_I/ORB_SW/FILTER_INC/PATT_MATCH_IRC/FSM_INST0/channel_name_63
+    -------------------------------------------------  ---------------------------
+    Total                                     16.457ns (3.936ns logic, 12.521ns route)
+                                                       (23.9% logic, 76.1% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: OFFSET = IN 6 ns BEFORE COMP 
+"hardorb_fpga_0_PHY_rx_clk_pin";
+For more information, see Offset In Analysis in the Timing Closure User Guide (UG612).
+
+ 6 paths analyzed, 6 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Offset is  -2.212ns.
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk_pin                 |     10.000ns|      4.000ns|     12.308ns|            0|         1034|            0|   5305897968|
+| TS_clock_generator_0_clock_gen|      6.667ns|      6.024ns|          N/A|            0|            0|          898|            0|
+| erator_0_SIG_PLL0_CLKOUT0     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      6.667ns|      3.100ns|          N/A|            0|            0|            0|            0|
+| erator_0_SIG_PLL0_CLKOUT1     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      6.667ns|      6.638ns|          N/A|            0|            0|        28687|            0|
+| erator_0_SIG_PLL0_CLKOUT2     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      5.000ns|      1.666ns|          N/A|            0|            0|            0|            0|
+| erator_0_SIG_PLL0_CLKOUT3     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|      3.333ns|      1.666ns|          N/A|            0|            0|            0|            0|
+| erator_0_SIG_PLL0_CLKOUT4     |             |             |             |             |             |             |             |
+| TS_clock_generator_0_clock_gen|     13.333ns|     16.410ns|          N/A|         1034|            0|   5305868383|            0|
+| erator_0_SIG_PLL0_CLKOUT5     |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock hardorb_fpga_0_PHY_rx_clk_pin
+---------------------------------+------------+------------+----------------------------------+--------+
+                                 |Max Setup to|Max Hold to |                                  | Clock  |
+Source                           | clk (edge) | clk (edge) |Internal Clock(s)                 | Phase  |
+---------------------------------+------------+------------+----------------------------------+--------+
+hardorb_fpga_0_PHY_dv_pin        |   -2.412(R)|    3.035(R)|hardorb_fpga_0_PHY_rx_clk_pin_IBUF|   0.000|
+hardorb_fpga_0_PHY_rx_data_pin<0>|   -2.212(R)|    2.821(R)|hardorb_fpga_0_PHY_rx_clk_pin_IBUF|   0.000|
+hardorb_fpga_0_PHY_rx_data_pin<1>|   -2.385(R)|    3.008(R)|hardorb_fpga_0_PHY_rx_clk_pin_IBUF|   0.000|
+hardorb_fpga_0_PHY_rx_data_pin<2>|   -2.396(R)|    3.017(R)|hardorb_fpga_0_PHY_rx_clk_pin_IBUF|   0.000|
+hardorb_fpga_0_PHY_rx_data_pin<3>|   -2.523(R)|    3.158(R)|hardorb_fpga_0_PHY_rx_clk_pin_IBUF|   0.000|
+hardorb_fpga_0_PHY_rx_er_pin     |   -2.407(R)|    3.030(R)|hardorb_fpga_0_PHY_rx_clk_pin_IBUF|   0.000|
+---------------------------------+------------+------------+----------------------------------+--------+
+
+Clock hardorb_fpga_0_PHY_tx_clk_pin to Pad
+---------------------------------+------------+------------------------------------------+--------+
+                                 | clk (edge) |                                          | Clock  |
+Destination                      |   to PAD   |Internal Clock(s)                         | Phase  |
+---------------------------------+------------+------------------------------------------+--------+
+hardorb_fpga_0_PHY_tx_data_pin<0>|    8.137(F)|hardorb_fpga_0/hardorb_fpga_0/phy_tx_clk_i|  14.000|
+hardorb_fpga_0_PHY_tx_data_pin<1>|    8.138(F)|hardorb_fpga_0/hardorb_fpga_0/phy_tx_clk_i|  14.000|
+hardorb_fpga_0_PHY_tx_data_pin<2>|    8.175(F)|hardorb_fpga_0/hardorb_fpga_0/phy_tx_clk_i|  14.000|
+hardorb_fpga_0_PHY_tx_data_pin<3>|    8.171(F)|hardorb_fpga_0/hardorb_fpga_0/phy_tx_clk_i|  14.000|
+hardorb_fpga_0_PHY_tx_en_pin     |    8.145(F)|hardorb_fpga_0/hardorb_fpga_0/phy_tx_clk_i|  14.000|
+---------------------------------+------------+------------------------------------------+--------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<0>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<0>|         |    1.809|         |    1.833|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<0>  |         |    1.809|         |    1.833|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<1>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<1>|         |    1.764|         |    1.788|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<1>  |         |    1.764|         |    1.788|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<2>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<2>|         |    1.822|         |    1.846|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<2>  |         |    1.822|         |    1.846|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<3>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<3>|         |    1.657|         |    1.681|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<3>  |         |    1.657|         |    1.681|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<4>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<4>|         |    1.829|         |    1.853|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<4>  |         |    1.829|         |    1.853|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<5>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<5>|         |    1.838|         |    1.862|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<5>  |         |    1.838|         |    1.862|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<6>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<6>|         |    1.792|         |    1.816|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<6>  |         |    1.792|         |    1.816|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<7>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<7>|         |    1.817|         |    1.841|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<7>  |         |    1.817|         |    1.841|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<0>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<0>|         |    1.809|         |    1.833|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<0>  |         |    1.809|         |    1.833|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<1>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<1>|         |    1.764|         |    1.788|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<1>  |         |    1.764|         |    1.788|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<2>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<2>|         |    1.822|         |    1.846|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<2>  |         |    1.822|         |    1.846|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<3>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<3>|         |    1.657|         |    1.681|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<3>  |         |    1.657|         |    1.681|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<4>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<4>|         |    1.829|         |    1.853|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<4>  |         |    1.829|         |    1.853|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<5>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<5>|         |    1.838|         |    1.862|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<5>  |         |    1.838|         |    1.862|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<6>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<6>|         |    1.792|         |    1.816|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<6>  |         |    1.792|         |    1.816|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_DDR2_SDRAM_DDR2_DQS_pin<7>
+-----------------------------------+---------+---------+---------+---------+
+                                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------+---------+---------+---------+---------+
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin<7>|         |    1.817|         |    1.841|
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin<7>  |         |    1.817|         |    1.841|
+-----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock fpga_0_clk_1_sys_clk_pin
+------------------------+---------+---------+---------+---------+
+                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------------+---------+---------+---------+---------+
+fpga_0_clk_1_sys_clk_pin|   16.410|    3.186|    4.044|    4.685|
+------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock hardorb_fpga_0_PHY_rx_clk_pin
+-----------------------------+---------+---------+---------+---------+
+                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------+---------+---------+---------+---------+
+hardorb_fpga_0_PHY_rx_clk_pin|         |         |    3.427|    2.856|
+-----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock hardorb_fpga_0_PHY_tx_clk_pin
+-----------------------------+---------+---------+---------+---------+
+                             | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                 |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------+---------+---------+---------+---------+
+hardorb_fpga_0_PHY_tx_clk_pin|    2.926|         |    2.841|         |
+-----------------------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 1034  Score: 903863  (Setup/Max: 903863, Hold: 0)
+
+Constraints cover 5305898827 paths, 47 nets, and 99501 connections
+
+Design statistics:
+   Minimum period:  16.410ns   (Maximum frequency:  60.938MHz)
+   Maximum path delay from/to any node:   4.945ns
+   Maximum net skew:   4.753ns
+   Maximum net delay:   1.954ns
+
+
+Analysis completed Thu Jun 27 17:42:44 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 923 MB
+
+
+

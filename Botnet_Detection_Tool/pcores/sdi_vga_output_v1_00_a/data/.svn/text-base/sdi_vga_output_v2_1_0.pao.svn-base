@@ -1,0 +1,7 @@
+##############################################################################
+## Filename:          sdi_vga_output_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+##############################################################################
+
+lib sdi_vga_output_v1_00_a vga_timer vhdl
+lib sdi_vga_output_v1_00_a sdi_vga_output vhdl

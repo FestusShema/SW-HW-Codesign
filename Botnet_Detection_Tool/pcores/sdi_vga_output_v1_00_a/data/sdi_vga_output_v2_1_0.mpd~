@@ -1,0 +1,52 @@
+###################################################################
+##
+## Name     : sdi_vga_output
+## Desc     : Microprocessor Peripheral Description
+## By       : University of Potsdam - Department of Computer Sceince 
+###################################################################
+
+BEGIN sdi_vga_output
+
+## Peripheral Options
+OPTION IPTYPE = PERIPHERAL
+OPTION IMP_NETLIST = TRUE
+OPTION HDL = VHDL
+OPTION IP_GROUP = PPC:USER
+OPTION ARCH_SUPPORT_MAP = (virtex4=PREFERRED)
+
+
+## Bus Interfaces
+BUS_INTERFACE BUS = STREAM_IN, BUS_TYPE = TARGET, BUS_STD = DATASTREAM
+
+## Generics for VHDL or Parameters for Verilog
+PARAMETER C_RECOMPILE = 0, DT = INTEGER, VALUES = (0= AGAIN, 1= ONCE_AGAIN)
+PARAMETER C_REG_WIDTH = 32, DT = INTEGER, RANGE = (32, 64, 128)
+PARAMETER C_DWIDTH = 64, DT = INTEGER, RANGE = (32, 64, 128)
+
+## CONTROL
+PORT reset = "", DIR = I, SIGIS = Rst
+PORT vga_pixel_clk = "", DIR = I, SIGIS = Clk
+
+## SDI Interface
+PORT pu_reset = "", DIR = I, SIGIS = RST
+PORT request_frame = "", DIR = O
+PORT request_frame_ack = "", DIR = I
+
+## STREAM IN
+PORT stream_in_stop = stream_stop, DIR = O, BUS = STREAM_IN
+PORT stream_in_valid = stream_valid, DIR = I, BUS = STREAM_IN
+PORT stream_in_data = stream_data, DIR = I, VEC = [(C_DWIDTH-1):0], BUS = STREAM_IN
+
+PORT config_reg = "", DIR = I, VEC = [(C_REG_WIDTH-1):0]
+PORT sof = "", DIR = I
+PORT sof_ack = "", DIR = O
+
+## VGA
+PORT pixel_clk = "", DIR = O
+PORT red = "", DIR = O, VEC = [7:0]
+PORT green = "", DIR = O, VEC = [7:0]
+PORT blue = "", DIR = O, VEC = [7:0]
+PORT h_sync = "", DIR = O
+PORT v_sync = "", DIR = O
+
+END

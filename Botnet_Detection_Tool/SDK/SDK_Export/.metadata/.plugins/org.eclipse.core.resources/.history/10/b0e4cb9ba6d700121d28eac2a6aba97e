@@ -1,0 +1,13 @@
+/*
+ * Empty C++ Application
+ */
+
+#include<iostream>
+#include <time.h>
+#include "xparameters.h"
+#include "xuartlite_l.h"
+
+int main()
+{
+	return 0;
+}

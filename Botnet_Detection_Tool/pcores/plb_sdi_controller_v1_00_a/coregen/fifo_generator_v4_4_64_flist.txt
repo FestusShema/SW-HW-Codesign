@@ -1,0 +1,10 @@
+# Output products list for <fifo_generator_v4_4_64>
+fifo_generator_v4_4_64.asy
+fifo_generator_v4_4_64.ngc
+fifo_generator_v4_4_64.sym
+fifo_generator_v4_4_64.vhd
+fifo_generator_v4_4_64.vho
+fifo_generator_v4_4_64.xco
+fifo_generator_v4_4_64_fifo_generator_v4_4_xst_1.ngc_xst.xrpt
+fifo_generator_v4_4_64_flist.txt
+fifo_generator_v4_4_64_xmdf.tcl

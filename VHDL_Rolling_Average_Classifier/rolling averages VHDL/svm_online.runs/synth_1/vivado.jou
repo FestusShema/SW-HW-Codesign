@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2013.4 (64-bit)
+# SW Build 353583 on Mon Dec  9 17:26:26 MST 2013
+# IP Build 208076 on Mon Dec  2 12:38:17 MST 2013
+# Start of session at: Thu Mar 24 18:41:54 2016
+# Process ID: 20594
+# Log file: /home/festus/Documents/vivado/svm_online/svm_online.runs/synth_1/classify.rds
+# Journal file: /home/festus/Documents/vivado/svm_online/svm_online.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source classify.tcl

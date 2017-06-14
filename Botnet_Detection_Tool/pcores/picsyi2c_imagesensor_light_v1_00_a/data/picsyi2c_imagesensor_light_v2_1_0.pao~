@@ -1,0 +1,11 @@
+##############################################################################
+## Filename:          /MyProcessorIPLib/pcores/picsyi2c_mux_light_v1_00_a/data/picsyi2c_mux_light_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Wed Nov 11 15:25:20 2009 (by Robert Hartmann)
+##############################################################################
+
+lib picsyi2c_mux_light_v1_00_a picsyi2c_mux_light vhdl
+lib picsyi2c_mux_light_v1_00_a i2c vhdl
+lib picsyi2c_mux_light_v1_00_a i2c_scl vhdl
+lib picsyi2c_mux_light_v1_00_a SerialTopARallel vhdl
+

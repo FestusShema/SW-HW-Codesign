@@ -1,0 +1,22 @@
+# Peripheral Analyze Order (.pao) file for the
+# PLB V4.6 PIM 2.01.a
+#
+# ----- Proc Common Library Files -----------------
+lib proc_common_v2_00_a  all
+#
+#----- PLB PIM Library Files --------
+lib plbv46_pim_v2_01_a sample_cycle.vhd vhdl
+lib plbv46_pim_v2_01_a data_steer_mirror.vhd vhdl
+lib plbv46_pim_v2_01_a rd_support.vhd vhdl
+lib plbv46_pim_v2_01_a rd_support_dsplb.vhd vhdl
+lib plbv46_pim_v2_01_a rd_support_isplb.vhd vhdl
+lib plbv46_pim_v2_01_a rd_support_single.vhd vhdl
+lib plbv46_pim_v2_01_a write_module.vhd vhdl
+lib plbv46_pim_v2_01_a address_decoder.vhd vhdl
+lib plbv46_pim_v2_01_a address_decoder_dsplb.vhd vhdl
+lib plbv46_pim_v2_01_a address_decoder_isplb.vhd vhdl
+lib plbv46_pim_v2_01_a address_decoder_single.vhd vhdl
+lib plbv46_pim_v2_01_a plbv46_pim.vhd vhdl
+#
+# --- End of list ------------------------------
+#nosort
